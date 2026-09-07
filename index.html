@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getty Art Connections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="museum-name">J. Paul Getty Museum</p>
+      <h1 class="game-title">Art Connections</h1>
+    </div>
+  </header>
+
+  <main class="game-main">
+
+    <!-- Instructions -->
+    <div class="instructions">
+      Here are 8 artworks at the Getty Museum. 5 of them have slots you can drag them to below.
+      The column holds three paintings of the same genre; the row holds three paintings by the same artist.
+      The center spot holds one artwork in that genre by that artist.
+      The remaining three artworks are distractions.
+      <br><br>
+      Drag the paintings to their appropriate spots, then check your work with the Check Answers button.
+    </div>
+
+    <!-- Candidate pool — above the grid -->
+    <div class="pool-section">
+      <p class="pool-heading">Drag artworks into the grid below</p>
+      <div class="candidate-pool" id="candidatePool"></div>
+    </div>
+
+    <!-- Cross grid -->
+    <div class="cross-grid" id="crossGrid">
+
+      <div class="grid-spacer"></div>
+      <div class="cell" data-pos="top" id="cell-top"></div>
+      <div class="grid-spacer"></div>
+
+      <div class="cell" data-pos="left"   id="cell-left"></div>
+      <div class="cell" data-pos="center" id="cell-center"></div>
+      <div class="cell" data-pos="right"  id="cell-right"></div>
+
+      <div class="grid-spacer"></div>
+      <div class="cell" data-pos="bottom" id="cell-bottom"></div>
+      <div class="grid-spacer"></div>
+
+    </div>
+
+    <!-- Check button -->
+    <div class="check-bar">
+      <button class="btn-check" id="checkBtn" disabled>Check answers</button>
+    </div>
+
+  </main>
+
+  <!-- Hover image overlay -->
+  <div class="img-overlay" id="imgOverlay">
+    <img id="overlayImg" alt="">
+  </div>
+
+  <!-- Win overlay -->
+  <div class="win-overlay" id="winOverlay" hidden>
+    <div class="win-card">
+      <div class="win-ornament">✦</div>
+      <h2 class="win-heading">Connections found</h2>
+      <p class="win-body" id="winBody"></p>
+      <button class="btn-next" id="nextBtn">Next puzzle →</button>
+    </div>
+  </div>
+
+  <script src="puzzles.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
