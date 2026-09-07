@@ -2,11 +2,13 @@
 
 const POSITIONS = ['top', 'left', 'center', 'right', 'bottom'];
 
-let puzzle      = null;
-let placed      = {};         // pos -> artworkId (all positions, including locked)
-let locked      = new Set();  // positions confirmed correct
-let drag        = { artworkId: null, fromPos: null };
-let puzzleIndex = 0;
+let puzzle       = null;
+let placed       = {};
+let locked       = new Set();
+let drag         = { artworkId: null, fromPos: null };
+let puzzleIndex  = 0;
+let wrongTotal   = 0;   // cumulative wrong placements across all checks
+let axesRevealed = false;
 
 // ── Overlay ───────────────────────────────────────────────────────────────────
 
@@ -18,19 +20,14 @@ function showOverlay(imageUrl, triggerRect) {
   overlay.classList.add('visible');
   positionOverlay(triggerRect);
 }
-
-function hideOverlay() {
-  overlay.classList.remove('visible');
-}
+function hideOverlay() { overlay.classList.remove('visible'); }
 
 function positionOverlay(rect) {
   const OW = 420, OH = 520, PAD = 14;
   let x = rect.right + PAD;
   let y = rect.top;
-
   if (x + OW > window.innerWidth  - PAD) x = rect.left - OW - PAD;
   if (y + OH > window.innerHeight - PAD) y = window.innerHeight - OH - PAD;
-
   overlay.style.left = Math.max(PAD, x) + 'px';
   overlay.style.top  = Math.max(PAD, y) + 'px';
 }
@@ -38,11 +35,13 @@ function positionOverlay(rect) {
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 function loadPuzzle(index) {
-  puzzleIndex = index;
-  puzzle      = PUZZLES[index];
-  placed      = {};
-  locked      = new Set();
-  drag        = { artworkId: null, fromPos: null };
+  puzzleIndex  = index;
+  puzzle       = PUZZLES[index];
+  placed       = {};
+  locked       = new Set();
+  drag         = { artworkId: null, fromPos: null };
+  wrongTotal   = 0;
+  axesRevealed = false;
 
   POSITIONS.forEach(pos => resetCell(pos));
 
@@ -51,7 +50,7 @@ function loadPuzzle(index) {
   pool.innerHTML = '';
   shuffled.forEach(a => pool.appendChild(makeCard(a)));
 
-  // Re-wire cells (clone to drop stale listeners)
+  // Re-wire cells (clone to clear stale listeners)
   POSITIONS.forEach(pos => {
     const old   = document.getElementById(`cell-${pos}`);
     const fresh = old.cloneNode(true);
@@ -59,9 +58,9 @@ function loadPuzzle(index) {
     wireCell(fresh, pos);
   });
 
-  // Pool accepts drops (return artworks from grid)
+  // Pool as drop target (return artworks from grid)
   const pool2 = document.getElementById('candidatePool');
-  pool2.addEventListener('dragover', e => { e.preventDefault(); pool2.classList.add('drag-over'); });
+  pool2.addEventListener('dragover',  e => { e.preventDefault(); pool2.classList.add('drag-over'); });
   pool2.addEventListener('dragleave', () => pool2.classList.remove('drag-over'));
   pool2.addEventListener('drop', e => {
     e.preventDefault();
@@ -72,7 +71,8 @@ function loadPuzzle(index) {
     }
   });
 
-  document.getElementById('winOverlay').setAttribute('hidden', '');
+  document.getElementById('resultBar').setAttribute('hidden', '');
+  document.getElementById('scoreDisplay').setAttribute('hidden', '');
   updateCheckButton();
 }
 
@@ -94,7 +94,7 @@ function wireCell(cell, pos) {
   });
 }
 
-// ── Card factory — image only ─────────────────────────────────────────────────
+// ── Card factory ──────────────────────────────────────────────────────────────
 
 function makeCard(artwork) {
   const card = document.createElement('div');
@@ -102,13 +102,15 @@ function makeCard(artwork) {
   card.dataset.id = artwork.id;
   card.draggable  = true;
 
-  const img = document.createElement('img');
-  img.src   = artwork.imageUrl;
-  img.alt   = '';          // intentionally blank: no title/artist shown
-  img.loading = 'lazy';
-  card.appendChild(img);
+  card.innerHTML = `
+    <div class="card-img">
+      <img src="${artwork.imageUrl}" alt="" loading="lazy">
+    </div>
+    <div class="card-info">
+      <div class="card-title">${artwork.title}</div>
+      <div class="card-byline">${artwork.artist}, ${artwork.date}</div>
+    </div>`;
 
-  // Drag events
   card.addEventListener('dragstart', e => {
     drag.artworkId = artwork.id;
     drag.fromPos   = card.closest('.cell')?.dataset.pos ?? null;
@@ -118,10 +120,7 @@ function makeCard(artwork) {
   });
   card.addEventListener('dragend', () => card.classList.remove('dragging'));
 
-  // Hover overlay
-  card.addEventListener('mouseenter', () => {
-    showOverlay(artwork.imageUrl, card.getBoundingClientRect());
-  });
+  card.addEventListener('mouseenter', () => showOverlay(artwork.imageUrl, card.getBoundingClientRect()));
   card.addEventListener('mouseleave', hideOverlay);
 
   return card;
@@ -133,21 +132,15 @@ function handleDrop(targetPos) {
   const { artworkId, fromPos } = drag;
   if (!artworkId) return;
 
-  // If something already in the target (unlocked), send it back to pool
   if (placed[targetPos] && !locked.has(targetPos)) {
     returnToPool(targetPos, placed[targetPos]);
   }
-
-  // If artwork came from another cell, clear that source cell
   if (fromPos !== null && fromPos !== targetPos && !locked.has(fromPos)) {
     delete placed[fromPos];
     resetCell(fromPos);
   }
 
-  // Remove from pool if present
   document.querySelector(`#candidatePool [data-id="${artworkId}"]`)?.remove();
-
-  // Place in target
   placeInCell(artworkId, targetPos);
 }
 
@@ -157,15 +150,22 @@ function placeInCell(artworkId, pos) {
   placed[pos] = artworkId;
   const artwork = puzzle.artworks.find(a => a.id === artworkId);
   const cell    = document.getElementById(`cell-${pos}`);
-  const card    = makeCard(artwork);
   cell.innerHTML = '';
-  cell.appendChild(card);
+  cell.appendChild(makeCard(artwork));
 }
 
-// ── Check all (deferred validation) ──────────────────────────────────────────
+// ── Check (deferred, set-based validation) ────────────────────────────────────
 
 function checkAll() {
   if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
+
+  // Reveal real axis labels on first check
+  if (!axesRevealed) {
+    axesRevealed = true;
+    document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
+    document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
+    document.getElementById('resultBar').removeAttribute('hidden');
+  }
 
   const { center, horizontal, vertical } = puzzle.solution;
   const horizSet = new Set(horizontal);
@@ -199,28 +199,27 @@ function checkAll() {
         updateCheckButton();
         resolvedCount++;
         if (resolvedCount === wrongCount && locked.size === 5) {
-          setTimeout(showWin, 300);
+          showScore();
         }
       }, 600);
     }
   });
 
+  wrongTotal += wrongCount;
+
   if (wrongCount === 0 && locked.size === 5) {
-    setTimeout(showWin, 400);
+    showScore();
   }
 }
 
-// ── Locking a correct cell ────────────────────────────────────────────────────
+// ── Locking ───────────────────────────────────────────────────────────────────
 
 function lockCell(pos) {
   locked.add(pos);
   const cell = document.getElementById(`cell-${pos}`);
   cell.classList.add('correct', 'locked');
   const card = cell.querySelector('.artwork-card');
-  if (card) {
-    card.draggable = false;
-    card.style.cursor = 'default';
-  }
+  if (card) { card.draggable = false; card.style.cursor = 'default'; }
 }
 
 // ── Return to pool ────────────────────────────────────────────────────────────
@@ -240,7 +239,7 @@ function returnToPool(pos, artworkId) {
 function cellHintLines(pos) {
   const v = puzzle.verticalAxis.label;
   const h = puzzle.horizontalAxis.label;
-  if (pos === 'center')              return ['Drop here:', v, h];
+  if (pos === 'center')                  return ['Drop here:', v, h];
   if (pos === 'top' || pos === 'bottom') return ['Drop here:', v];
   return ['Drop here:', h];
 }
@@ -262,27 +261,22 @@ function updateCheckButton() {
   document.getElementById('checkBtn').disabled = !allFilled;
 }
 
-// ── Win ───────────────────────────────────────────────────────────────────────
+// ── Score ─────────────────────────────────────────────────────────────────────
 
-function showWin() {
-  const isLast = puzzleIndex === PUZZLES.length - 1;
-  document.getElementById('winBody').textContent = isLast
-    ? `You've completed all ${PUZZLES.length} puzzles.`
-    : `You found every connection in "${puzzle.title}".`;
-  document.getElementById('nextBtn').textContent = isLast
-    ? 'Play again →'
-    : 'Next puzzle →';
-  document.getElementById('winOverlay').removeAttribute('hidden');
+function showScore() {
+  const label = wrongTotal === 0 ? 'Perfect' :
+                wrongTotal === 1 ? 'Good'    :
+                wrongTotal === 2 ? 'OK'      : 'Poor';
+  const cls   = label.toLowerCase();
+  const el    = document.getElementById('scoreWord');
+  el.textContent = label;
+  el.className   = `score-word ${cls}`;
+  document.getElementById('scoreDisplay').removeAttribute('hidden');
+  document.getElementById('resultBar').removeAttribute('hidden');
+  document.getElementById('checkBtn').disabled = true;
 }
-
-// ── Controls ──────────────────────────────────────────────────────────────────
-
-document.getElementById('checkBtn').addEventListener('click', checkAll);
-
-document.getElementById('nextBtn').addEventListener('click', () => {
-  loadPuzzle((puzzleIndex + 1) % PUZZLES.length);
-});
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
+document.getElementById('checkBtn').addEventListener('click', checkAll);
 window.addEventListener('DOMContentLoaded', () => loadPuzzle(0));

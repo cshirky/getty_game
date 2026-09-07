@@ -15,8 +15,8 @@ const PUZZLES = [
   {
     id: 1,
     title: "Turner & Italian Landscapes",
-    verticalAxis:   { label: "Same Genre" },
-    horizontalAxis: { label: "Same Artist" },
+    verticalAxis:   { label: "Same Genre",  reveal: "Italian Landscapes" },
+    horizontalAxis: { label: "Same Artist", reveal: "J.M.W. Turner" },
     solution: {
       center:     "turner-rome",
       horizontal: ["turner-tromp", "turner-conway"],   // either order in left/right
