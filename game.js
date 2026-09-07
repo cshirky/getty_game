@@ -44,11 +44,6 @@ function loadPuzzle(index) {
   locked      = new Set();
   drag        = { artworkId: null, fromPos: null };
 
-  document.getElementById('verticalText').textContent   = puzzle.verticalAxis.label;
-  document.getElementById('horizontalText').textContent = puzzle.horizontalAxis.label;
-  document.getElementById('puzzleLabel').textContent    =
-    `Puzzle ${index + 1} of ${PUZZLES.length}`;
-
   POSITIONS.forEach(pos => resetCell(pos));
 
   const shuffled = [...puzzle.artworks].sort(() => Math.random() - 0.5);
