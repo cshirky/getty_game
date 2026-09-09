@@ -23,7 +23,7 @@ function showOverlay(imageUrl, triggerRect) {
 function hideOverlay() { overlay.classList.remove('visible'); }
 
 function positionOverlay(rect) {
-  const OW = 420, OH = 520, PAD = 14;
+  const OW = 500, OH = 620, PAD = 14;
   let x = rect.right + PAD;
   let y = rect.top;
   if (x + OW > window.innerWidth  - PAD) x = rect.left - OW - PAD;
@@ -73,6 +73,7 @@ function loadPuzzle(index) {
 
   document.getElementById('resultBar').setAttribute('hidden', '');
   document.getElementById('scoreDisplay').setAttribute('hidden', '');
+  document.getElementById('revealListGrid').innerHTML = '';
   updateCheckButton();
 }
 
@@ -104,11 +105,7 @@ function makeCard(artwork) {
 
   card.innerHTML = `
     <div class="card-img">
-      <img src="${artwork.imageUrl}" alt="" loading="lazy">
-    </div>
-    <div class="card-info">
-      <div class="card-title">${artwork.title}</div>
-      <div class="card-byline">${artwork.artist}, ${artwork.date}</div>
+      <img src="${artwork.imageUrl}" alt="${artwork.title} — ${artwork.artist}, ${artwork.date}" loading="lazy">
     </div>`;
 
   card.addEventListener('dragstart', e => {
@@ -159,11 +156,18 @@ function placeInCell(artworkId, pos) {
 function checkAll() {
   if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
 
-  // Reveal real axis labels on first check
+  // Reveal real axis labels + full painting list on first check
   if (!axesRevealed) {
     axesRevealed = true;
     document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
     document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
+
+    document.getElementById('revealListGrid').innerHTML = puzzle.artworks.map(a => `
+      <div class="reveal-item">
+        <span class="reveal-title">${a.title}</span>
+        <span class="reveal-byline">${a.artist}, ${a.date}</span>
+      </div>`).join('');
+
     document.getElementById('resultBar').removeAttribute('hidden');
   }
 

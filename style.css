@@ -2,9 +2,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:      #f7f4ef;
+  --bg:         #141414;
   --ink:        #1c1c1c;
   --ink-light:  #5a5a5a;
+  --muted:      #9c968c;
   --rule:       #d4cfc8;
   --card-bg:    #111;
 
@@ -12,12 +13,15 @@
   --blue-tint:  #edf2fb;
   --amber:      #b86c0e;
   --amber-tint: #fdf3e7;
-  --center-grad: linear-gradient(135deg, var(--blue-tint) 50%, var(--amber-tint) 50%);
 
-  --green:      #2d7a3d;
-  --green-tint: #eaf4ec;
-  --red:        #b0312b;
-  --red-tint:   #fbeaea;
+  --green:      #4caf60;
+  --green-tint: #16301f;
+  --red:        #e2726b;
+  --red-tint:   #3a1616;
+
+  --cell-blue-bg:  #1e2b40;
+  --cell-amber-bg: #3a2b14;
+  --cell-center-grad: linear-gradient(135deg, var(--cell-blue-bg) 50%, var(--cell-amber-bg) 50%);
 
   --cell-w:        160px;
   --cell-h:        216px;   /* image + label area */
@@ -27,11 +31,18 @@
   --radius:        4px;
   --shadow:        0 2px 8px rgba(0,0,0,.12);
   --shadow-lg:     0 8px 32px rgba(0,0,0,.22);
+
+  /* Width of the pool rail + gap + cross grid, so top bars can match it */
+  --board-w: calc(
+    (2 * var(--pool-card-w)) + var(--gap) + 16px
+    + 32px
+    + (3 * var(--cell-w)) + (2 * var(--gap))
+  );
 }
 
 body {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  background: var(--cream);
+  background: var(--bg);
   color: var(--ink);
   min-height: 100vh;
   display: flex;
@@ -63,8 +74,8 @@ body {
 
 /* ── Main layout ──────────────────────────────────────────────────── */
 .game-main {
-  width: 100%;
-  max-width: 640px;
+  width: 85%;
+  max-width: 1400px;
   padding: 24px 20px 60px;
   display: flex;
   flex-direction: column;
@@ -75,6 +86,7 @@ body {
 /* ── Instructions ─────────────────────────────────────────────────── */
 .instructions {
   width: 100%;
+  max-width: var(--board-w);
   font-size: 15px;
   line-height: 1.65;
   color: var(--ink);
@@ -84,36 +96,45 @@ body {
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
-/* ── Pool (above grid) ────────────────────────────────────────────── */
-.pool-section { width: 100%; }
+/* ── Game board (pool rail + cross grid, side by side) ──────────────── */
+.game-board {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* ── Pool (down the side) ─────────────────────────────────────────── */
+.pool-section { flex-shrink: 0; }
 .pool-heading {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--muted);
   margin-bottom: 10px;
   text-align: center;
 }
 .candidate-pool {
   display: grid;
-  grid-template-columns: repeat(4, var(--pool-card-w));
+  grid-template-columns: repeat(2, var(--pool-card-w));
+  grid-template-rows: repeat(4, var(--pool-card-h));
   gap: var(--gap);
-  justify-content: center;
-  min-height: calc(var(--pool-card-h) + 16px);
   padding: 8px;
-  border: 1.5px dashed var(--rule);
+  border: 1.5px dashed rgba(255,255,255,.4);
   border-radius: var(--radius);
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.14);
   transition: border-color .15s, background .15s;
 }
 .candidate-pool.drag-over {
-  border-color: var(--ink);
-  background: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.22);
 }
 
 /* ── Cross grid ───────────────────────────────────────────────────── */
 .cross-grid {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, var(--cell-w));
   grid-template-rows: repeat(3, var(--cell-h));
@@ -124,9 +145,9 @@ body {
 /* ── Cells ────────────────────────────────────────────────────────── */
 .cell {
   position: relative;
-  border: 2px dashed var(--rule);
+  border: 2px dashed rgba(255,255,255,.25);
   border-radius: var(--radius);
-  background: #fff;
+  background: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,9 +156,9 @@ body {
 }
 
 /* Axis color coding */
-.cell-vertical  { border-color: #a8c0e8; background: var(--blue-tint); }
-.cell-horizontal{ border-color: #e8c898; background: var(--amber-tint); }
-.cell-center    { border-color: var(--ink); background: var(--center-grad); }
+.cell-vertical  { border-color: #5c86c4; background: var(--cell-blue-bg); }
+.cell-horizontal{ border-color: #c99a4e; background: var(--cell-amber-bg); }
+.cell-center    { border-color: #fff;    background: var(--cell-center-grad); }
 
 .drop-hint {
   display: flex;
@@ -149,7 +170,7 @@ body {
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--muted);
   line-height: 1.4;
   user-select: none;
   pointer-events: none;
@@ -158,7 +179,7 @@ body {
 
 .cell.drag-over:not(.locked) {
   border-style: solid;
-  border-color: var(--ink);
+  border-color: #fff;
   transform: scale(1.03);
 }
 .cell.correct {
@@ -224,32 +245,6 @@ body {
   pointer-events: none;
 }
 
-.card-info {
-  flex-shrink: 0;
-  background: #fff;
-  padding: 5px 7px 6px;
-  border-top: 1px solid var(--rule);
-}
-.card-title {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 11px;
-  line-height: 1.3;
-  color: var(--ink);
-  margin-bottom: 2px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.card-byline {
-  font-size: 10px;
-  color: var(--ink-light);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* ── Check bar ────────────────────────────────────────────────────── */
 .check-bar {
   width: 100%;
@@ -260,8 +255,8 @@ body {
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
-  background: var(--ink);
+  color: #3a3a3a;
+  background: #fff;
   border: none;
   border-radius: var(--radius);
   padding: 12px 36px;
@@ -269,12 +264,13 @@ body {
   letter-spacing: .04em;
   transition: background .15s, opacity .15s;
 }
-.btn-check:disabled { opacity: .35; cursor: not-allowed; }
-.btn-check:not(:disabled):hover { background: #3a3a3a; }
+.btn-check:disabled { background: #e4e4e4; color: #9a9a9a; cursor: not-allowed; }
+.btn-check:not(:disabled):hover { background: var(--amber-tint); }
 
 /* ── Result bar (axis reveal + score) ─────────────────────────────── */
 .result-bar {
   width: 100%;
+  max-width: var(--board-w);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -299,6 +295,38 @@ body {
 .horizontal-tag { background: var(--amber-tint); color: var(--amber); }
 .reveal-icon    { font-size: 17px; flex-shrink: 0; }
 
+.reveal-list-heading {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.reveal-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 24px;
+}
+.reveal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  background: rgba(255,255,255,.05);
+  border-radius: var(--radius);
+}
+.reveal-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #fff;
+}
+.reveal-byline {
+  font-size: 11px;
+  color: var(--muted);
+}
+
 .score-display {
   text-align: center;
   padding: 16px 0 4px;
@@ -314,7 +342,7 @@ body {
 }
 .score-word.perfect { color: var(--amber); }
 .score-word.good    { color: var(--green); }
-.score-word.ok      { color: var(--ink-light); }
+.score-word.ok      { color: var(--muted); }
 .score-word.poor    { color: var(--red); }
 
 /* ── Image hover overlay ──────────────────────────────────────────── */
@@ -326,15 +354,15 @@ body {
   border-radius: 3px;
   box-shadow: var(--shadow-lg);
   background: var(--card-bg);
-  max-width: 420px;
-  max-height: 520px;
+  max-width: 500px;
+  max-height: 620px;
   overflow: hidden;
 }
 .img-overlay.visible { display: block; }
 .img-overlay img {
   display: block;
-  max-width: 420px;
-  max-height: 520px;
+  max-width: 500px;
+  max-height: 620px;
   width: auto;
   height: auto;
   object-fit: contain;

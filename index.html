@@ -21,35 +21,8 @@
   <main class="game-main">
 
     <div class="instructions">
-      Here are 8 artworks at the Getty Museum. 5 of them have slots you can drag them to below.
-      The column holds three paintings of the same genre; the row holds three paintings by the same artist.
-      The center spot holds one artwork in that genre by that artist.
-      The remaining three artworks are distractions.
-      <br><br>
-      Drag the paintings to their appropriate spots, then check your work with the Check Answers button.
-    </div>
-
-    <!-- Candidate pool — above the grid -->
-    <div class="pool-section">
-      <p class="pool-heading">Drag artworks into the grid below</p>
-      <div class="candidate-pool" id="candidatePool"></div>
-    </div>
-
-    <!-- Cross grid — color-coded by axis -->
-    <div class="cross-grid" id="crossGrid">
-
-      <div class="grid-spacer"></div>
-      <div class="cell cell-vertical"   data-pos="top"    id="cell-top"></div>
-      <div class="grid-spacer"></div>
-
-      <div class="cell cell-horizontal" data-pos="left"   id="cell-left"></div>
-      <div class="cell cell-center"     data-pos="center" id="cell-center"></div>
-      <div class="cell cell-horizontal" data-pos="right"  id="cell-right"></div>
-
-      <div class="grid-spacer"></div>
-      <div class="cell cell-vertical"   data-pos="bottom" id="cell-bottom"></div>
-      <div class="grid-spacer"></div>
-
+      Here are 8 paintings at the Getty Museum. 5 of them fit in the crossword grid; drag them to their appropriate boxes.
+      The column should contain three paintings in the same genre. The row should contain three paintings by the same artist.
     </div>
 
     <!-- Check button -->
@@ -69,9 +42,41 @@
           <span id="revealHorizontal"></span>
         </div>
       </div>
+      <div class="reveal-list">
+        <p class="reveal-list-heading">All eight paintings</p>
+        <div class="reveal-list-grid" id="revealListGrid"></div>
+      </div>
+
       <div class="score-display" id="scoreDisplay" hidden>
         <span class="score-word" id="scoreWord"></span>
       </div>
+    </div>
+
+    <div class="game-board">
+
+      <!-- Candidate pool — down the side -->
+      <div class="pool-section">
+        <p class="pool-heading">Artworks</p>
+        <div class="candidate-pool" id="candidatePool"></div>
+      </div>
+
+      <!-- Cross grid — color-coded by axis -->
+      <div class="cross-grid" id="crossGrid">
+
+        <div class="grid-spacer"></div>
+        <div class="cell cell-vertical"   data-pos="top"    id="cell-top"></div>
+        <div class="grid-spacer"></div>
+
+        <div class="cell cell-horizontal" data-pos="left"   id="cell-left"></div>
+        <div class="cell cell-center"     data-pos="center" id="cell-center"></div>
+        <div class="cell cell-horizontal" data-pos="right"  id="cell-right"></div>
+
+        <div class="grid-spacer"></div>
+        <div class="cell cell-vertical"   data-pos="bottom" id="cell-bottom"></div>
+        <div class="grid-spacer"></div>
+
+      </div>
+
     </div>
 
   </main>
