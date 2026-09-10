@@ -14,13 +14,20 @@ let axesRevealed = false;
 
 const overlay    = document.getElementById('imgOverlay');
 const overlayImg = document.getElementById('overlayImg');
+let overlayArtworkId = null;
 
-function showOverlay(imageUrl, triggerRect) {
+function showOverlay(imageUrl, triggerRect, artworkId) {
   overlayImg.src = imageUrl;
   overlay.classList.add('visible');
+  overlayArtworkId = artworkId;
   positionOverlay(triggerRect);
 }
-function hideOverlay() { overlay.classList.remove('visible'); }
+function hideOverlay() { overlay.classList.remove('visible'); overlayArtworkId = null; }
+
+// Click anywhere outside a card closes the popup
+document.addEventListener('click', e => {
+  if (!e.target.closest('.artwork-card')) hideOverlay();
+});
 
 function positionOverlay(rect) {
   const OW = 500, OH = 620, PAD = 14;
@@ -42,6 +49,7 @@ function loadPuzzle(index) {
   drag         = { artworkId: null, fromPos: null };
   wrongTotal   = 0;
   axesRevealed = false;
+  document.body.classList.remove('answers-revealed');
 
   POSITIONS.forEach(pos => resetCell(pos));
 
@@ -73,7 +81,6 @@ function loadPuzzle(index) {
 
   document.getElementById('resultBar').setAttribute('hidden', '');
   document.getElementById('scoreDisplay').setAttribute('hidden', '');
-  document.getElementById('revealListGrid').innerHTML = '';
   updateCheckButton();
 }
 
@@ -106,6 +113,10 @@ function makeCard(artwork) {
   card.innerHTML = `
     <div class="card-img">
       <img src="${artwork.imageUrl}" alt="${artwork.title} — ${artwork.artist}, ${artwork.date}" loading="lazy">
+    </div>
+    <div class="card-caption">
+      <div class="card-caption-title">${artwork.title}</div>
+      <div class="card-caption-byline">${artwork.artist}, ${artwork.date}</div>
     </div>`;
 
   card.addEventListener('dragstart', e => {
@@ -114,11 +125,18 @@ function makeCard(artwork) {
     e.dataTransfer.effectAllowed = 'move';
     e.dataTransfer.setData('text/plain', artwork.id);
     requestAnimationFrame(() => card.classList.add('dragging'));
+    hideOverlay();
   });
   card.addEventListener('dragend', () => card.classList.remove('dragging'));
 
-  card.addEventListener('mouseenter', () => showOverlay(artwork.imageUrl, card.getBoundingClientRect()));
-  card.addEventListener('mouseleave', hideOverlay);
+  card.addEventListener('click', e => {
+    e.stopPropagation();
+    if (overlayArtworkId === artwork.id) {
+      hideOverlay();
+    } else {
+      showOverlay(artwork.imageUrl, card.getBoundingClientRect(), artwork.id);
+    }
+  });
 
   return card;
 }
@@ -156,18 +174,12 @@ function placeInCell(artworkId, pos) {
 function checkAll() {
   if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
 
-  // Reveal real axis labels + full painting list on first check
+  // Reveal real axis labels + on-card captions for all paintings on first check
   if (!axesRevealed) {
     axesRevealed = true;
     document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
     document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
-
-    document.getElementById('revealListGrid').innerHTML = puzzle.artworks.map(a => `
-      <div class="reveal-item">
-        <span class="reveal-title">${a.title}</span>
-        <span class="reveal-byline">${a.artist}, ${a.date}</span>
-      </div>`).join('');
-
+    document.body.classList.add('answers-revealed');
     document.getElementById('resultBar').removeAttribute('hidden');
   }
 
