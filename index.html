@@ -20,10 +20,8 @@
 
   <main class="game-main">
 
-    <div class="instructions">
-      Here are 8 paintings at the Getty Museum. 5 of them fit in the crossword grid; drag them to their appropriate boxes.
-      The column should contain three paintings in the same genre. The row should contain three paintings by the same artist.
-    </div>
+    <p class="puzzle-title" id="puzzleTitle"></p>
+    <div class="instructions" id="instructions"></div>
 
     <!-- Check button -->
     <div class="check-bar">
@@ -32,7 +30,7 @@
 
     <!-- Result area: axis reveal (after first check) + score (after win) -->
     <div class="result-bar" id="resultBar" hidden>
-      <div class="axis-reveals">
+      <div class="axis-reveals" id="crossAxisReveals" hidden>
         <div class="axis-reveal-tag vertical-tag">
           <span class="reveal-icon">↕</span>
           <span id="revealVertical"></span>
@@ -42,8 +40,12 @@
           <span id="revealHorizontal"></span>
         </div>
       </div>
+      <div class="axis-reveals" id="ringAxisReveals" hidden></div>
       <div class="score-display" id="scoreDisplay" hidden>
         <span class="score-word" id="scoreWord"></span>
+        <div class="next-puzzle-bar">
+          <button class="btn-next" id="nextBtn" hidden>Next puzzle →</button>
+        </div>
       </div>
     </div>
 
@@ -59,16 +61,33 @@
       <div class="cross-grid" id="crossGrid">
 
         <div class="grid-spacer"></div>
-        <div class="cell cell-vertical"   data-pos="top"    id="cell-top"></div>
+        <div class="cell cell-vertical"   data-pos="top"    id="cell-cross-top"></div>
         <div class="grid-spacer"></div>
 
-        <div class="cell cell-horizontal" data-pos="left"   id="cell-left"></div>
-        <div class="cell cell-center"     data-pos="center" id="cell-center"></div>
-        <div class="cell cell-horizontal" data-pos="right"  id="cell-right"></div>
+        <div class="cell cell-horizontal" data-pos="left"   id="cell-cross-left"></div>
+        <div class="cell cell-center"     data-pos="center" id="cell-cross-center"></div>
+        <div class="cell cell-horizontal" data-pos="right"  id="cell-cross-right"></div>
 
         <div class="grid-spacer"></div>
-        <div class="cell cell-vertical"   data-pos="bottom" id="cell-bottom"></div>
+        <div class="cell cell-vertical"   data-pos="bottom" id="cell-cross-bottom"></div>
         <div class="grid-spacer"></div>
+
+      </div>
+
+      <!-- Ring grid — 3x3, empty center, color-coded by axis, corners blend two axes -->
+      <div class="ring-grid" id="ringGrid" hidden>
+
+        <div class="cell cell-corner-tl cell-motif"       data-pos="topLeft"     id="cell-ring-topLeft"></div>
+        <div class="cell cell-motif"                      data-pos="top"         id="cell-ring-top"></div>
+        <div class="cell cell-corner-tr cell-motif"       data-pos="topRight"    id="cell-ring-topRight"></div>
+
+        <div class="cell cell-nationality"                data-pos="left"       id="cell-ring-left"></div>
+        <div class="cell cell-center-empty"><span class="center-mark">GETTY</span></div>
+        <div class="cell cell-item"                       data-pos="right"      id="cell-ring-right"></div>
+
+        <div class="cell cell-corner-bl cell-nationality" data-pos="bottomLeft" id="cell-ring-bottomLeft"></div>
+        <div class="cell cell-decade"                     data-pos="bottom"     id="cell-ring-bottom"></div>
+        <div class="cell cell-corner-br cell-decade"      data-pos="bottomRight" id="cell-ring-bottomRight"></div>
 
       </div>
 

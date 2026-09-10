@@ -1,7 +1,10 @@
 // game.js
 
-const POSITIONS = ['top', 'left', 'center', 'right', 'bottom'];
+const CROSS_POSITIONS = ['top', 'left', 'center', 'right', 'bottom'];
+const RING_POSITIONS  = ['topLeft', 'top', 'topRight', 'left', 'right', 'bottomLeft', 'bottom', 'bottomRight'];
+const RING_AXIS_ICONS = { top: '▲', right: '►', bottom: '▼', left: '◄' };
 
+let POSITIONS    = CROSS_POSITIONS;
 let puzzle       = null;
 let placed       = {};
 let locked       = new Set();
@@ -44,12 +47,22 @@ function positionOverlay(rect) {
 function loadPuzzle(index) {
   puzzleIndex  = index;
   puzzle       = PUZZLES[index];
+  POSITIONS    = puzzle.type === 'ring' ? RING_POSITIONS : CROSS_POSITIONS;
   placed       = {};
   locked       = new Set();
   drag         = { artworkId: null, fromPos: null };
   wrongTotal   = 0;
   axesRevealed = false;
   document.body.classList.remove('answers-revealed');
+
+  document.getElementById('puzzleTitle').textContent  = puzzle.title;
+  document.getElementById('instructions').textContent = puzzle.instructions;
+
+  document.getElementById('crossGrid').toggleAttribute('hidden', puzzle.type === 'ring');
+  document.getElementById('ringGrid').toggleAttribute('hidden', puzzle.type !== 'ring');
+  document.getElementById('crossAxisReveals').setAttribute('hidden', '');
+  document.getElementById('ringAxisReveals').setAttribute('hidden', '');
+  document.getElementById('nextBtn').setAttribute('hidden', '');
 
   POSITIONS.forEach(pos => resetCell(pos));
 
@@ -60,7 +73,7 @@ function loadPuzzle(index) {
 
   // Re-wire cells (clone to clear stale listeners)
   POSITIONS.forEach(pos => {
-    const old   = document.getElementById(`cell-${pos}`);
+    const old   = document.getElementById(cellId(pos));
     const fresh = old.cloneNode(true);
     old.parentNode.replaceChild(fresh, old);
     wireCell(fresh, pos);
@@ -85,6 +98,10 @@ function loadPuzzle(index) {
 }
 
 // ── Cell wiring ───────────────────────────────────────────────────────────────
+
+function cellId(pos) {
+  return `cell-${puzzle.type === 'ring' ? 'ring' : 'cross'}-${pos}`;
+}
 
 function wireCell(cell, pos) {
   cell.addEventListener('dragover', e => {
@@ -164,37 +181,19 @@ function handleDrop(targetPos) {
 function placeInCell(artworkId, pos) {
   placed[pos] = artworkId;
   const artwork = puzzle.artworks.find(a => a.id === artworkId);
-  const cell    = document.getElementById(`cell-${pos}`);
+  const cell    = document.getElementById(cellId(pos));
   cell.innerHTML = '';
   cell.appendChild(makeCard(artwork));
 }
 
-// ── Check (deferred, set-based validation) ────────────────────────────────────
+// ── Check ─────────────────────────────────────────────────────────────────────
 
 function checkAll() {
-  if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
+  return puzzle.type === 'ring' ? checkAllRing() : checkAllCross();
+}
 
-  // Reveal real axis labels + on-card captions for all paintings on first check
-  if (!axesRevealed) {
-    axesRevealed = true;
-    document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
-    document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
-    document.body.classList.add('answers-revealed');
-    document.getElementById('resultBar').removeAttribute('hidden');
-  }
-
-  const { center, horizontal, vertical } = puzzle.solution;
-  const horizSet = new Set(horizontal);
-  const vertSet  = new Set(vertical);
-
-  const isCorrect = {
-    center: placed.center === center,
-    left:   horizSet.has(placed.left),
-    right:  horizSet.has(placed.right),
-    top:    vertSet.has(placed.top),
-    bottom: vertSet.has(placed.bottom),
-  };
-
+// Shared "grade the current placements" loop — takes an isCorrect map of pos -> bool
+function gradePlacements(isCorrect) {
   let wrongCount    = 0;
   let resolvedCount = 0;
 
@@ -206,7 +205,7 @@ function checkAll() {
     } else {
       wrongCount++;
       const artworkId = placed[pos];
-      const cell      = document.getElementById(`cell-${pos}`);
+      const cell      = document.getElementById(cellId(pos));
       cell.classList.add('wrong');
 
       setTimeout(() => {
@@ -214,7 +213,7 @@ function checkAll() {
         returnToPool(pos, artworkId);
         updateCheckButton();
         resolvedCount++;
-        if (resolvedCount === wrongCount && locked.size === 5) {
+        if (resolvedCount === wrongCount && locked.size === POSITIONS.length) {
           showScore();
         }
       }, 600);
@@ -223,16 +222,70 @@ function checkAll() {
 
   wrongTotal += wrongCount;
 
-  if (wrongCount === 0 && locked.size === 5) {
+  if (wrongCount === 0 && locked.size === POSITIONS.length) {
     showScore();
   }
+}
+
+// Cross puzzles: solution.horizontal/vertical are sets — either artwork may go in either arm slot.
+function checkAllCross() {
+  if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
+
+  if (!axesRevealed) {
+    axesRevealed = true;
+    document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
+    document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
+    document.body.classList.add('answers-revealed');
+    document.getElementById('crossAxisReveals').removeAttribute('hidden');
+    document.getElementById('resultBar').removeAttribute('hidden');
+  }
+
+  const { center, horizontal, vertical } = puzzle.solution;
+  const horizSet = new Set(horizontal);
+  const vertSet  = new Set(vertical);
+
+  gradePlacements({
+    center: placed.center === center,
+    left:   horizSet.has(placed.left),
+    right:  horizSet.has(placed.right),
+    top:    vertSet.has(placed.top),
+    bottom: vertSet.has(placed.bottom),
+  });
+}
+
+// Ring puzzles: every position (corner or edge) has one exact correct artwork —
+// corners are unique because they satisfy two axes at once.
+function checkAllRing() {
+  if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
+
+  if (!axesRevealed) {
+    axesRevealed = true;
+    renderRingReveals();
+    document.body.classList.add('answers-revealed');
+    document.getElementById('ringAxisReveals').removeAttribute('hidden');
+    document.getElementById('resultBar').removeAttribute('hidden');
+  }
+
+  const isCorrect = {};
+  POSITIONS.forEach(pos => { isCorrect[pos] = placed[pos] === puzzle.solution[pos]; });
+  gradePlacements(isCorrect);
+}
+
+function renderRingReveals() {
+  const order     = ['top', 'right', 'bottom', 'left'];
+  const container = document.getElementById('ringAxisReveals');
+  container.innerHTML = order.map(key => `
+    <div class="axis-reveal-tag ${key}-tag">
+      <span class="reveal-icon">${RING_AXIS_ICONS[key]}</span>
+      <span>${puzzle.axes[key].reveal}</span>
+    </div>`).join('');
 }
 
 // ── Locking ───────────────────────────────────────────────────────────────────
 
 function lockCell(pos) {
   locked.add(pos);
-  const cell = document.getElementById(`cell-${pos}`);
+  const cell = document.getElementById(cellId(pos));
   cell.classList.add('correct', 'locked');
   const card = cell.querySelector('.artwork-card');
   if (card) { card.draggable = false; card.style.cursor = 'default'; }
@@ -253,6 +306,10 @@ function returnToPool(pos, artworkId) {
 // ── Cell reset ────────────────────────────────────────────────────────────────
 
 function cellHintLines(pos) {
+  return puzzle.type === 'ring' ? cellHintLinesRing(pos) : cellHintLinesCross(pos);
+}
+
+function cellHintLinesCross(pos) {
   const v = puzzle.verticalAxis.label;
   const h = puzzle.horizontalAxis.label;
   if (pos === 'center')                  return ['Drop here:', v, h];
@@ -260,8 +317,13 @@ function cellHintLines(pos) {
   return ['Drop here:', h];
 }
 
+function cellHintLinesRing(pos) {
+  const labels = puzzle.cellAxes[pos].map(key => puzzle.axes[key].label);
+  return ['Drop here:', ...labels];
+}
+
 function resetCell(pos) {
-  const cell = document.getElementById(`cell-${pos}`);
+  const cell = document.getElementById(cellId(pos));
   if (!cell) return;
   cell.classList.remove('correct', 'wrong', 'locked', 'drag-over');
   const lines = cellHintLines(pos)
@@ -280,9 +342,11 @@ function updateCheckButton() {
 // ── Score ─────────────────────────────────────────────────────────────────────
 
 function showScore() {
-  const label = wrongTotal === 0 ? 'Perfect' :
-                wrongTotal === 1 ? 'Good'    :
-                wrongTotal === 2 ? 'OK'      : 'Poor';
+  const goodMax = Math.max(1, Math.round(POSITIONS.length * 0.2));
+  const okMax   = Math.max(2, Math.round(POSITIONS.length * 0.4));
+  const label = wrongTotal === 0       ? 'Perfect' :
+                wrongTotal <= goodMax  ? 'Good'    :
+                wrongTotal <= okMax    ? 'OK'      : 'Poor';
   const cls   = label.toLowerCase();
   const el    = document.getElementById('scoreWord');
   el.textContent = label;
@@ -290,9 +354,14 @@ function showScore() {
   document.getElementById('scoreDisplay').removeAttribute('hidden');
   document.getElementById('resultBar').removeAttribute('hidden');
   document.getElementById('checkBtn').disabled = true;
+
+  if (puzzleIndex + 1 < PUZZLES.length) {
+    document.getElementById('nextBtn').removeAttribute('hidden');
+  }
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 document.getElementById('checkBtn').addEventListener('click', checkAll);
+document.getElementById('nextBtn').addEventListener('click', () => loadPuzzle(puzzleIndex + 1));
 window.addEventListener('DOMContentLoaded', () => loadPuzzle(0));
