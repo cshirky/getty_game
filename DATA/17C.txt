@@ -1,0 +1,719 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abbé Amable de Bourzeis 	2	17C
+Abbé Jacques de Cassagne 	1	17C
+Abraham Bloemaert 	3	17C
+Abraham Genoels 	1	17C
+Abraham Rutgers 	2	17C
+Abraham Storck 	1	17C
+Adam Elsheimer 	1	17C
+Adam Weisweiler 	2	17C
+Adriaen de Vries 	2	17C
+Adriaen Hendriksz. Verboom 	2	17C
+Adriaen van de Velde 	3	17C
+Adriaen van de Venne 	3	17C
+Adriaen van Ostade 	3	17C
+Adriaen van Utrecht 	1	17C
+Adriaen-Frans Boudewyns (called Baudoin) 	1	17C
+Aelbert Cuyp 	4	17C
+Aert de Gelder 	2	17C
+Aert van der Neer 	1	17C
+Aghap'ir 	26	17C
+Albert Eckhout 	1	17C
+Albert Jansz. Vinckenbrinck 	1	17C
+Alessandro Algardi 	3	17C
+Alexandre-François Desportes 	1	17C
+Allart van Everdingen 	1	17C
+Ambrosius Bosschaert the Elder 	1	17C
+Andrea Sacchi 	1	17C
+André-Charles Boulle 	11	17C
+Anthonie De Lorme 	1	17C
+Anthonie Waterloo 	2	17C
+Anthony van Dyck 	7	17C
+Antoine Coypel 	2	17C
+Antoine Gaudron 	1	17C
+Antonio Castillo y Saavedra 	2	17C
+Antonio Susini 	2	17C
+Artemisia Gentileschi 	1	17C
+Augustus P. Ready 	1	17C
+Baciccio (Giovanni Battista Gaulli) 	1	17C
+Baghram 	1	17C
+Balthasar Griessmann 	1	17C
+Bartholomeus Breenbergh 	3	17C
+Bartholomeus van der Helst 	1	17C
+Bartolomeo Biscaino 	1	17C
+Bartolomeo Cavarozzi 	1	17C
+Bartolomeo Manfredi 	1	17C
+Bartolomé Esteban Murillo 	5	17C
+Beaudrin Yvart 	1	17C
+Beauvais Manufactory 	12	17C
+Benvenuto Cellini 	1	17C
+Bernardino Mei 	1	17C
+Bernardino Poccetti (Barbatelli) 	2	17C
+Bernardo Cavallino 	1	17C
+Bernardo Strozzi 	2	17C
+Burchardt Precht 	1	17C
+Carl Borromäus Andreas Ruthart 	1	17C
+Carlo Dolci 	2	17C
+Carlo Maratti 	1	17C
+Carlo Saraceni 	1	17C
+Caspar Gras 	1	17C
+Caspar van den Bos 	1	17C
+Cesar van Everdingen 	1	17C
+Cesare Targone 	1	17C
+Chantilly Porcelain Manufactory 	1	17C
+Charles de La Fosse 	2	17C
+Charles Errard 	1	17C
+Charles Le Brun 	6	17C
+Charles Mellin 	1	17C
+Charles Perrault 	1	17C
+Christoffel van den Berghe 	1	17C
+Christoph Daniel Schenck 	2	17C
+Claes Cornelisz. Moeyaert 	1	17C
+Claes van Beresteyn 	1	17C
+Claude Galle 	1	17C
+Claude Gillot 	1	17C
+Claude Lorrain (Claude Gellée) 	5	17C
+Claude Mellan 	1	17C
+Claude Simpol 	1	17C
+Constantin Huygens 	1	17C
+Cornelis Bega 	1	17C
+Cornelis Dusart 	3	17C
+Cornelis Jansen van Ceulen (Cornelius Jonson) 	1	17C
+Cornelis Saftleven 	2	17C
+Cornelis van Poelenburgh 	2	17C
+Cornelis Vroom 	1	17C
+Daniel Marot 	3	17C
+David Bailly 	1	17C
+David Vinckboons 	1	17C
+Denis Bardin 	1	17C
+Denys van Alsloot 	1	17C
+Dirk (Theodorus) Helmbreker 	1	17C
+Domenichino (Domenico Zampieri) 	2	17C
+Domenico Cucci 	1	17C
+Domenico Fetti 	2	17C
+Domenico Maria Canuti 	1	17C
+Domenico Tintoretto (Domenico Robusti) 	1	17C
+El Greco (Domenico Theotokopoulos) 	1	17C
+Ep'rem 	1	17C
+Esaias van de Velde 	2	17C
+Etienne-Jean Forestier 	1	17C
+Eugenio Cajés (Caxés) 	1	17C
+Eustache Le Sueur 	3	17C
+Federico Barocci 	1	17C
+Federico Zuccaro 	1	17C
+Ferdinand Bol 	3	17C
+Ferdinando Tacca 	2	17C
+Filippo Baldinucci 	1	17C
+Francesco Bertos 	2	17C
+Francesco Fanelli 	1	17C
+Francesco Maffei 	2	17C
+Francesco Mochi 	1	17C
+Francis van Bossuit 	1	17C
+Francisco de Herrera the Younger (El Mozo) 	1	17C
+Francisco Ribalta 	1	17C
+Francisco Rizi 	1	17C
+Frans Francken the Younger 	2	17C
+Frans Hals 	1	17C
+Frans Post 	1	17C
+Frans Snijders 	2	17C
+Frans van Mieris the Elder 	2	17C
+François Bonnemer 	2	17C
+François Girardon 	1	17C
+Friedrich Winter 	1	17C
+Galleria de'Lavori in pietre dure 	1	17C
+Gaspard Marsy 	1	17C
+Georg Leupold 	1	17C
+Georg Strauch 	6	17C
+Georges de La Tour 	1	17C
+Georges Lallemant 	1	17C
+Gerard Hoet 	2	17C
+Gerard ter Borch 	4	17C
+Gerard van Opstal 	5	17C
+Gerardus van Veen 	1	17C
+Gerbrand van den Eeckhout 	2	17C
+Gerrit Battem 	1	17C
+Gerrit Dou 	1	17C
+Gerrit Pietersz. 	1	17C
+Gerrit van Honthorst 	3	17C
+Giambologna (Giovanni da Bologna or Jean de Boulogne) 	2	17C
+Gian Lorenzo Bernini 	5	17C
+Gilles-François Martin 	1	17C
+Gillis van Coninxloo 	1	17C
+Giovanna Garzoni 	1	17C
+Giovanni Battista Calandra 	1	17C
+Giovanni Battista Foggini 	1	17C
+Giovanni Benedetto Castiglione 	4	17C
+Giovanni Biliverti 	1	17C
+Giovanni Campagna 	1	17C
+Giovanni Francesco Grimaldi 	1	17C
+Giovanni Francesco Susini 	3	17C
+Giovanni Lanfranco 	3	17C
+Girolamo Campagna 	1	17C
+Giulio Cesare Procaccini 	3	17C
+Giuseppe Piamontini 	1	17C
+Godfried Schalcken 	1	17C
+Govaert Flinck 	2	17C
+Grégoire Huret 	1	17C
+Guercino (Giovanni Francesco Barbieri) 	7	17C
+Guido Cagnacci 	1	17C
+Guido Reni 	3	17C
+Guillam Dubois 	1	17C
+Guillaume Benneman 	1	17C
+Guillaume Courtois 	1	17C
+Guy-Louis Vernansal 	11	17C
+Hayrapet 	1	17C
+Hendrick Avercamp 	2	17C
+Hendrick Dubbels 	1	17C
+Hendrick Goltzius 	2	17C
+Hendrick ter Brugghen 	1	17C
+Hendrick van Steenwijck the Younger 	1	17C
+Hendrik van Balen 	1	17C
+Herman Nauwincx 	1	17C
+Herman Saftleven the Younger 	4	17C
+Herman van Swanevelt 	2	17C
+Hermann Schwinger 	1	17C
+Hermann Weyer 	2	17C
+Ignaz Preissler 	1	17C
+Isaac Major 	1	17C
+Isack van Ostade 	1	17C
+Jacob Adriaensz. Backer 	2	17C
+Jacob Duck 	1	17C
+Jacob Jordaens 	4	17C
+Jacob Marrel 	1	17C
+Jacob Matham 	1	17C
+Jacob Pynas 	1	17C
+Jacob van Hulsdonck 	1	17C
+Jacob van Ruisdael 	5	17C
+Jacobus Vrel 	1	17C
+Jacopo Ligozzi 	4	17C
+Jacques Bailly 	14	17C
+Jacques Callot 	3	17C
+Jacques de Gheyn II 	2	17C
+Jacques de Gheyn III 	1	17C
+Jan Asselijn 	1	17C
+Jan Boeckhorst 	2	17C
+Jan Brueghel the Elder 	2	17C
+Jan Brueghel the Younger 	2	17C
+Jan Cossiers 	1	17C
+Jan Davidsz. de Heem 	1	17C
+Jan de Bisschop 	5	17C
+Jan de Bray 	1	17C
+Jan de Visscher 	1	17C
+Jan Lievens 	2	17C
+Jan Mytens 	1	17C
+Jan Steen 	3	17C
+Jan van de Cappelle 	1	17C
+Jan van de Velde 	2	17C
+Jan van Goyen 	3	17C
+Jan van Kessel I 	1	17C
+Jan Victors 	1	17C
+Jean de la Croix 	2	17C
+Jean de La Fraye 	1	17C
+Jean Leroy 	1	17C
+Jean Raon 	1	17C
+Jean Varin 	1	17C
+Jean-Baptiste Belin de Fontenay 	8	17C
+Jean-Baptiste Corneille 	1	17C
+Jean-Baptiste Martin (called Martin des Batailles) 	1	17C
+Jean-Baptiste Monnoyer 	12	17C
+Joachim Anthonisz. Wtewael 	2	17C
+Joachim von Sandrart 	1	17C
+Johann Carl Loth 	1	17C
+Johann Ludwig Biller the Elder 	1	17C
+Johann Paul Schor (called Giovanni Paolo Tedesco) 	1	17C
+Johannes Lingelbach 	1	17C
+Joseph Yvart 	1	17C
+Josias Murer II 	1	17C
+Josse van Craesbeeck 	1	17C
+Josua de Grave 	1	17C
+José Ximénez Donoso 	1	17C
+Juan Carreño de Miranda 	2	17C
+Juan de Valdés Leal 	1	17C
+Juan del Castillo 	2	17C
+Juan Martín Cabezalero 	1	17C
+Jusepe de Ribera 	3	17C
+Karel Skréta 	1	17C
+Lambert Doomer 	2	17C
+Lambert-Sigisbert Adam 	1	17C
+Laurent de La Hyre 	3	17C
+Lorenzo Ottoni 	1	17C
+Luca Forte 	1	17C
+Luca Giordano 	1	17C
+Lucas Achtschellinck 	1	17C
+Lucas van Uden 	1	17C
+Ludolf Backhuyzen 	1	17C
+Ludolf de Jongh 	1	17C
+Ludovico Carracci 	1	17C
+Luigi Garzi 	1	17C
+Luisa Roldán (called "La Roldana") 	1	17C
+Malnazar 	26	17C
+Marcus Heiden 	1	17C
+Maria Sibylla Merian 	1	17C
+Martín de Murúa 	1	17C
+Massimiliano Soldani-Benzi 	2	17C
+Mattia Preti 	2	17C
+Meindert Hobbema 	2	17C
+Mesrop of Khizan 	23	17C
+Michael Sweerts 	2	17C
+Michel Anguier 	1	17C
+Michel Corneille the Elder 	1	17C
+Michel Corneille the Younger 	1	17C
+Michele Rocca 	1	17C
+Morazzone (Pier Francesco Mazzuchelli) 	1	17C
+Moses ter Borch 	1	17C
+Nevers Manufactory 	1	17C
+Nicolaes Berchem 	4	17C
+Nicolaes Eliasz. Pickenoy 	2	17C
+Nicolaes Maes 	1	17C
+Nicolas de Plattemontagne 	1	17C
+Nicolas Jarry 	2	17C
+Nicolas Mignard (Mignard d'Avignon) 	1	17C
+Nicolas Poussin 	10	17C
+Nicolas Verkolye 	1	17C
+Nikolaus Knüpfer 	2	17C
+Orazio Gentileschi 	2	17C
+P. L. R. 	1	17C
+Palma il Giovane 	1	17C
+Paul Heermann 	1	17C
+Paul Juvenel the Elder 	1	17C
+Paulus Pontius 	1	17C
+Paulus Potter 	1	17C
+Pedro Atanasio Bocanegra 	1	17C
+Pedro Mena y Medrano 	1	17C
+Peter Lely 	1	17C
+Peter Paul Rubens 	21	17C
+Philippe Béhagle 	7	17C
+Philippe de Champaigne 	3	17C
+Philippe Lourdet 	1	17C
+Philips Koninck 	2	17C
+Phillip Roos 	1	17C
+Phillips Garden 	1	17C
+Pier Francesco Mola 	2	17C
+Pierre Gole 	1	17C
+Pierre Gouthière 	1	17C
+Pierre Puget 	1	17C
+Pierre-Philippe Thomire 	1	17C
+Pieter Claesz. 	1	17C
+Pieter de Hooch 	1	17C
+Pieter Holsteyn II 	1	17C
+Pieter Jansz. Saenredam 	2	17C
+Pieter Lastman 	2	17C
+Pieter Molijn 	2	17C
+Pieter Moninckx 	1	17C
+Pieter van Lint 	1	17C
+Pieter Withoos 	1	17C
+Pietro Bernini 	1	17C
+Pietro da Cortona 	3	17C
+Pietro Novelli 	2	17C
+Pietro Paolini 	1	17C
+Pietro Tacca 	1	17C
+Pietro Testa 	1	17C
+Quiringh Gerritsz. van Brekelenkam 	1	17C
+Ralph Leake 	1	17C
+Rembrandt Harmensz. van Rijn 	17	17C
+René-Antoine Houasse 	1	17C
+Reyer Jacobsz van Blommendael 	1	17C
+Robert Nanteuil 	1	17C
+Rochus van Veen 	1	17C
+Roelandt Savery 	4	17C
+Roelant Roghman 	1	17C
+Rombout Verhulst 	1	17C
+Royal Factory of Furniture to the Crown at the Gobelins Manufactory 	4	17C
+Saint-Cloud Porcelain Manufactory 	1	17C
+Salomon de Bray 	2	17C
+Salvator Rosa 	2	17C
+Samuel van Hoogstraten 	1	17C
+Sassoferrato (Giovanni Battista Salvi) 	1	17C
+Savonnerie Manufactory 	1	17C
+Sebastiano Ricci 	1	17C
+Select Artists:
+Showing 358 artists
+Simon de Vlieger 	1	17C
+Simon Hurtrelle 	1	17C
+Simon Lourdet 	1	17C
+Simon Vouet 	3	17C
+Sinibaldo Scorza 	1	17C
+Stefano della Bella 	1	17C
+Sébastien Bourdon 	1	17C
+Tadda (Romolo di Francesco Ferrucci) 	1	17C
+Tanzio da Varallo 	1	17C
+Thomas Adriaensz. Wyck 	1	17C
+Thomas Hendricksz. de Keyser 	1	17C
+Tobias Verhaecht 	1	17C
+Tomás de Los Arcos 	1	17C
+Toussaint Dubreuil 	1	17C
+Unknown artist/maker 	360	17C
+Valentin de Boulogne 	1	17C
+Valerio Castello 	1	17C
+Various makers 	1	17C
+Vicente Carducho 	1	17C
+Volterrano (Baldassare Franceschini) 	3	17C
+Wilhelm Fistulator 	1	17C
+Wilhelm Schubert van Ehrenberg 	1	17C
+Willem Isaacsz van Swanenburg 	1	17C
+Willem Jacobsz van Heemskerk 	1	17C
+Willem Kalf 	1	17C
+Willem Pietersz. Buytewech 	1	17C
+Willem Schellinks 	3	17C
+Willem van Aelst 	1	17C
+Willem van de Velde the Elder 	1	17C
+Willem van de Velde the Younger 	1	17C
+Wolfgang Howzer 	1	17C

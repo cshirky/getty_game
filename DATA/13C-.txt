@@ -1,0 +1,831 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Cenni di Pepi) Cimabue 	1	13C-
+Aberdeen Painter 	1	13C-
+Achilles Painter 	5	13C-
+Adolphseck Painter 	1	13C-
+Aegisthus Painter 	1	13C-
+Affecter 	3	13C-
+Affecter's Potter 	1	13C-
+Agrigento Painter 	5	13C-
+Aison 	1	13C-
+Akestorides Painter 	2	13C-
+Alabastra Group 	1	13C-
+Albertinum Group 	1	13C-
+Alessandro Castellani 	1	13C-
+Altamura Painter 	1	13C-
+Altenberg Class 	1	13C-
+Amasis 	3	13C-
+Amasis Painter 	1	13C-
+Ambrosios Painter 	3	13C-
+Amykos Painter 	2	13C-
+Andokides Painter 	1	13C-
+Antimenes Painter 	1	13C-
+Antiphon Painter 	2	13C-
+Apelles 	1	13C-
+Apollodoros 	4	13C-
+Argos Painter 	17	13C-
+Aristodamos of Argos 	1	13C-
+Arndt Group 	1	13C-
+Arnò Painter 	1	13C-
+Artists Loaded
+Asteas 	3	13C-
+Athena Painter 	1	13C-
+Augustus P. Ready 	1	13C-
+Baltimore Painter 	2	13C-
+Baltimore Painter, Lavello Group 	1	13C-
+Bareiss Painter, Medea Group 	1	13C-
+Bearded Sphinx Painter 	1	13C-
+Beaune Painter 	1	13C-
+Berengaudus 	1	13C-
+Berkeley Painter 	1	13C-
+Berlin Painter 	136	13C-
+Bern Group 	1	13C-
+Binningen Painter 	1	13C-
+Black Fury Group 	7	13C-
+BMN Painter 	2	13C-
+Bolognese Illuminator of the First Style 	2	13C-
+Bonn Painter 	1	13C-
+Boot Painter 	1	13C-
+Boreads Painter 	3	13C-
+Boreas-Florence Group 	1	13C-
+Boston Ready Painter 	1	13C-
+Bowdoin Painter 	2	13C-
+Boëthos of Kalchedon 	1	13C-
+Branicki Painter 	1	13C-
+Briseis Painter 	4	13C-
+Brooklyn Painter 	1	13C-
+Brygos 	1	13C-
+Brygos Painter 	68	13C-
+Bulas Group 	1	13C-
+Bute Master 	185	13C-
+CA Painter, Orvieto Sub-Group 	1	13C-
+Cabinet des Médailles 218 	1	13C-
+Caeretan Branch of the Genucilia Group 	2	13C-
+Caivano Painter 	1	13C-
+Camel Painter 	1	13C-
+Carlsruhe Painter 	1	13C-
+Carpenter Painter 	1	13C-
+Castellani Painter 	1	13C-
+Centaur Painter 	2	13C-
+Chigi Group 	1	13C-
+Chimaera Painter 	1	13C-
+Chiusi Painter 	1	13C-
+Christie Painter 	1	13C-
+Class B bis: Class of Louvre H 62 	1	13C-
+Class of Athens 581 	1	13C-
+Class of Band-skyphoi 	1	13C-
+Class of Cabinet des Médailles 390 	1	13C-
+Class of Louvre F348 	1	13C-
+Class of Neck Amphorae with Shoulder Pictures 	1	13C-
+Class of Top-band Stemless Cups 	2	13C-
+Class of Vatican G.47 	1	13C-
+Class Q: Vienna Class 	1	13C-
+Clusium Group 	2	13C-
+Colmar Painter 	1	13C-
+Como Group Ic 	1	13C-
+Cotugno Painter 	1	13C-
+Creation Date
+Creusa Painter 	2	13C-
+Cultures
+Darius Painter 	11	13C-
+De Bellis Painter 	1	13C-
+Del Chiaro Painter 	3	13C-
+Dinos Painter 	3	13C-
+Dioskourides 	1	13C-
+Dokimasia Painter 	8	13C-
+Dolon Painter 	1	13C-
+Dolphin Painter 	1	13C-
+Dot-Ivy Group 	2	13C-
+Douris 	44	13C-
+Eadmer of Canterbury 	1	13C-
+Eagle Painter 	1	13C-
+Elbows Out 	3	13C-
+Elijah ben Jehiel 	46	13C-
+Elijah ben Meshallum 	50	13C-
+Ennion 	1	13C-
+Epeleios Painter 	18	13C-
+Epiktetos 	9	13C-
+Epimenes 	3	13C-
+Epitimos 	1	13C-
+Epitimos Painter 	1	13C-
+Eretria Painter 	2	13C-
+Euaichme Painter 	19	13C-
+Euaion Painter 	6	13C-
+Eucharides Painter 	14	13C-
+Euergides Painter 	4	13C-
+Euphiletos Painter 	14	13C-
+Euphronios 	64	13C-
+Euthymides 	11	13C-
+Exekias 	2	13C-
+Fallow Deer Painter, Tyrrhenian Group 	1	13C-
+Felton Group 	1	13C-
+Fighting Rams Group 	1	13C-
+Floating Handles 	2	13C-
+Florence 3797 	1	13C-
+Florence Painter 	1	13C-
+Flying - Angel Painter 	2	13C-
+Fortnum Group 	1	13C-
+Foundry Painter 	6	13C-
+Full Sakkos Group 	1	13C-
+Full Sakkos Painter 	1	13C-
+Funnel Group 	1	13C-
+Gabinia Darillius 	1	13C-
+Gaddiani Master 	1	13C-
+Gela Painter 	2	13C-
+Geras Painter 	20	13C-
+Goateed Siren Painter 	1	13C-
+Golvol Group 	1	13C-
+Gorgon Painter 	1	13C-
+Goulandris Master 	3	13C-
+Grasshopper Group 	1	13C-
+Gratian 	1	13C-
+Group E (Workshop of Exekias) 	2	13C-
+Group of Berlin 2095 	1	13C-
+Group of Boston 10.190 	1	13C-
+Group of London B460 	1	13C-
+Group of Munich 892 	1	13C-
+Group of Naples 3231 	1	13C-
+Group of the Floral Nolans 	1	13C-
+Group of the Leaping Lions 	1	13C-
+Group of the Negro Alabastra 	1	13C-
+Group of the Scale Amphorae 	1	13C-
+Group of Undetermined Mannerists 	2	13C-
+Group of Vatican 480 	1	13C-
+Group of Vatican G61 	1	13C-
+Group of Walters 48.42 	1	13C-
+Group of Würzburg 221 	1	13C-
+Gududio 	1	13C-
+Guide-line Class 	1	13C-
+H.A. Group 	1	13C-
+Haifa Painter 	1	13C-
+Haimon Group 	1	13C-
+Harrow Painter 	2	13C-
+Heidelberg Painter 	1	13C-
+Hermaios Painter 	1	13C-
+Hermogenes 	1	13C-
+Hermogenes Painter 	1	13C-
+Heron Class 	4	13C-
+Hippocamp Painter 	1	13C-
+Hischylos 	1	13C-
+Hoppin Group 	1	13C-
+Hoppin Painter 	2	13C-
+Hoppin-Lecce Group 	2	13C-
+Hugh of Fouilloy 	2	13C-
+Hunt Painter 	2	13C-
+Iliupersis Painter 	3	13C-
+Inscription Painter 	1	13C-
+Intermediate Group 	1	13C-
+Iris Painter 	2	13C-
+Isidora Master 	1	13C-
+Ixion Painter 	1	13C-
+Jacobellus of Salerno 	10	13C-
+Joel ben Simeon 	1	13C-
+Kachrylion 	1	13C-
+Kandila Sculptor B 	1	13C-
+Kantharos Group 	4	13C-
+Keyside Class 	2	13C-
+Kithara Painter 	1	13C-
+Kleomelos Painter 	1	13C-
+Kleophrades 	5	13C-
+Kleophrades Painter 	91	13C-
+Konnakis Painter 	4	13C-
+Kontoleon Master 	1	13C-
+Krokotos Painter 	1	13C-
+Kuban Group 	1	13C-
+Kyllenios Painter 	14	13C-
+L.M. Painter 	1	13C-
+Lambert-Sigisbert Adam 	1	13C-
+Lambros Workshop 	1	13C-
+Le Havre Painter 	1	13C-
+Leafless Group, Caylus Painter 	4	13C-
+Leagros Group 	12	13C-
+Lecce Painter 	3	13C-
+Likinnios 	1	13C-
+Little Lion Class, Krotala Group 	1	13C-
+Lyandros Painter 	2	13C-
+Lycurgus Painter 	2	13C-
+Lydos 	4	13C-
+Lykomedes Painter 	1	13C-
+Lyre Player Group 	5	13C-
+Lysippides Painter 	1	13C-
+Lysippos 	1	13C-
+Magnini Sub-Group, Chevron Group 	1	13C-
+Makron 	39	13C-
+Malacena Group 	1	13C-
+Malibu Painter 	2	13C-
+Malibu Painter, Chevron Group 	2	13C-
+Marlay Group 	1	13C-
+Marsyas Painter 	3	13C-
+Master of Gerona 	6	13C-
+Master of Saint Francis 	1	13C-
+Master of Sant'Agnese 	1	13C-
+Master of St. Cecilia 	1	13C-
+Master of the Boston Dionysos 	1	13C-
+Master of the Deruta and Salerno Missals 	1	13C-
+Master of the Ingeborg Psalter 	10	13C-
+Master of the London Satyr 	1	13C-
+Mastos Painter 	1	13C-
+Medea Group 	2	13C-
+Mediums
+Meidias Painter 	5	13C-
+Meleager Painter 	1	13C-
+Menzies Group 	5	13C-
+Micali Painter 	1	13C-
+Michael Lupi de Çandiu 	138	13C-
+Monopoli Group 	2	13C-
+Monte Abbatone Group 	1	13C-
+Moschos 	1	13C-
+Myson 	2	13C-
+Nekyia Painter 	1	13C-
+Nessos Painter 	1	13C-
+Nichomachos Group 	3	13C-
+Nikodemos 	1	13C-
+Nikosthenes 	4	13C-
+Nikosthenes Painter 	1	13C-
+Nikoxenos Painter 	1	13C-
+Oak-leaf Painter 	1	13C-
+Object Types
+Oionokles Painter 	2	13C-
+Oltos 	11	13C-
+Onesimos 	121	13C-
+Orpheus Master 	1	13C-
+Orvieto Group 	2	13C-
+Osborne House Painter 	1	13C-
+Owl Pillar Group 	1	13C-
+P Potter 	1	13C-
+Painter 20 	1	13C-
+Painter N 	10	13C-
+Painter N, Thiasos Group 	1	13C-
+Painter of Acropolis 606 	1	13C-
+Painter of Agora P42 	1	13C-
+Painter of Athens 1826 	2	13C-
+Painter of Athens 897 	1	13C-
+Painter of Bologna 417 	1	13C-
+Painter of Boston C.A. 	1	13C-
+Painter of Camiros Palmettes 	1	13C-
+Painter of Copenhagen 103 	1	13C-
+Painter of Copenhagen 3757 	1	13C-
+Painter of Lecce 1075 	1	13C-
+Painter of London B 174 	1	13C-
+Painter of London D12 	1	13C-
+Painter of London E489 	1	13C-
+Painter of London E543 	1	13C-
+Painter of London E614 	1	13C-
+Painter of Louvre 160 	1	13C-
+Painter of Louvre F311 	1	13C-
+Painter of Louvre G228 [Padgett] 	1	13C-
+Painter of Louvre K 240 	1	13C-
+Painter of Louvre MNB 1148 	2	13C-
+Painter of Malibu 85.AE.89 (namepiece) 	1	13C-
+Painter of Munich 1736 	1	13C-
+Painter of Munich 2365 	1	13C-
+Painter of Munich 2676 	2	13C-
+Painter of Oxford 225 	1	13C-
+Painter of Palermo 489 	1	13C-
+Painter of Paris Gigantomachy 	6	13C-
+Painter of Philadelphia 2449 	2	13C-
+Painter of the 14th Brygos 	3	13C-
+Painter of the Birth of Dionysos 	1	13C-
+Painter of the Dancing Satyrs 	1	13C-
+Painter of the Dublin Situla 	1	13C-
+Painter of the Fleischman Phlyax Cup 	1	13C-
+Painter of the Frankfort Acorn 	1	13C-
+Painter of the Long Overfalls 	1	13C-
+Painter of the Louvre Centauromachy 	1	13C-
+Painter of the Nicosia Olpe 	2	13C-
+Painter of the Orvieto Hydria 	1	13C-
+Painter of the Vatican Mourner 	1	13C-
+Painter of the Wedding Procession 	2	13C-
+Painter of the Yale Lekythos 	1	13C-
+Painter of Vatican 73 	2	13C-
+Painter of Villa Giulia 63613 	1	13C-
+Painter of Wurzburg 351 	1	13C-
+Palermo Painter 	1	13C-
+Pan Painter 	4	13C-
+Paris Painter 	2	13C-
+Passion Master 	1	13C-
+Patera Painter 	5	13C-
+Pendants Group 	3	13C-
+Penelope Painter 	1	13C-
+Penthesilea Painter 	15	13C-
+Peter Comestor 	4	13C-
+Pezzino Group 	4	13C-
+Phantom Group 	2	13C-
+Phanyllis Group, E, the Group of "Hoplite-leaving-home" 	1	13C-
+Pheidippos 	1	13C-
+Phiale Painter 	2	13C-
+Philadelphia Painter 	1	13C-
+Phineus Painter 	2	13C-
+Phintias 	3	13C-
+Phrynos Painter 	1	13C-
+Pioneer Group 	1	13C-
+Pisticci Painter 	1	13C-
+Pithos Painter 	4	13C-
+Plouton Painter 	1	13C-
+Pointed Nose Painter 	2	13C-
+Policoro Painter 	1	13C-
+Polion 	1	13C-
+Polos Painter 	1	13C-
+Polygnotos 	5	13C-
+Princeton Painter 	1	13C-
+Protarchos 	1	13C-
+Proto-Panaitian Group 	6	13C-
+Providence Painter 	1	13C-
+Psiax 	5	13C-
+Ptolemy I 	1	13C-
+Python 	1	13C-
+Q Painter 	4	13C-
+Rainone Painter 	1	13C-
+Rashi 	49	13C-
+Red Swan Group 	1	13C-
+Reggio Group 	1	13C-
+Ribbon Painter 	1	13C-
+Richmond Painter 	2	13C-
+Rinaldo da Siena 	2	13C-
+Rycroft Painter 	4	13C-
+Sabouroff Class 	1	13C-
+Sabouroff Painter 	2	13C-
+Saint Beatus of Liébana 	1	13C-
+Santa Eufemia Master 	1	13C-
+Sarpedon Painter 	2	13C-
+Schuster Master 	3	13C-
+Scottsdale Painter 	2	13C-
+Segment Class 	1	13C-
+Select Artists:
+Serpent Master 	1	13C-
+Shop of AL and Dionysus 	1	13C-
+Shop of Zopyras, Ra and La 	1	13C-
+Showing 409 artists
+Sigenulfus 	1	13C-
+Siren Painter 	1	13C-
+Skythes 	2	13C-
+Smikros 	2	13C-
+Sokles 	1	13C-
+Sokles Painter 	1	13C-
+Sokra Group 	1	13C-
+Solon 	1	13C-
+Sosias Painter 	20	13C-
+Sostratos 	1	13C-
+Spanner Group 	1	13C-
+Sphinx and Youth Group I 	3	13C-
+Sphinx and Youth Group II 	2	13C-
+Steiner Master 	1	13C-
+Stieglitz Painter 	1	13C-
+Stoke-on-Trent Painter 	9	13C-
+Suckling - Salting Group 	4	13C-
+Swing Painter 	28	13C-
+Syleus Painter 	9	13C-
+Syriskos 	10	13C-
+T'oros Roslin 	9	13C-
+Taleides Painter 	1	13C-
+Tarquinia Painter 	3	13C-
+Theseus Painter 	8	13C-
+Three Stripe Painter 	1	13C-
+Thyrsus Painter 	1	13C-
+Timiades Painter 	1	13C-
+Timokrates Painter 	1	13C-
+Tleson 	3	13C-
+Tleson Painter 	2	13C-
+Tomb 112B 	1	13C-
+Triptolemos Painter 	24	13C-
+Troilos Painter 	1	13C-
+Tymbos Painter 	2	13C-
+Type to filter artist results
+Tyszkiewicz Painter 	2	13C-
+Underworld Painter 	6	13C-
+Unknown artist/maker (12,316)
+Ure's Class of Skyphoi A 1 	2	13C-
+Ure's Class of Skyphoi B 	1	13C-
+V. and A. Group 	1	13C-
+Vagnonville Group 	1	13C-
+Valhramus 	1	13C-
+Varrese Painter 	1	13C-
+VHP Painter 	1	13C-
+Vidal de Canellas 	1	13C-
+Villa Giulia Painter 	4	13C-
+Virginia Exhibition Group 	1	13C-
+Volunteer Painter 	1	13C-
+Vouni Painter 	1	13C-
+Waterspout Group 	1	13C-
+Waterton Group 	1	13C-
+White Saccos Painter 	1	13C-
+White Saccos-Kantharos Group 	3	13C-
+William of Conches 	1	13C-
+Witt Painter 	1	13C-
+Wraith Painter 	4	13C-
+Xenokles 	2	13C-
+Xenon Group 	3	13C-
+ZA Painter 	1	13C-

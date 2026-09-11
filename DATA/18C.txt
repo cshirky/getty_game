@@ -1,0 +1,975 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abraham Genoels 	1	18C
+Abraham Roentgen 	2	18C
+Adam Weisweiler 	4	18C
+Adriaen-Frans Boudewyns (called Baudoin) 	1	18C
+Adrian Zingg 	1	18C
+Adrien Faizelot-Delorme 	1	18C
+Adélaïde Labille-Guiard 	2	18C
+Agostino Carlini 	1	18C
+Albert Eckhout 	1	18C
+Alcora Ceramic Factory 	1	18C
+Alessandro Magnasco 	4	18C
+Alexandre Fortier 	1	18C
+Alexandre-François Desportes 	9	18C
+Alexandre-Jean Noël 	1	18C
+Alexandre-Jean Oppenordt 	1	18C
+André Charlemagne Charron 	2	18C
+André Laurent 	1	18C
+André-Charles Boulle 	9	18C
+André-Jean Le Brun 	1	18C
+Angelica Kauffman 	4	18C
+Anna Catharina Rugendas 	1	18C
+Anne-Louis Girodet de Roucy-Trioson 	1	18C
+Anselme Flamen 	1	18C
+Antoine Boizot 	4	18C
+Antoine Capelle 	2	18C
+Antoine Caton 	1	18C
+Antoine Foullet 	1	18C
+Antoine-Nicolas Martinière 	3	18C
+Antoine-Toussaint Cornaille 	1	18C
+Anton Raphael Mengs 	4	18C
+Antonie Erkelens 	1	18C
+Antonio Canova 	1	18C
+Armand-Claude Mollet 	1	18C
+Aubert-Henri-Joseph Parent 	2	18C
+Augustin de Saint-Aubin 	1	18C
+Augustin Pajou 	2	18C
+Augustus P. Ready 	1	18C
+Balthazar Lieutaud 	1	18C
+Baradel (le jeune) 	1	18C
+Barbara Regina Dietzsch 	1	18C
+Bardet 	1	18C
+Baron François-Pascal-Simon Gérard 	2	18C
+Bartolomeo Cavaceppi 	1	18C
+Beaudrin Yvart 	1	18C
+Beauvais Manufactory 	17	18C
+Benjamin West 	1	18C
+Benvenuto Cellini 	1	18C
+Bernard II van Risenburgh 	14	18C
+Bernard Molitor 	1	18C
+Bernardo Bellotto 	1	18C
+Boulle fils 	1	18C
+Canaletto (Giovanni Antonio Canal) 	4	18C
+Captain William Baillie 	1	18C
+Carl Wilhelm Becker 	5	18C
+Carle Vanloo 	1	18C
+Carle Vernet 	2	18C
+Cesare Targone 	1	18C
+Chaillot 	1	18C
+Chambrette Manufactory (Lunéville) 	2	18C
+Chantilly Porcelain Manufactory 	12	18C
+Charles Buteux père 	1	18C
+Charles Cressent 	6	18C
+Charles de La Fosse 	1	18C
+Charles Le Brun 	2	18C
+Charles Monnet 	2	18C
+Charles Voisin 	1	18C
+Charles-Antoine Coypel 	6	18C
+Charles-Eloi Asselin 	1	18C
+Charles-Guillaume Manière 	1	18C
+Charles-Joseph Natoire 	1	18C
+Charles-Michel Cochois 	1	18C
+Charles-Nicolas Cochin II 	2	18C
+Charles-Nicolas Dodin 	5	18C
+Chatard 	1	18C
+Chaudron 	1	18C
+Christian Frederich Herold 	1	18C
+Christian Gottfried Jüchtzer 	2	18C
+Christian Gotthelf Grossman 	1	18C
+Christian Möllinger 	1	18C
+Christian Wilhelm Ernst Dietrich 	1	18C
+Christoph Henrich Kniep 	1	18C
+Claude Audran III 	5	18C
+Claude Couturier 	1	18C
+Claude Galle 	1	18C
+Claude Gillot 	1	18C
+Claude Jean-Baptiste Hoin 	1	18C
+Claude-François Capin 	1	18C
+Claude-Jean Pitoin 	1	18C
+Claude-Joseph Vernet 	3	18C
+Claude-Nicolas Ledoux 	2	18C
+Clodion (Claude Michel) 	1	18C
+Cornelis Troost 	1	18C
+David Roentgen 	2	18C
+David Teniers the Younger 	3	18C
+Denis Bardin 	1	18C
+Derby Porcelain Factory 	1	18C
+Desfarges 	1	18C
+Digue 	1	18C
+Doccia Porcelain Factory 	2	18C
+Domenico Ferretti 	1	18C
+Du Paquier Porcelain Manufactory 	1	18C
+Edme Bouchardon 	1	18C
+Edmé-François Bouillat père 	1	18C
+Edward Dayes 	1	18C
+Elie Barbezat 	1	18C
+Elizabeth, Lady Templetown 	1	18C
+Élisabeth Louise Vigée Le Brun 	1	18C
+Etienne Bouchardy 	1	18C
+Etienne Doirat 	1	18C
+Etienne Martincourt 	2	18C
+Etienne-Claude Le Blond 	2	18C
+Etienne-Henri Le Guay 	5	18C
+Etienne-Henry Bono 	1	18C
+Etienne-Jean Chabry the Younger 	1	18C
+Etienne-Jean Forestier 	1	18C
+Etienne-Louis Boullée 	1	18C
+Étienne Le Noir II 	3	18C
+Étienne Meunier 	1	18C
+Étienne-Augustin Le Roy 	1	18C
+Étienne-Maurice Falconet 	4	18C
+Étienne-Simon Martin 	6	18C
+F. A. Colebrook 	1	18C
+Fallot 	1	18C
+Ferdinand Berthoud 	2	18C
+Ferdinand Kobell 	1	18C
+Filippo Juvarra 	1	18C
+Francesco (or Filippo) Saverio Maria Grue (Saverio Maria or Saverio Grue) 	1	18C
+Francesco Abbiati 	1	18C
+Francesco Antonio Franzoni 	1	18C
+Francesco Bertos 	3	18C
+Francesco Guardi 	5	18C
+Francesco Natale Juvara 	1	18C
+Francesco Panini 	1	18C
+Francesco Papillion 	1	18C
+Francesco Salvator Fontebasso 	2	18C
+Francesco Solimena 	5	18C
+Francesco Zuccarelli 	2	18C
+Francis Cotes 	1	18C
+Francis Harwood 	1	18C
+Francisco Bayeu y Subias 	1	18C
+Frans Post 	1	18C
+Franz Anton Maulbertsch 	1	18C
+Franz Innocenz Kobell 	3	18C
+Franz Xaver Messerschmidt 	1	18C
+François Barreau 	1	18C
+François Bonnemer 	2	18C
+François Boucher 	23	18C
+François de Cuvilliés 	1	18C
+François Girardon 	2	18C
+François Le Moyne 	1	18C
+François Rémond 	3	18C
+François-André Vincent 	2	18C
+François-Denis Roger 	1	18C
+François-Firmin Dufresne (or Fresne) 	1	18C
+François-Joseph Bélanger 	1	18C
+François-Thomas Germain 	6	18C
+François-Toussaint Foliot 	1	18C
+François-Xavier Fabre 	2	18C
+Gabriel Jacques de Saint-Aubin 	4	18C
+Gaetano Gandolfi 	1	18C
+Gaetano Sabbatini 	1	18C
+Galleria de'Lavori in pietre dure 	1	18C
+Gambier 	1	18C
+Gaspard Marsy 	2	18C
+Gaspare Diziani 	1	18C
+Gaspero Bruschi 	2	18C
+Geminiano Cozzi 	1	18C
+Gennaro Laudato 	1	18C
+Georg Dionysius Ehret 	5	18C
+Georg Haas 	1	18C
+Georg Strauch 	6	18C
+Georges Jacob 	7	18C
+Georges-Adrien Merlet 	1	18C
+Gerard Hoet 	2	18C
+Giacomo Ceruti 	2	18C
+Giampietro Zanotti 	1	18C
+Gilles Joubert 	1	18C
+Gilles-François Martin 	1	18C
+Gilles-Louis Chrétien 	4	18C
+Gilles-Marie Oppenord 	2	18C
+Gilles-Paul Cauvet 	1	18C
+Giovanni Antonio Guardi 	2	18C
+Giovanni Battista Foggini 	4	18C
+Giovanni Battista Lusieri 	2	18C
+Giovanni Battista Piazzetta 	1	18C
+Giovanni Battista Piranesi 	2	18C
+Giovanni Battista Pittoni 	1	18C
+Giovanni Battista Tiepolo 	8	18C
+Giovanni Domenico Tiepolo 	5	18C
+Giovanni Paolo Panini 	1	18C
+Giovanni Pichler 	1	18C
+Giuseppe Bossi 	1	18C
+Giuseppe Cades 	2	18C
+Giuseppe Maggiolini 	1	18C
+Giuseppe Maria Crespi 	2	18C
+Giuseppe Piamontini 	1	18C
+Giuseppe Sanmartino 	1	18C
+Giuseppe Sarao 	1	18C
+Giuseppe Valadier 	1	18C
+Guillaume Benneman 	1	18C
+Guillaume Martin 	6	18C
+Guy-Louis Vernansal 	12	18C
+Hendrik Meyer 	2	18C
+Henri-François Dubuisson 	1	18C
+Henri-Martin Prevost the younger 	1	18C
+Henri-Pierre Danloux 	1	18C
+Henry-Francois Vincent le jeune 	1	18C
+Herman Henstenburgh 	1	18C
+Hubert Robert 	4	18C
+Hugh Douglas Hamilton 	1	18C
+Hyacinthe Rigaud 	3	18C
+Ignaz Preissler 	2	18C
+J. Robert et Fils 	1	18C
+Jacob van Strij 	1	18C
+Jacopo Amigoni 	1	18C
+Jacques Caffieri 	3	18C
+Jacques Chapelle 	1	18C
+Jacques Decla 	1	18C
+Jacques Dubois 	5	18C
+Jacques Fontaine 	1	18C
+Jacques Gaultier 	1	18C
+Jacques Gondoin 	1	18C
+Jacques Neilson 	4	18C
+Jacques Thuret 	1	18C
+Jacques Wilbault 	1	18C
+Jacques-André Portail 	1	18C
+Jacques-André-Joseph Aved 	1	18C
+Jacques-François Deparis 	1	18C
+Jacques-François Micaud 	1	18C
+Jacques-François-Louis de Laroche 	2	18C
+Jacques-Jean-Baptiste Tilliard 	1	18C
+Jacques-Louis David 	3	18C
+Jacques-Philippe Le Bas 	2	18C
+Jakob Philipp Hackert 	1	18C
+Jan Berents 	1	18C
+Jan van Huysum 	4	18C
+Jean Audran fils 	4	18C
+Jean Avisse 	3	18C
+Jean Boucault 	1	18C
+Jean Chauvaux the Younger 	1	18C
+Jean de la Croix 	2	18C
+Jean de La Fraye 	1	18C
+Jean François Pelloquin 	2	18C
+Jean Jacques Bachelier 	1	18C
+Jean Jacques Flipart 	1	18C
+Jean Pierre Rousselet 	7	18C
+Jean Raoux 	1	18C
+Jean Romilly 	1	18C
+Jean-André Lepaute 	1	18C
+Jean-Antoine Houdon 	2	18C
+Jean-Antoine Nollet 	3	18C
+Jean-Antoine Watteau 	6	18C
+Jean-Baptiste Belin de Fontenay 	11	18C
+Jean-Baptiste Belin de Fontenay fils 	4	18C
+Jean-Baptiste Deshays 	1	18C
+Jean-Baptiste Fouquet 	2	18C
+Jean-Baptiste Greuze 	8	18C
+Jean-Baptiste Huet 	1	18C
+Jean-Baptiste Le Prince 	1	18C
+Jean-Baptiste Lemoyne II 	1	18C
+Jean-Baptiste Lepaute 	1	18C
+Jean-Baptiste Martin (called Martin des Batailles) 	1	18C
+Jean-Baptiste Monnoyer 	12	18C
+Jean-Baptiste Oudry 	10	18C
+Jean-Baptiste Pater 	1	18C
+Jean-Baptiste Perronneau 	3	18C
+Jean-Baptiste Pigalle 	2	18C
+Jean-Baptiste Pillement 	1	18C
+Jean-Baptiste Raguenet 	2	18C
+Jean-Baptiste Stouf 	1	18C
+Jean-Baptiste Tilliard 	3	18C
+Jean-Baptiste-Claude Sené 	1	18C
+Jean-Baptiste-Emmanuel Vandé 	1	18C
+Jean-Baptiste-Etienne Genest 	1	18C
+Jean-Baptiste-François Chéret 	1	18C
+Jean-Baptiste-Marie Pierre 	1	18C
+Jean-Baptiste-Simon Rode 	2	18C
+Jean-Charles Delafosse 	1	18C
+Jean-Claude Duplessis the Elder 	5	18C
+Jean-Demosthene Dugourc 	1	18C
+Jean-Francois-Pierre Peyron 	1	18C
+Jean-François de Troy 	3	18C
+Jean-François Dominicé 	1	18C
+Jean-François Leleu 	2	18C
+Jean-François Oeben 	8	18C
+Jean-François-Henry Philippine 	1	18C
+Jean-Guillaume Moitte 	3	18C
+Jean-Henri Riesener 	2	18C
+Jean-Honoré Fragonard 	6	18C
+Jean-Jacques Caffieri 	3	18C
+Jean-Jacques de Boissieu 	1	18C
+Jean-Jacques Dieu 	2	18C
+Jean-Jacques Fiéffé 	1	18C
+Jean-Jacques Pierre le jeune 	1	18C
+Jean-Joseph de Saint-Germain 	2	18C
+Jean-Joseph-Xavier Bidauld 	1	18C
+Jean-Louis Morin 	2	18C
+Jean-Louis Prieur 	4	18C
+Jean-Marc Nattier 	1	18C
+Jean-Michel Moreau le jeune 	2	18C
+Jean-Nicholas Le Bel 	1	18C
+Jean-Noël Turpin 	1	18C
+Jean-Pierre Feuchère 	1	18C
+Jean-Pierre Latz 	6	18C
+Jean-Pierre-Louis-Laurent Hoüel 	1	18C
+Jean-Siméon Chardin 	3	18C
+Jean-Siméon Rousseau de la Rottière 	1	18C
+Jean-Étienne Liotard 	5	18C
+Johann Adam Pichler 	1	18C
+Johann August Nahl 	1	18C
+Johann Donner 	1	18C
+Johann Friedrich Böttger 	3	18C
+Johann Georg von Dillis 	1	18C
+Johann Gottlieb Kirchner 	1	18C
+Johann Gregor Höroldt 	3	18C
+Johann Heinrich Fuseli 	1	18C
+Johann Heinrich Wilhelm Tischbein 	1	18C
+Johann Jakob Wilhelm Spängler 	1	18C
+Johann Joachim Dietrich 	1	18C
+Johann Joachim Kändler 	2	18C
+Johann Karl Wendelin Anreiter von Zirnfeld 	2	18C
+Johann Valentin Sonnenschein 	1	18C
+Johann Wilhelm Weyl 	1	18C
+Johann Wolfgang Baumgartner 	1	18C
+Johann Zoffany 	1	18C
+Johannes Andreas Beo 	1	18C
+Johannes Janson 	1	18C
+John Deare 	1	18C
+John Russell 	1	18C
+Jonathan Richardson the Elder 	1	18C
+Joseph Anton Koch 	1	18C
+Joseph Baumhauer 	4	18C
+Joseph Chinard 	1	18C
+Joseph Ducreux 	1	18C
+Joseph Effner 	1	18C
+Joseph Mallord William Turner 	1	18C
+Joseph Nollekens 	3	18C
+Joseph Olerys Manufactory (Moustiers) 	2	18C
+Joseph Vivien 	1	18C
+Joseph Wilton 	4	18C
+Joseph Wright of Derby 	4	18C
+Joseph Yvart 	1	18C
+Joseph-Benoît Suvée 	3	18C
+Josse-François-Joseph LeRiche 	1	18C
+Juan Conchillos Falcó 	1	18C
+Jules Degoullons 	1	18C
+Jules-Hughes Rousseau 	1	18C
+Julien Le Roy 	2	18C
+Juste-Aurèle Meissonnier 	1	18C
+Katharine Ghuys, the Widow Guillaume Werniers 	1	18C
+Lambert-Sigisbert Adam 	1	18C
+Lapina 	1	18C
+Leonard van der Vinne 	1	18C
+Louis Borde 	2	18C
+Louis Carrogis de Carmontelle 	2	18C
+Louis Cordier 	1	18C
+Louis Jean François Lagrenée 	1	18C
+Louis Tessier 	4	18C
+Louis-Denis Armand l'aîné 	1	18C
+Louis-François Cassas 	1	18C
+Louis-Gabriel Féloix 	1	18C
+Louis-Simon Boizot 	5	18C
+Luca Carlevarijs 	2	18C
+Lucien-François Feuchère 	1	18C
+Luigi Garzi 	1	18C
+Luigi Pichler 	1	18C
+Marco Benefial 	1	18C
+Marco Ricci 	3	18C
+Marguerite Gérard 	1	18C
+Maria Sibylla Merian 	1	18C
+Mariano Salvador Maella 	1	18C
+Martin Carlin 	6	18C
+Mary Hoare 	1	18C
+Massimiliano Soldani-Benzi 	5	18C
+Master of the Months of Lucas 	1	18C
+Maurice Jacques 	8	18C
+Maurice-Quentin de La Tour 	2	18C
+Meissen Porcelain Manufactory 	17	18C
+Mennecy Porcelain Manufactory 	5	18C
+Michel Audran 	5	18C
+Michel Stollenwerck 	1	18C
+Michel-Barnabe Chauvaux the Elder 	1	18C
+Michel-Dorothée Coudray 	2	18C
+Michel-Ferdinand d'Albert d'Ailly, 5th duke of Chaulnes 	1	18C
+Nantier 	1	18C
+Niccolo Ricciolini 	1	18C
+Nicolaas Struyck 	1	18C
+Nicolas Bailleul le jeune 	2	18C
+Nicolas Besnier 	4	18C
+Nicolas Bulidon 	1	18C
+Nicolas de Largillierre 	1	18C
+Nicolas Heurtaut 	1	18C
+Nicolas Lancret 	2	18C
+Nicolas Petit 	1	18C
+Nicolas Pineau 	1	18C
+Nicolas Thomas 	1	18C
+Nicolas Verkolye 	1	18C
+Nicolas-Alexandre Folin 	1	18C
+Nicolas-François Vallois 	1	18C
+Nicolas-Quinibert Foliot 	2	18C
+Niderviller Porcelain Manufactory 	1	18C
+Niquet 	1	18C
+Nyon Porcelain Manufactory 	1	18C
+Olerys-Laugier Manufactory 	3	18C
+Oppenord 	1	18C
+P. L. R. 	1	18C
+Paul (?) Georges 	1	18C
+Paul de Lamerie 	1	18C
+Paul Gudin 	1	18C
+Paulus van Liender 	1	18C
+Peter Kinzing 	1	18C
+Peter Paul Rubens 	1	18C
+Peter Rienicke 	1	18C
+Philipp Otto Runge 	1	18C
+Philippe Béhagle 	7	18C
+Philippe Caffieri 	3	18C
+Philippe Parpette 	2	18C
+Philippe-Claude Montigny 	2	18C
+Pier Leone Ghezzi 	1	18C
+Pierre Contant d'Ivry 	3	18C
+Pierre Deumier 	1	18C
+Pierre Garnier 	1	18C
+Pierre Gouthière 	5	18C
+Pierre Étienne Le Noir 	1	18C
+Pierre-Adrien Pâris 	1	18C
+Pierre-André Le Guay 	1	18C
+Pierre-Antoine Méreaud 	1	18C
+Pierre-Bazile Lepaute 	1	18C
+Pierre-Claude Triquet 	1	18C
+Pierre-François Feuchère 	1	18C
+Pierre-Henri de Valenciennes 	2	18C
+Pierre-Jacques Volaire 	2	18C
+Pierre-Joseph Redouté 	1	18C
+Pierre-Josse Perrot 	1	18C
+Pierre-Nicolas Pierre 	2	18C
+Pierre-Paul Prud'hon 	1	18C
+Pierre-Philippe Thomire 	9	18C
+Pieter de Swart 	1	18C
+Pieter Jan de Vlamynck 	1	18C
+Pietro Antonio Novelli 	1	18C
+Pietro Antonio Rotari 	1	18C
+Pietro Cipriani 	2	18C
+Pietro Longhi 	3	18C
+Pietro Piffetti 	1	18C
+Placido Costanzi 	1	18C
+Pompeo Batoni 	4	18C
+Raux aîné 	1	18C
+Rehnisch 	1	18C
+René Dubois 	1	18C
+René-Antoine Houasse 	1	18C
+Robert Osmond 	1	18C
+Robert-Jacques Lefevre 	1	18C
+Robert-Joseph Auguste 	3	18C
+Rock & Co. 	6	18C
+Roger the Elder 	1	18C
+Roger Vandercruse Lacroix 	1	18C
+Rosalba Carriera 	2	18C
+Royal Factory of Furniture to the Crown at the Gobelins Manufactory 	14	18C
+Rue de Charenton Manufactory (Paris) 	1	18C
+Saint-Cloud Porcelain Manufactory 	6	18C
+Sarah Stone 	2	18C
+Savonnerie Manufactory 	4	18C
+Sceaux Manufactory 	3	18C
+Sebastiano Conca 	1	18C
+Sebastiano Ricci 	5	18C
+Sigisbert-François Michel 	1	18C
+Simon Alexandre Clément Denis 	1	18C
+Simon Gallien 	3	18C
+Sir Joshua Reynolds 	1	18C
+Sèvres Manufactory 	51	18C
+Thomas Gainsborough 	4	18C
+Thomas Germain 	6	18C
+Thomas Girtin 	1	18C
+Thomas Rowlandson 	2	18C
+Tournai Manufactory 	1	18C
+Toussaint Foliot 	1	18C
+Ubaldo Gandolfi 	1	18C
+Unknown artist/maker 	361	18C
+Various makers 	1	18C
+Vicente López y Portaña 	1	18C
+Victor Louis 	1	18C
+Vincennes Porcelain Manufactory 	14	18C
+Wedgwood Factory 	1	18C
+Wilhelm Fistulator 	1	18C
+William Blake 	1	18C
+William Hackwood 	1	18C
+William Hoare 	1	18C
+William Hogarth 	2	18C

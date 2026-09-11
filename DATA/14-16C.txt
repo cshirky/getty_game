@@ -1,0 +1,959 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abraham Bloemaert 	3	14-16C
+Abraham Pfleger I 	1	14-16C
+Adriaen Ysenbrandt 	1	14-16C
+Aeneas Silvius Piccolomini 	2	14-16C
+Aesop 	1	14-16C
+Agnolo Bronzino 	5	14-16C
+Agostino Busti 	1	14-16C
+Agostino Carracci 	3	14-16C
+Agostino Ciampelli 	1	14-16C
+Albrecht Altdorfer 	1	14-16C
+Albrecht Dürer 	3	14-16C
+Alessandro Allori 	1	14-16C
+Alessandro Vittoria 	1	14-16C
+Amico Aspertini 	1	14-16C
+Andrea del Sarto 	5	14-16C
+Andrea della Robbia 	1	14-16C
+Andrea di Bartolo 	1	14-16C
+Andrea Lilio 	1	14-16C
+Andrea Mantegna 	3	14-16C
+Andrea Previtali 	1	14-16C
+Andrea Schiavone (Andrea Meldolla) 	1	14-16C
+Angelos Gregorios 	1	14-16C
+Anicius Manlius Severinus Boëthius (called Boethius) 	1	14-16C
+Annibale Carracci 	6	14-16C
+Annibale Fontana 	3	14-16C
+Anovelo da Imbonate 	11	14-16C
+Antico (Pier Jacopo Alari-Bonacolsi) 	1	14-16C
+Antoine Caron 	1	14-16C
+Antoine de Lonhy 	2	14-16C
+Anton Koberger 	22	14-16C
+Antonio da Monza 	5	14-16C
+Antonio Maffei 	1	14-16C
+Antonio Rizzo 	1	14-16C
+Antonio Susini 	2	14-16C
+Antonis Mor van Dashorst 	1	14-16C
+Augustus P. Ready 	1	14-16C
+Aurelio Luini 	1	14-16C
+Avianus 	1	14-16C
+Baccio Bandinelli 	3	14-16C
+Bachiacca (Francesco Ubertini) 	1	14-16C
+Bagnacavallo (Bartholomeo Ramenghi) 	1	14-16C
+Baldassare Manara 	1	14-16C
+Baldassare Peruzzi 	3	14-16C
+Barbarigo Master 	1	14-16C
+Bartholomaeus Spranger 	2	14-16C
+Bartolomeo Ammannati 	3	14-16C
+Bartolomeo Cesi 	1	14-16C
+Bartolomeo Montagna 	1	14-16C
+Bartolomeo Passarotti 	1	14-16C
+Bartolomeo Rigossi da Gallarate 	4	14-16C
+Bartolomeo Veneto 	1	14-16C
+Bartolomeo Vivarini 	1	14-16C
+Battista di Biagio Sanguini 	2	14-16C
+Battista Franco 	1	14-16C
+Bedford Master 	87	14-16C
+Belbello da Pavia 	3	14-16C
+Benedetto Cervi 	1	14-16C
+Benedikt Wurzelbauer 	1	14-16C
+Benvenuto Cellini 	1	14-16C
+Berengarius Fredoli 	1	14-16C
+Bernaert van Orley 	1	14-16C
+Bernard Palissy 	2	14-16C
+Bernardino Fungai 	1	14-16C
+Bernardino Gatti 	1	14-16C
+Bernardino Lanino 	1	14-16C
+Bernardino Poccetti (Barbatelli) 	1	14-16C
+Bernardino Zenale 	1	14-16C
+Bernardo Daddi 	2	14-16C
+Bernardo Parentino 	1	14-16C
+Biagio d'Antonio 	1	14-16C
+Boucicaut Master 	75	14-16C
+Brother Philipp 	79	14-16C
+Carl von Egeri 	1	14-16C
+Caspar Freisinger 	1	14-16C
+Cenni di Francesco di Ser Cenni 	1	14-16C
+Cerano (Giovanni Battista Crespi) 	1	14-16C
+Cesare da Sesto 	1	14-16C
+Cesare Targone 	1	14-16C
+Cherubino Alberti 	1	14-16C
+Christine de Pizan 	4	14-16C
+Christoph Murer 	1	14-16C
+Conrat Meit 	1	14-16C
+Cornelis Cornelisz van Haarlem 	1	14-16C
+Cornelis Engebrechtsz. 	1	14-16C
+Cornelis Ketel 	1	14-16C
+Correggio (Antonio Allegri) 	4	14-16C
+Cosmè Tura 	2	14-16C
+Coëtivy Master (Henri de Vulcop?) 	4	14-16C
+Crispijn van den Broeck 	6	14-16C
+Cristoforo Cortese 	27	14-16C
+Cristoforo Roncalli (Il Pomarancio) 	1	14-16C
+Cyril of Alexandria 	1	14-16C
+Daniel Lindtmayer 	1	14-16C
+David Aubert 	57	14-16C
+Defendente Ferrari 	1	14-16C
+Desiderio da Settignano 	2	14-16C
+Diebold Lauber 	139	14-16C
+Dieric Bouts 	1	14-16C
+Domenico Beccafumi 	4	14-16C
+Domenico Campagnola 	3	14-16C
+Domenico Tintoretto (Domenico Robusti) 	1	14-16C
+Don Silvestro dei Gherarducci 	1	14-16C
+Don Simone Camaldolese 	1	14-16C
+Donato d'Arezzo 	1	14-16C
+Dorotheos of Gaza 	1	14-16C
+Dosso Dossi (Giovanni di Niccolò de Lutero) 	3	14-16C
+Dreux Budé Master, possibly André d'Ypres 	1	14-16C
+Dreux Jean 	2	14-16C
+Dunois Master 	5	14-16C
+Egerton Master 	57	14-16C
+El Greco (Domenico Theotokopoulos) 	2	14-16C
+Elijah ben Jehiel 	1	14-16C
+Elijah ben Meshallum 	1	14-16C
+Ercole de'Roberti 	1	14-16C
+Erhard Schön 	1	14-16C
+Etienne Colaud 	75	14-16C
+Etienne Delaune 	1	14-16C
+Federico Barocci 	3	14-16C
+Federico Zuccaro 	24	14-16C
+Fernando Gallego 	1	14-16C
+Filippino Lippi 	1	14-16C
+Fiore Furlan dei Liberi da Premariacco 	93	14-16C
+First Master of the Bible historiale of Jean de Berry 	7	14-16C
+First Master of the Choir Books of Siena Cathedral 	2	14-16C
+Flaminio Fontana 	1	14-16C
+Fontana Workshop 	2	14-16C
+Fra Angelico (Guido di Pietro, Fra Giovanni da Fiesole) 	1	14-16C
+Fra Bartolommeo (Baccio della Porta) 	6	14-16C
+Fra Paolino (Paolo del Signoraccio) 	1	14-16C
+Fra Vincentius a Fundis 	11	14-16C
+Francesco di Antonio del Chierico 	12	14-16C
+Francesco di Giorgio Martini 	2	14-16C
+Francesco Morone 	1	14-16C
+Francesco Primaticcio 	4	14-16C
+Francesco Salviati 	2	14-16C
+Francesco Vanni 	1	14-16C
+Francesco Xanto Avelli 	1	14-16C
+Franciabigio 	1	14-16C
+Francisco Ribalta 	1	14-16C
+Franco dei Russi 	8	14-16C
+Franco-Flemish Master 	1	14-16C
+Frans Crabbe van Espleghem 	1	14-16C
+Frate Nebridio 	3	14-16C
+Friedrich Sustris 	2	14-16C
+Gaius Julius Caesar 	1	14-16C
+Galleria de'Lavori in pietre dure 	1	14-16C
+Gaston Phébus 	1	14-16C
+Gentile da Fabriano 	2	14-16C
+Georg Bocskay 	130	14-16C
+Georg Pencz 	2	14-16C
+Georges Trubert 	21	14-16C
+Gerard David 	1	14-16C
+Gerard Horenbout 	15	14-16C
+Geremia da Montagnone 	1	14-16C
+Gherardo di Giovanni del Ciriagio 	1	14-16C
+Gherardo Starnina (Master of the Bambino Vispo) 	1	14-16C
+Ghoukas 	31	14-16C
+Giambologna (Giovanni da Bologna or Jean de Boulogne) 	3	14-16C
+Gillis van Coninxloo 	1	14-16C
+Giorgio di Pietro Andreoli, known as Maestro Giorgio 	1	14-16C
+Giorgio Vasari 	5	14-16C
+Giovanni Agostino da Lodi 	1	14-16C
+Giovanni Antonio Decio 	1	14-16C
+Giovanni Battista Cima da Conegliano 	1	14-16C
+Giovanni Battista della Porta 	1	14-16C
+Giovanni Battista Naldini 	2	14-16C
+Giovanni Battista Paggi 	1	14-16C
+Giovanni Bellini 	2	14-16C
+Giovanni Boccaccio 	103	14-16C
+Giovanni da Cavino 	1	14-16C
+Giovanni di Balduccio 	1	14-16C
+Giovanni di Paolo 	7	14-16C
+Giovanni di Ser Giovanni Guidi (Lo Scheggia) 	1	14-16C
+Giovanni Francesco Susini 	2	14-16C
+Giovanni Girolamo Savoldo 	5	14-16C
+Giralamo dai Libri 	1	14-16C
+Girolamo Campagna 	1	14-16C
+Girolamo da Cremona 	2	14-16C
+Girolamo del Pacchia 	1	14-16C
+Girolamo della Robbia 	1	14-16C
+Girolamo Genga 	1	14-16C
+Girolamo Macchietti 	1	14-16C
+Girolamo Muziano 	1	14-16C
+Giuliano Amadei 	2	14-16C
+Giulio Campi 	1	14-16C
+Giulio Romano (Giulio Pippi) 	7	14-16C
+Giuseppe Porta (Giuseppe Salviati) 	1	14-16C
+Gregorio d'Arezzo 	1	14-16C
+Grigoris, catholicos of Aght'amar 	3	14-16C
+Guariento di Arpo 	1	14-16C
+Guglielmo Giraldi 	5	14-16C
+Guido Reni 	1	14-16C
+Guillaume de Lorris 	1	14-16C
+Guyart des Moulins 	3	14-16C
+Hanns Lautensack 	1	14-16C
+Hans Baldung Grien 	2	14-16C
+Hans Bol 	1	14-16C
+Hans Brosamer 	2	14-16C
+Hans Hoffmann 	2	14-16C
+Hans Holbein the Younger 	3	14-16C
+Hans Jacob Plepp 	1	14-16C
+Hans Mont 	1	14-16C
+Hans Schilling 	139	14-16C
+Hans Schwarz 	1	14-16C
+Hans Schäufelein 	1	14-16C
+Hans von Aachen 	1	14-16C
+Hans von Kulmbach 	2	14-16C
+Heinrich Aldegrever 	1	14-16C
+Hendrick Goltzius 	2	14-16C
+Hieronymus Lang 	1	14-16C
+Hippocrates 	1	14-16C
+Illustratore (Andrea da Bologna?) 	2	14-16C
+Innocenzo da Imola 	1	14-16C
+Jacob Cornelisz. van Oostsanen 	1	14-16C
+Jacob de Backer 	1	14-16C
+Jacob I Savery 	2	14-16C
+Jacopo Bassano 	3	14-16C
+Jacopo Ligozzi 	3	14-16C
+Jacopo Sansovino 	1	14-16C
+Jacopo Tintoretto (Jacopo Robusti) 	1	14-16C
+Jacopo Zucchi 	1	14-16C
+Jacques de Gheyn II 	4	14-16C
+Jacques Le Moyne de Morgues 	1	14-16C
+Jacques Legrand 	1	14-16C
+Jan Brueghel the Elder 	1	14-16C
+Jan Gossaert 	2	14-16C
+Jan Harmensz. Muller 	1	14-16C
+Jan van Scorel 	1	14-16C
+Jan Verbeeck II 	1	14-16C
+Jansen Enikel 	27	14-16C
+Jean Bourdichon 	22	14-16C
+Jean de Meun 	2	14-16C
+Jean de Vignay 	3	14-16C
+Jean du Quesne 	1	14-16C
+Jean Fouquet 	3	14-16C
+Jean Froissart 	2	14-16C
+Jean Gerson 	1	14-16C
+Jean II Pénicaud 	1	14-16C
+Jean Miélot 	1	14-16C
+Jean Pichore 	3	14-16C
+Jeanne de Montbaston 	18	14-16C
+Joachim Beuckelaer 	2	14-16C
+Joel ben Simeon 	1	14-16C
+Johann Amerbach 	1	14-16C
+Johann Gregor van der Schardt 	1	14-16C
+Johannes de Malborch 	1	14-16C
+John Mandeville 	1	14-16C
+Joris Hoefnagel 	182	14-16C
+Joseph Heintz the Elder 	1	14-16C
+Josias Murer II 	1	14-16C
+Jost Amman 	1	14-16C
+Juan de Juanes (Juan Maçip) 	1	14-16C
+Justinian 	1	14-16C
+Jörg Breu the Elder 	2	14-16C
+Jörg Ziegler 	22	14-16C
+Karel van Mander 	2	14-16C
+Lambert-Sigisbert Adam 	1	14-16C
+Lattanzio Gambara 	1	14-16C
+Laurent de Premierfait 	1	14-16C
+Lavinia Fontana 	2	14-16C
+Lazzaro Bastiani 	1	14-16C
+Lelio Orsi 	2	14-16C
+Leonardo da Vinci 	2	14-16C
+Leonardo di Giovanni Tolosani da Colle 	1	14-16C
+Lieven van Lathem 	92	14-16C
+Lippo Vanni 	3	14-16C
+Lorenzo Costa 	1	14-16C
+Lorenzo di Credi (Lorenzo d'Andrea d'Oderigo) 	2	14-16C
+Lorenzo Lotto 	2	14-16C
+Lorenzo Monaco 	4	14-16C
+Loyset Liédet 	16	14-16C
+Luca Cambiaso 	1	14-16C
+Luca di Tommè 	1	14-16C
+Luca Penni 	1	14-16C
+Lucas Cranach the Elder 	4	14-16C
+Lucius Caecilius Firmianus Lactantius 	1	14-16C
+Ludger tom Ring the Younger 	2	14-16C
+Ludovico Carracci 	1	14-16C
+Luis de Morales 	1	14-16C
+Léonard Limosin 	1	14-16C
+Maerten van Heemskerck 	3	14-16C
+Maestro Daddesco 	1	14-16C
+Mair von Landshut 	1	14-16C
+Marco d' Oggiono 	1	14-16C
+Marco Pino 	1	14-16C
+Margare of Ardjesh 	3	14-16C
+Mariotto di Nardo 	2	14-16C
+Martin Schongauer 	3	14-16C
+Masaccio (Tommaso di Giovanni Guidi) 	1	14-16C
+Master B.F. 	5	14-16C
+Master from Konstanz (Christoph Bockstorffer) 	1	14-16C
+Master H.B. 	1	14-16C
+Master LCz 	1	14-16C
+Master Michael 	27	14-16C
+Master of Cardinal Bourbon 	24	14-16C
+Master of Edward IV 	2	14-16C
+Master of Evert Zoudenbalch 	8	14-16C
+Master of François de Rohan 	30	14-16C
+Master of Guillaume Lambert 	35	14-16C
+Master of Guillebert de Mets 	12	14-16C
+Master of Jacques de Besançon 	25	14-16C
+Master of Jacques of Luxembourg 	29	14-16C
+Master of James IV of Scotland 	46	14-16C
+Master of Jean Chevrot 	3	14-16C
+Master of Jean de Mandeville 	74	14-16C
+Master of Jean Rolin II (Hand B) 	3	14-16C
+Master of Klosterneuburg 	1	14-16C
+Master of Morgan 366 	2	14-16C
+Master of Saint Christopher 	1	14-16C
+Master of Sir John Fastolf 	46	14-16C
+Master of St. Veronica 	3	14-16C
+Master of the Antiphonal Q of San Giorgio Maggiore 	2	14-16C
+Master of the Antiphonary of San Giovanni Fuorcivitas 	2	14-16C
+Master of the Berlin Roundels 	2	14-16C
+Master of the Birago Hours 	2	14-16C
+Master of the Brussels Initials 	95	14-16C
+Master of the Brussels Romuléon 	23	14-16C
+Master of the Burke Saint John the Baptist and the Messiah 	1	14-16C
+Master of the Chronique scandaleuse 	19	14-16C
+Master of the Coburg Roundels 	1	14-16C
+Master of the Copenhagen Caesar 	12	14-16C
+Master of the Cypresses (Pedro de Toledo?) 	2	14-16C
+Master of the Dominican Effigies 	3	14-16C
+Master of the Dresden Prayer Book 	42	14-16C
+Master of the Egmont Albums 	1	14-16C
+Master of the First Prayer Book of Maximilian 	26	14-16C
+Master of the Geneva Boccaccio 	39	14-16C
+Master of the Getty Epistles 	4	14-16C
+Master of the Getty Froissart 	21	14-16C
+Master of the Getty Lalaing 	18	14-16C
+Master of the Golden Bull 	4	14-16C
+Master of the Harburger Altar 	1	14-16C
+Master of the Harvard Hannibal 	15	14-16C
+Master of the Houghton Miniatures 	3	14-16C
+Master of the Housebook 	1	14-16C
+Master of the Jardin de vertueuse consolation 	15	14-16C
+Master of the Kremnitz Stadtbuch 	2	14-16C
+Master of the Lee Hours 	34	14-16C
+Master of the Llangattock Epiphany 	2	14-16C
+Master of the Llangattock Hours 	20	14-16C
+Master of the London Wavrin 	1	14-16C
+Master of the Lécurieux Collection 	1	14-16C
+Master of the Lübeck Bible 	9	14-16C
+Master of the Murano Gradual 	5	14-16C
+Master of the Osservanza 	2	14-16C
+Master of the Oxford Hours 	8	14-16C
+Master of the Prayer Books of around 1500 	3	14-16C
+Master of the Rimini Altarpiece 	1	14-16C
+Master of the Soane Josephus 	5	14-16C
+Master of the St. Bartholomew Altarpiece 	1	14-16C
+Master of Trinity College Ms. B.11.7 	2	14-16C
+Master of Wauquelin's Alexander 	6	14-16C
+Masters of Dirc van Delf 	12	14-16C
+Matteo da Milano 	5	14-16C
+Matthäus Gutrecht the Younger 	1	14-16C
+Maître François 	2	14-16C
+Medici Porcelain Factory 	1	14-16C
+Michael Haintzmann of Babenhausen 	1	14-16C
+Michael Lupi de Çandiu 	138	14-16C
+Michael Sittow 	1	14-16C
+Michelangelo Buonarroti 	2	14-16C
+Michelangelo di Pietro Membrini 	1	14-16C
+Mik'ayel 	1	14-16C
+Miniatore di Niccolò V 	1	14-16C
+Monogrammist AS 	1	14-16C
+Monogrammist MS 	1	14-16C
+Morazzone (Pier Francesco Mazzuchelli) 	1	14-16C
+Neri da Rimini 	1	14-16C
+Niccolò di Giacomo da Bologna 	11	14-16C
+Nicholas of Lynn 	1	14-16C
+Nicola di Gabriele Sbraghe (or Sbraga), known as Nicola da Urbino 	1	14-16C
+Nicolas de Gonesse 	1	14-16C
+Nicolas Spierinc 	54	14-16C
+Nicolaus of Prussia 	1	14-16C
+Nicolo di Antonio di Pardo de Ricci (Nicolaus Riccius Spinosus) 	1	14-16C
+Nicolò dell'Abate 	2	14-16C
+Niklaus Manuel Deutsch 	1	14-16C
+Nosadella 	1	14-16C
+Novella Master 	2	14-16C
+Ohannes 	1	14-16C
+Olivetan Master 	3	14-16C
+Orazio Fontana 	2	14-16C
+Pacino di Bonaguida 	7	14-16C
+Paolo Farinati 	1	14-16C
+Paolo Savin 	1	14-16C
+Paolo Uccello 	1	14-16C
+Paolo Veneziano 	1	14-16C
+Paolo Veronese (Paolo Caliari) 	8	14-16C
+Paris Bordone 	1	14-16C
+Parmigianino (Francesco Mazzola) 	7	14-16C
+Passion Master 	12	14-16C
+Pellegrino di Mariano Rossini 	1	14-16C
+Pellegrino Tibaldi 	1	14-16C
+Perino del Vaga (Piero Buonaccorsi) 	2	14-16C
+Perrin Remiet 	7	14-16C
+Peter Comestor 	3	14-16C
+Peter Hemmel von Andlau 	1	14-16C
+Peter Paul Rubens 	1	14-16C
+Petros 	1	14-16C
+Pier Francesco Foschi 	1	14-16C
+Piero del Pollaiuolo 	1	14-16C
+Piero di Mazzeo 	1	14-16C
+Pieter Coecke van Aelst 	1	14-16C
+Pieter Cornelisz. Kunst 	1	14-16C
+Pieter de Jode 	1	14-16C
+Pieter Stevens 	1	14-16C
+Pisanello 	2	14-16C
+Pol Fruit 	16	14-16C
+Polidoro da Caravaggio (Polidoro Caldara) 	1	14-16C
+Pontormo (Jacopo Carucci) 	5	14-16C
+Pope Clement V 	1	14-16C
+Pordenone (Giovanni Antonio de'Sacchis) 	1	14-16C
+Pseudo-Jacquemart de Hesdin 	2	14-16C
+Quentin Metsys 	2	14-16C
+Quintus Curtius Rufus 	1	14-16C
+Rainerius de Pisis 	22	14-16C
+Raoul de Presles 	1	14-16C
+Raphael (Raffaello Sanzio) 	6	14-16C
+Rashi 	1	14-16C
+Riccio (Andrea Briosco) 	3	14-16C
+Richard Fitzralph 	1	14-16C
+Robert Campin 	1	14-16C
+Robert Grosseteste 	1	14-16C
+Rogier van der Weyden 	3	14-16C
+Rohan Master 	16	14-16C
+Rosso Fiorentino (Giovanni Battista di Jacopo di Gasparre) 	2	14-16C
+Rudolf von Ems 	171	14-16C
+Saint Augustine 	1	14-16C
+Sano di Pietro 	3	14-16C
+Santi di Tito 	1	14-16C
+Sebald Beham 	4	14-16C
+Sebastian Höchstetter 	5	14-16C
+Sebastian Vrancx 	1	14-16C
+Sebastiano del Piombo 	3	14-16C
+Ser Ricciardo di Nanni 	3	14-16C
+Simon Bening 	86	14-16C
+Simon de Hesdin 	1	14-16C
+Simon Marmion 	25	14-16C
+Simone Martini 	1	14-16C
+Sodoma (Giovanni Antonio Bazzi) 	1	14-16C
+Spitz Master 	19	14-16C
+Stefan Lochner 	62	14-16C
+Stefano da Verona 	2	14-16C
+Stradanus 	2	14-16C
+T.D. 	3	14-16C
+Tadda (Romolo di Francesco Ferrucci) 	1	14-16C
+Taddeo Crivelli 	24	14-16C
+Taddeo Zuccaro 	4	14-16C
+Theodor de Bry 	1	14-16C
+Titian (Tiziano Vecellio) 	5	14-16C
+Tiziano Aspetti 	1	14-16C
+Tobias Stimmer 	1	14-16C
+Tommaso da Modena 	1	14-16C
+Tommaso del Mazza 	1	14-16C
+Toussaint Dubreuil 	1	14-16C
+Ulrich Schreier 	2	14-16C
+Unknown artist/maker (2,569)
+Upper Rhenish Master 	1	14-16C
+Urs Graf 	1	14-16C
+Valentine Noh 	38	14-16C
+Valerius Maximus 	1	14-16C
+Vanni di Baldolo 	2	14-16C
+Vasco da Lucena 	1	14-16C
+Veit Stoss 	1	14-16C
+Vidal de Canellas 	1	14-16C
+Vienna Master of Mary of Burgundy 	4	14-16C
+Vincent de Beauvais 	4	14-16C
+Vincent Raymond 	2	14-16C
+Virgil Master 	25	14-16C
+Virgil Solis 	2	14-16C
+Vittore Carpaccio 	4	14-16C
+Werner Kuebler the Elder 	1	14-16C
+Willem Danielsz. van Tetrode 	1	14-16C
+Willem Vrelant 	89	14-16C
+William of Moerbeke 	1	14-16C
+William Reade 	1	14-16C
+Wolf Huber 	2	14-16C
+Wolfgang Vitl 	3	14-16C
+Wouter Crabeth 	1	14-16C
+Zanobi di Benedetto Strozzi 	3	14-16C
