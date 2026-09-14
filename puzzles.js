@@ -14,7 +14,9 @@ function gettyImg(uuid) {
 const PUZZLES = [
   {
     id: 1,
+    type: "cross",
     title: "Turner & Italian Landscapes",
+    instructions: "Here are 8 paintings at the Getty Museum. 5 of them fit in the crossword grid; drag them to their appropriate boxes. The column should contain three paintings in the same genre. The row should contain three paintings by the same artist.",
     verticalAxis:   { label: "Same Genre",  reveal: "Italian Landscapes" },
     horizontalAxis: { label: "Same Artist", reveal: "J.M.W. Turner" },
     solution: {
@@ -98,6 +100,96 @@ const PUZZLES = [
         date:     "about 1673-74",
         medium:   "Oil on canvas",
         imageUrl: gettyImg("70c596e7-ef41-429e-a8c5-b19f887f9000"),
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    type: "zigzag",
+    title: "Venus, Four Ways",
+    instructions: "Here are 8 paintings and drawings at the Getty Museum. The center column holds four depictions of the same subject. Each painting beside the column was made by the same artist as its neighbor in the center — drag each pair into the same row.",
+    centerAxis: { label: "Same Subject", reveal: "Venus" },
+    sideAxis:   { label: "Same Artist",  reveal: "Same artist as its row's center painting" },
+    solution: {
+      centerIds: ["boucher-venus-triumph", "ricci-marine-venus", "solimena-forge", "titian-venus-adonis"],
+    },
+    artworks: [
+      // ── Row 1: Boucher (side on the left) ──────────────────────────────────
+      {
+        id:       "boucher-venus-triumph",
+        objectId: "10985F",
+        title:    "The Birth and Triumph of Venus",
+        artist:   "François Boucher",
+        date:     "about 1743",
+        medium:   "Black chalk and gouache",
+        imageUrl: gettyImg("40016a32-0f38-4f14-bb0b-a1eb191efe7f"),
+      },
+      {
+        id:       "boucher-reclining-nude",
+        objectId: "103QWY",
+        title:    "Study of a Reclining Nude",
+        artist:   "François Boucher",
+        date:     "1732–1735",
+        medium:   "Red and white chalk on oatmeal paper",
+        imageUrl: gettyImg("6314632d-529d-448d-a0e9-b15a6307f98e"),
+      },
+      // ── Row 2: Ricci (side on the right) ───────────────────────────────────
+      {
+        id:       "ricci-marine-venus",
+        objectId: "103RCT",
+        title:    "Triumph of the Marine Venus",
+        artist:   "Sebastiano Ricci",
+        date:     "about 1713",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("eb31c802-f813-492b-bfba-f5ec79abd4a2"),
+      },
+      {
+        id:       "ricci-tarquin",
+        objectId: "103RCE",
+        title:    "Tarquin the Elder Consulting Attius Navius",
+        artist:   "Sebastiano Ricci",
+        date:     "about 1690",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("37cc3885-33e4-4602-bf02-559ab8ec0ee8"),
+      },
+      // ── Row 3: Solimena (side on the left) ─────────────────────────────────
+      {
+        id:       "solimena-forge",
+        objectId: "103RFY",
+        title:    "Venus at the Forge of Vulcan",
+        artist:   "Francesco Solimena",
+        date:     "1704",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("0e2d21f0-e964-4988-9960-c5d14c5dc1c1"),
+      },
+      {
+        id:       "solimena-aurora",
+        objectId: "103RG1",
+        title:    "Aurora Taking Leave of Tithonus",
+        artist:   "Francesco Solimena",
+        date:     "1704",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("5402aa28-a384-45bb-8a89-54b9929c0915"),
+      },
+      // ── Row 4: Titian (side on the right) ──────────────────────────────────
+      {
+        id:       "titian-venus-adonis",
+        objectId: "103RJS",
+        title:    "Venus and Adonis",
+        artist:   "Titian (Tiziano Vecellio)",
+        date:     "about 1555–1560",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("d353f957-af6b-4757-9291-900c3859a5d2"),
+      },
+      {
+        id:       "titian-magdalene",
+        objectId: "103R9F",
+        title:    "The Penitent Magdalene",
+        artist:   "Titian (Tiziano Vecellio)",
+        date:     "1555–1560",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("ee8db855-5367-4932-9015-3e49f78aee53"),
       },
     ],
   },

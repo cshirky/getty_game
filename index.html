@@ -20,10 +20,8 @@
 
   <main class="game-main">
 
-    <div class="instructions">
-      Here are 8 paintings at the Getty Museum. 5 of them fit in the crossword grid; drag them to their appropriate boxes.
-      The column should contain three paintings in the same genre. The row should contain three paintings by the same artist.
-    </div>
+    <p class="puzzle-label" id="puzzleLabel"></p>
+    <div class="instructions" id="instructions"></div>
 
     <!-- Check button -->
     <div class="check-bar">
@@ -44,6 +42,9 @@
       </div>
       <div class="score-display" id="scoreDisplay" hidden>
         <span class="score-word" id="scoreWord"></span>
+        <div class="next-puzzle-bar">
+          <button class="btn-next" id="nextPuzzleBtn" hidden>Next puzzle →</button>
+        </div>
       </div>
     </div>
 
@@ -55,22 +56,8 @@
         <div class="candidate-pool" id="candidatePool"></div>
       </div>
 
-      <!-- Cross grid — color-coded by axis -->
-      <div class="cross-grid" id="crossGrid">
-
-        <div class="grid-spacer"></div>
-        <div class="cell cell-vertical"   data-pos="top"    id="cell-top"></div>
-        <div class="grid-spacer"></div>
-
-        <div class="cell cell-horizontal" data-pos="left"   id="cell-left"></div>
-        <div class="cell cell-center"     data-pos="center" id="cell-center"></div>
-        <div class="cell cell-horizontal" data-pos="right"  id="cell-right"></div>
-
-        <div class="grid-spacer"></div>
-        <div class="cell cell-vertical"   data-pos="bottom" id="cell-bottom"></div>
-        <div class="grid-spacer"></div>
-
-      </div>
+      <!-- Puzzle grid — built per-puzzle in JS (shape + color-coding depend on puzzle.type) -->
+      <div class="puzzle-grid" id="puzzleGrid"></div>
 
     </div>
 

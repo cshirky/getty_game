@@ -1,8 +1,7 @@
 // game.js
 
-const POSITIONS = ['top', 'left', 'center', 'right', 'bottom'];
-
 let puzzle       = null;
+let positions    = [];  // slot ids for the current puzzle (shape depends on puzzle.type)
 let placed       = {};
 let locked       = new Set();
 let drag         = { artworkId: null, fromPos: null };
@@ -39,11 +38,62 @@ function positionOverlay(rect) {
   overlay.style.top  = Math.max(PAD, y) + 'px';
 }
 
+// ── Grid shape (per puzzle.type) ─────────────────────────────────────────────
+
+function getPositions(p) {
+  if (p.type === 'zigzag') {
+    return ['center1', 'center2', 'center3', 'center4', 'side1', 'side2', 'side3', 'side4'];
+  }
+  return ['top', 'left', 'center', 'right', 'bottom']; // 'cross'
+}
+
+// Layout of the grid as a sequence of column-major-free rows; null = spacer cell.
+function getGridLayout(p) {
+  if (p.type === 'zigzag') {
+    const rows = [];
+    for (let r = 1; r <= 4; r++) {
+      const left = (r % 2 === 1); // rows 1,3 -> side on the left; rows 2,4 -> right
+      rows.push(left ? [`side${r}`, `center${r}`, null] : [null, `center${r}`, `side${r}`]);
+    }
+    return { columns: 3, rows };
+  }
+  return {
+    columns: 3,
+    rows: [
+      [null, 'top', null],
+      ['left', 'center', 'right'],
+      [null, 'bottom', null],
+    ],
+  };
+}
+
+function cellAxisClass(p, pos) {
+  if (p.type === 'zigzag') return pos.startsWith('center') ? 'cell-vertical' : 'cell-horizontal';
+  if (pos === 'center') return 'cell-center';
+  if (pos === 'top' || pos === 'bottom') return 'cell-vertical';
+  return 'cell-horizontal';
+}
+
+function positionAxisLabels(p, pos) {
+  if (p.type === 'zigzag') {
+    return pos.startsWith('center') ? [p.centerAxis.label] : [p.sideAxis.label];
+  }
+  if (pos === 'center') return [p.verticalAxis.label, p.horizontalAxis.label];
+  if (pos === 'top' || pos === 'bottom') return [p.verticalAxis.label];
+  return [p.horizontalAxis.label];
+}
+
+function axisReveals(p) {
+  if (p.type === 'zigzag') return { a: p.centerAxis.reveal, b: p.sideAxis.reveal };
+  return { a: p.verticalAxis.reveal, b: p.horizontalAxis.reveal };
+}
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 function loadPuzzle(index) {
   puzzleIndex  = index;
   puzzle       = PUZZLES[index];
+  positions    = getPositions(puzzle);
   placed       = {};
   locked       = new Set();
   drag         = { artworkId: null, fromPos: null };
@@ -51,37 +101,62 @@ function loadPuzzle(index) {
   axesRevealed = false;
   document.body.classList.remove('answers-revealed');
 
-  POSITIONS.forEach(pos => resetCell(pos));
+  document.getElementById('puzzleLabel').textContent  = `Puzzle ${index + 1} of ${PUZZLES.length}: ${puzzle.title}`;
+  document.getElementById('instructions').textContent = puzzle.instructions;
 
-  const shuffled = [...puzzle.artworks].sort(() => Math.random() - 0.5);
-  const pool = document.getElementById('candidatePool');
-  pool.innerHTML = '';
-  shuffled.forEach(a => pool.appendChild(makeCard(a)));
+  buildGrid();
 
-  // Re-wire cells (clone to clear stale listeners)
-  POSITIONS.forEach(pos => {
-    const old   = document.getElementById(`cell-${pos}`);
-    const fresh = old.cloneNode(true);
-    old.parentNode.replaceChild(fresh, old);
-    wireCell(fresh, pos);
-  });
+  // Re-wire pool (clone first, while empty, to clear stale container-level listeners
+  // from a previous loadPuzzle call — cards get their own fresh listeners below)
+  const oldPool = document.getElementById('candidatePool');
+  const pool    = oldPool.cloneNode(false);
+  oldPool.parentNode.replaceChild(pool, oldPool);
 
-  // Pool as drop target (return artworks from grid)
-  const pool2 = document.getElementById('candidatePool');
-  pool2.addEventListener('dragover',  e => { e.preventDefault(); pool2.classList.add('drag-over'); });
-  pool2.addEventListener('dragleave', () => pool2.classList.remove('drag-over'));
-  pool2.addEventListener('drop', e => {
+  pool.addEventListener('dragover',  e => { e.preventDefault(); pool.classList.add('drag-over'); });
+  pool.addEventListener('dragleave', () => pool.classList.remove('drag-over'));
+  pool.addEventListener('drop', e => {
     e.preventDefault();
-    pool2.classList.remove('drag-over');
+    pool.classList.remove('drag-over');
     if (drag.fromPos !== null && !locked.has(drag.fromPos)) {
       returnToPool(drag.fromPos, drag.artworkId);
       updateCheckButton();
     }
   });
 
+  const shuffled = [...puzzle.artworks].sort(() => Math.random() - 0.5);
+  shuffled.forEach(a => pool.appendChild(makeCard(a)));
+
   document.getElementById('resultBar').setAttribute('hidden', '');
   document.getElementById('scoreDisplay').setAttribute('hidden', '');
+  document.getElementById('nextPuzzleBtn').setAttribute('hidden', '');
   updateCheckButton();
+}
+
+// ── Grid building ─────────────────────────────────────────────────────────────
+
+function buildGrid() {
+  const grid = document.getElementById('puzzleGrid');
+  grid.innerHTML = '';
+  grid.className = `puzzle-grid grid-${puzzle.type}`;
+
+  const { rows } = getGridLayout(puzzle);
+  rows.forEach(row => {
+    row.forEach(pos => {
+      if (pos === null) {
+        const spacer = document.createElement('div');
+        spacer.className = 'grid-spacer';
+        grid.appendChild(spacer);
+        return;
+      }
+      const cell = document.createElement('div');
+      cell.className  = `cell ${cellAxisClass(puzzle, pos)}`;
+      cell.id         = `cell-${pos}`;
+      cell.dataset.pos = pos;
+      resetCell(pos, cell);
+      wireCell(cell, pos);
+      grid.appendChild(cell);
+    });
+  });
 }
 
 // ── Cell wiring ───────────────────────────────────────────────────────────────
@@ -141,6 +216,10 @@ function makeCard(artwork) {
   return card;
 }
 
+function artworkById(id) {
+  return puzzle.artworks.find(a => a.id === id);
+}
+
 // ── Drop handler ──────────────────────────────────────────────────────────────
 
 function handleDrop(targetPos) {
@@ -163,7 +242,7 @@ function handleDrop(targetPos) {
 
 function placeInCell(artworkId, pos) {
   placed[pos] = artworkId;
-  const artwork = puzzle.artworks.find(a => a.id === artworkId);
+  const artwork = artworkById(artworkId);
   const cell    = document.getElementById(`cell-${pos}`);
   cell.innerHTML = '';
   cell.appendChild(makeCard(artwork));
@@ -171,34 +250,52 @@ function placeInCell(artworkId, pos) {
 
 // ── Check (deferred, set-based validation) ────────────────────────────────────
 
-function checkAll() {
-  if (!POSITIONS.every(pos => placed[pos] || locked.has(pos))) return;
-
-  // Reveal real axis labels + on-card captions for all paintings on first check
-  if (!axesRevealed) {
-    axesRevealed = true;
-    document.getElementById('revealVertical').textContent   = puzzle.verticalAxis.reveal;
-    document.getElementById('revealHorizontal').textContent = puzzle.horizontalAxis.reveal;
-    document.body.classList.add('answers-revealed');
-    document.getElementById('resultBar').removeAttribute('hidden');
+function computeCorrectness() {
+  if (puzzle.type === 'zigzag') {
+    const centerIds = new Set(puzzle.solution.centerIds);
+    const result = {};
+    for (let r = 1; r <= 4; r++) {
+      const centerPos = `center${r}`;
+      const sidePos   = `side${r}`;
+      const centerArt = artworkById(placed[centerPos]);
+      const sideArt   = artworkById(placed[sidePos]);
+      result[centerPos] = centerIds.has(placed[centerPos]);
+      result[sidePos]   = !!(centerArt && sideArt && sideArt.artist === centerArt.artist);
+    }
+    return result;
   }
 
   const { center, horizontal, vertical } = puzzle.solution;
   const horizSet = new Set(horizontal);
   const vertSet  = new Set(vertical);
-
-  const isCorrect = {
+  return {
     center: placed.center === center,
     left:   horizSet.has(placed.left),
     right:  horizSet.has(placed.right),
     top:    vertSet.has(placed.top),
     bottom: vertSet.has(placed.bottom),
   };
+}
+
+function checkAll() {
+  if (!positions.every(pos => placed[pos] || locked.has(pos))) return;
+
+  // Reveal real axis labels + on-card captions for all paintings on first check
+  if (!axesRevealed) {
+    axesRevealed = true;
+    const { a, b } = axisReveals(puzzle);
+    document.getElementById('revealVertical').textContent   = a;
+    document.getElementById('revealHorizontal').textContent = b;
+    document.body.classList.add('answers-revealed');
+    document.getElementById('resultBar').removeAttribute('hidden');
+  }
+
+  const isCorrect = computeCorrectness();
 
   let wrongCount    = 0;
   let resolvedCount = 0;
 
-  POSITIONS.forEach(pos => {
+  positions.forEach(pos => {
     if (locked.has(pos)) return;
 
     if (isCorrect[pos]) {
@@ -214,7 +311,7 @@ function checkAll() {
         returnToPool(pos, artworkId);
         updateCheckButton();
         resolvedCount++;
-        if (resolvedCount === wrongCount && locked.size === 5) {
+        if (resolvedCount === wrongCount && locked.size === positions.length) {
           showScore();
         }
       }, 600);
@@ -223,7 +320,7 @@ function checkAll() {
 
   wrongTotal += wrongCount;
 
-  if (wrongCount === 0 && locked.size === 5) {
+  if (wrongCount === 0 && locked.size === positions.length) {
     showScore();
   }
 }
@@ -245,23 +342,18 @@ function returnToPool(pos, artworkId) {
   delete placed[pos];
   resetCell(pos);
   if (!document.querySelector(`#candidatePool [data-id="${artworkId}"]`)) {
-    const artwork = puzzle.artworks.find(a => a.id === artworkId);
-    document.getElementById('candidatePool').appendChild(makeCard(artwork));
+    document.getElementById('candidatePool').appendChild(makeCard(artworkById(artworkId)));
   }
 }
 
 // ── Cell reset ────────────────────────────────────────────────────────────────
 
 function cellHintLines(pos) {
-  const v = puzzle.verticalAxis.label;
-  const h = puzzle.horizontalAxis.label;
-  if (pos === 'center')                  return ['Drop here:', v, h];
-  if (pos === 'top' || pos === 'bottom') return ['Drop here:', v];
-  return ['Drop here:', h];
+  return ['Drop here:', ...positionAxisLabels(puzzle, pos)];
 }
 
-function resetCell(pos) {
-  const cell = document.getElementById(`cell-${pos}`);
+function resetCell(pos, cellEl) {
+  const cell = cellEl || document.getElementById(`cell-${pos}`);
   if (!cell) return;
   cell.classList.remove('correct', 'wrong', 'locked', 'drag-over');
   const lines = cellHintLines(pos)
@@ -273,7 +365,7 @@ function resetCell(pos) {
 // ── Check button state ────────────────────────────────────────────────────────
 
 function updateCheckButton() {
-  const allFilled = POSITIONS.every(pos => placed[pos] || locked.has(pos));
+  const allFilled = positions.every(pos => placed[pos] || locked.has(pos));
   document.getElementById('checkBtn').disabled = !allFilled;
 }
 
@@ -290,9 +382,19 @@ function showScore() {
   document.getElementById('scoreDisplay').removeAttribute('hidden');
   document.getElementById('resultBar').removeAttribute('hidden');
   document.getElementById('checkBtn').disabled = true;
+
+  const nextBtn = document.getElementById('nextPuzzleBtn');
+  if (puzzleIndex + 1 < PUZZLES.length) {
+    nextBtn.removeAttribute('hidden');
+  } else {
+    nextBtn.setAttribute('hidden', '');
+  }
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 document.getElementById('checkBtn').addEventListener('click', checkAll);
+document.getElementById('nextPuzzleBtn').addEventListener('click', () => {
+  if (puzzleIndex + 1 < PUZZLES.length) loadPuzzle(puzzleIndex + 1);
+});
 window.addEventListener('DOMContentLoaded', () => loadPuzzle(0));
