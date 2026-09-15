@@ -130,7 +130,7 @@ body {
 .candidate-pool {
   display: grid;
   grid-template-columns: repeat(2, var(--pool-card-w));
-  grid-template-rows: repeat(4, var(--pool-card-h));
+  grid-auto-rows: var(--pool-card-h);
   gap: var(--gap);
   padding: 8px;
   border: 1.5px dashed rgba(255,255,255,.4);

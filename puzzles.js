@@ -108,7 +108,7 @@ const PUZZLES = [
     id: 2,
     type: "zigzag",
     title: "Venus, Four Ways",
-    instructions: "Here are 8 paintings and drawings at the Getty Museum. The center column holds four depictions of the same subject. Each painting beside the column was made by the same artist as its neighbor in the center — drag each pair into the same row.",
+    instructions: "Here are 11 paintings and drawings at the Getty Museum. 8 of them fit the grid; drag them to their appropriate boxes. The center column holds four depictions of the same subject. Each painting beside the column was made by the same artist as its neighbor in the center — drag each pair into the same row.",
     centerAxis: { label: "Same Subject", reveal: "Venus" },
     sideAxis:   { label: "Same Artist",  reveal: "Same artist as its row's center painting" },
     solution: {
@@ -190,6 +190,36 @@ const PUZZLES = [
         date:     "1555–1560",
         medium:   "Oil on canvas",
         imageUrl: gettyImg("ee8db855-5367-4932-9015-3e49f78aee53"),
+      },
+      // ── DISTRACTORS ────────────────────────────────────────────────────────
+      {
+        // Also depicts Venus, but by an artist outside the puzzle's four —
+        // looks like a center candidate, but isn't one of the designated four.
+        id:       "vouet-venus-adonis",
+        objectId: "103RB7",
+        title:    "Venus and Adonis",
+        artist:   "Simon Vouet",
+        date:     "about 1642",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("9873c9d7-3fa6-4465-aacd-e90acb2c8ea7"),
+      },
+      {
+        id:       "vangogh-irises",
+        objectId: "103JNH",
+        title:    "Irises",
+        artist:   "Vincent van Gogh",
+        date:     "1889",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("8c255d80-7382-46db-9fa8-892c0d37247e"),
+      },
+      {
+        id:       "rembrandt-bartholomew",
+        objectId: "103RB6",
+        title:    "Saint Bartholomew",
+        artist:   "Rembrandt Harmensz. van Rijn",
+        date:     "1661",
+        medium:   "Oil on canvas",
+        imageUrl: gettyImg("419d4e47-23e5-4031-92cf-b196f5590113"),
       },
     ],
   },
