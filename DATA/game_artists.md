@@ -34,14 +34,12 @@ format and quirks.
 | Antonio Susini | 4 | 14-16C: 2, 17C: 2 |
 | Bartolomeo Rigossi da Gallarate | 4 | 14-16C: 4 |
 | Bartolomé Esteban Murillo | 5 | 17C: 5 |
-| Beauvais Manufactory | 29 | 17C: 12, 18C: 17 |
 | Bedford Master | 87 | 14-16C: 87 |
 | Bernard II van Risenburgh | 14 | 18C: 14 |
 | Boucicaut Master | 75 | 14-16C: 75 |
 | Brother Philipp | 79 | 14-16C: 79 |
 | Canaletto (Giovanni Antonio Canal) | 4 | 18C: 4 |
 | Carl Wilhelm Becker | 5 | 18C: 5 |
-| Chantilly Porcelain Manufactory | 13 | 17C: 1, 18C: 12 |
 | Charles Cressent | 6 | 18C: 6 |
 | Charles Le Brun | 8 | 17C: 6, 18C: 2 |
 | Charles-Antoine Coypel | 6 | 18C: 6 |
@@ -63,7 +61,6 @@ format and quirks.
 | Federico Barocci | 4 | 14-16C: 3, 17C: 1 |
 | Federico Zuccaro | 25 | 14-16C: 24, 17C: 1 |
 | Fiore Furlan dei Liberi da Premariacco | 93 | 14-16C: 93 |
-| First Master of the Bible historiale of Jean de Berry | 7 | 14-16C: 7 |
 | Fra Bartolommeo (Baccio della Porta) | 6 | 14-16C: 6 |
 | Fra Vincentius a Fundis | 11 | 14-16C: 11 |
 | Francesco Bertos | 5 | 17C: 2, 18C: 3 |
@@ -149,43 +146,8 @@ format and quirks.
 | Malnazar | 26 | 17C: 26 |
 | Martin Carlin | 6 | 18C: 6 |
 | Massimiliano Soldani-Benzi | 7 | 17C: 2, 18C: 5 |
-| Master B.F. | 5 | 14-16C: 5 |
-| Master Michael | 27 | 14-16C: 27 |
-| Master of Cardinal Bourbon | 24 | 14-16C: 24 |
-| Master of Evert Zoudenbalch | 8 | 14-16C: 8 |
-| Master of François de Rohan | 30 | 14-16C: 30 |
-| Master of Guillaume Lambert | 35 | 14-16C: 35 |
-| Master of Guillebert de Mets | 12 | 14-16C: 12 |
-| Master of Jacques de Besançon | 25 | 14-16C: 25 |
-| Master of Jacques of Luxembourg | 29 | 14-16C: 29 |
-| Master of James IV of Scotland | 46 | 14-16C: 46 |
-| Master of Jean de Mandeville | 74 | 14-16C: 74 |
-| Master of Sir John Fastolf | 46 | 14-16C: 46 |
-| Master of the Brussels Initials | 95 | 14-16C: 95 |
-| Master of the Brussels Romuléon | 23 | 14-16C: 23 |
-| Master of the Chronique scandaleuse | 19 | 14-16C: 19 |
-| Master of the Copenhagen Caesar | 12 | 14-16C: 12 |
-| Master of the Dresden Prayer Book | 42 | 14-16C: 42 |
-| Master of the First Prayer Book of Maximilian | 26 | 14-16C: 26 |
-| Master of the Geneva Boccaccio | 39 | 14-16C: 39 |
-| Master of the Getty Epistles | 4 | 14-16C: 4 |
-| Master of the Getty Froissart | 21 | 14-16C: 21 |
-| Master of the Getty Lalaing | 18 | 14-16C: 18 |
-| Master of the Golden Bull | 4 | 14-16C: 4 |
-| Master of the Harvard Hannibal | 15 | 14-16C: 15 |
-| Master of the Jardin de vertueuse consolation | 15 | 14-16C: 15 |
-| Master of the Lee Hours | 34 | 14-16C: 34 |
-| Master of the Llangattock Hours | 20 | 14-16C: 20 |
-| Master of the Lübeck Bible | 9 | 14-16C: 9 |
-| Master of the Murano Gradual | 5 | 14-16C: 5 |
-| Master of the Oxford Hours | 8 | 14-16C: 8 |
-| Master of the Soane Josephus | 5 | 14-16C: 5 |
-| Master of Wauquelin's Alexander | 6 | 14-16C: 6 |
-| Masters of Dirc van Delf | 12 | 14-16C: 12 |
 | Matteo da Milano | 5 | 14-16C: 5 |
 | Maurice Jacques | 8 | 18C: 8 |
-| Meissen Porcelain Manufactory | 17 | 18C: 17 |
-| Mennecy Porcelain Manufactory | 5 | 18C: 5 |
 | Mesrop of Khizan | 23 | 17C: 23 |
 | Michael Lupi de Çandiu | 138 | 14-16C: 138 |
 | Michel Audran | 5 | 18C: 5 |
@@ -209,13 +171,8 @@ format and quirks.
 | Rainerius de Pisis | 22 | 14-16C: 22 |
 | Raphael (Raffaello Sanzio) | 6 | 14-16C: 6 |
 | Rembrandt Harmensz. van Rijn | 17 | 17C: 17 |
-| Rock & Co. | 6 | 18C: 6 |
 | Roelandt Savery | 4 | 17C: 4 |
-| Rohan Master | 16 | 14-16C: 16 |
-| Royal Factory of Furniture to the Crown at the Gobelins Manufactory | 18 | 17C: 4, 18C: 14 |
 | Rudolf von Ems | 171 | 14-16C: 171 |
-| Saint-Cloud Porcelain Manufactory | 7 | 17C: 1, 18C: 6 |
-| Savonnerie Manufactory | 5 | 17C: 1, 18C: 4 |
 | Sebald Beham | 4 | 14-16C: 4 |
 | Sebastian Höchstetter | 5 | 14-16C: 5 |
 | Sebastiano Ricci | 6 | 17C: 1, 18C: 5 |
@@ -223,15 +180,12 @@ format and quirks.
 | Simon Marmion | 25 | 14-16C: 25 |
 | Spitz Master | 19 | 14-16C: 19 |
 | Stefan Lochner | 62 | 14-16C: 62 |
-| Sèvres Manufactory | 51 | 18C: 51 |
 | Taddeo Crivelli | 24 | 14-16C: 24 |
 | Taddeo Zuccaro | 4 | 14-16C: 4 |
 | Thomas Gainsborough | 4 | 18C: 4 |
 | Thomas Germain | 6 | 18C: 6 |
 | Titian (Tiziano Vecellio) | 5 | 14-16C: 5 |
 | Valentine Noh | 38 | 14-16C: 38 |
-| Vienna Master of Mary of Burgundy | 4 | 14-16C: 4 |
-| Vincennes Porcelain Manufactory | 14 | 18C: 14 |
 | Vincent de Beauvais | 4 | 14-16C: 4 |
 | Virgil Master | 25 | 14-16C: 25 |
 | Vittore Carpaccio | 4 | 14-16C: 4 |

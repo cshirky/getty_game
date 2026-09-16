@@ -5,9 +5,38 @@ let positions    = [];  // slot ids for the current puzzle (shape depends on puz
 let placed       = {};
 let locked       = new Set();
 let drag         = { artworkId: null, fromPos: null };
-let puzzleIndex  = 0;
-let wrongTotal   = 0;   // cumulative wrong placements across all checks
+let puzzleIndex     = 0;
+let wrongCenterTotal = 0;   // cumulative wrong Venus-in-center placements
+let wrongSideTotal   = 0;   // cumulative wrong same-artist-match placements
 let axesRevealed = false;
+
+// ── Scoring config (loaded from SCORING.md so it's editable without touching code) ─────────
+let SCORING = {
+  pointsPerVenusMatch:  10,
+  maxVenusMatches:      4,
+  pointsPerArtistMatch: 10,
+  maxArtistMatches:     4,
+  maxChronologyPoints:  20,
+  perfectThreshold:     90,
+  goodThreshold:        70,
+  okThreshold:          50,
+};
+
+async function loadScoring() {
+  try {
+    const res = await fetch('SCORING.md');
+    if (!res.ok) return;
+    const text = await res.text();
+    const parsed = {};
+    for (const m of text.matchAll(/^([A-Za-z][A-Za-z0-9]*)\s*:\s*(-?\d+(?:\.\d+)?)\s*$/gm)) {
+      parsed[m[1]] = Number(m[2]);
+    }
+    Object.assign(SCORING, parsed);
+  } catch (err) {
+    console.warn('Could not load SCORING.md — using built-in scoring defaults.', err);
+  }
+}
+loadScoring();
 
 // ── Overlay ───────────────────────────────────────────────────────────────────
 
@@ -97,12 +126,16 @@ function loadPuzzle(index) {
   placed       = {};
   locked       = new Set();
   drag         = { artworkId: null, fromPos: null };
-  wrongTotal   = 0;
+  wrongCenterTotal = 0;
+  wrongSideTotal   = 0;
   axesRevealed = false;
   document.body.classList.remove('answers-revealed');
 
   document.getElementById('puzzleLabel').textContent  = `Puzzle ${index + 1} of ${PUZZLES.length}: ${puzzle.title}`;
-  document.getElementById('instructions').textContent = puzzle.instructions;
+
+  const instructionsEl = document.getElementById('instructions');
+  const paragraphs = Array.isArray(puzzle.instructions) ? puzzle.instructions : [puzzle.instructions];
+  instructionsEl.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
 
   buildGrid();
 
@@ -140,11 +173,18 @@ function buildGrid() {
   grid.className = `puzzle-grid grid-${puzzle.type}`;
 
   const { rows } = getGridLayout(puzzle);
-  rows.forEach(row => {
+  rows.forEach((row, rowIndex) => {
+    const rowLabel = rowIndex === 0             ? puzzle.rowLabels?.top :
+                      rowIndex === rows.length-1 ? puzzle.rowLabels?.bottom :
+                      null;
     row.forEach(pos => {
       if (pos === null) {
         const spacer = document.createElement('div');
         spacer.className = 'grid-spacer';
+        if (rowLabel) {
+          spacer.classList.add('row-label');
+          spacer.textContent = rowLabel;
+        }
         grid.appendChild(spacer);
         return;
       }
@@ -302,6 +342,8 @@ function checkAll() {
       lockCell(pos);
     } else {
       wrongCount++;
+      if (pos.startsWith('center')) wrongCenterTotal++;
+      if (pos.startsWith('side'))   wrongSideTotal++;
       const artworkId = placed[pos];
       const cell      = document.getElementById(`cell-${pos}`);
       cell.classList.add('wrong');
@@ -317,8 +359,6 @@ function checkAll() {
       }, 600);
     }
   });
-
-  wrongTotal += wrongCount;
 
   if (wrongCount === 0 && locked.size === positions.length) {
     showScore();
@@ -371,14 +411,59 @@ function updateCheckButton() {
 
 // ── Score ─────────────────────────────────────────────────────────────────────
 
+// Pairwise closeness of the center column to chronological order (latest on
+// top, earliest on bottom): for every pair of center positions, the higher
+// (earlier-in-`positions`) one should date the same year or later.
+function computeChronologyScore() {
+  if (!puzzle.chronology) return null;
+  const centerPositions = positions.filter(pos => pos.startsWith('center'));
+  if (centerPositions.length < 2) return null;
+
+  const years = centerPositions.map(pos => puzzle.chronology[placed[pos]]);
+  let correctPairs = 0, totalPairs = 0;
+  for (let i = 0; i < years.length; i++) {
+    for (let j = i + 1; j < years.length; j++) {
+      totalPairs++;
+      if (years[i] >= years[j]) correctPairs++;
+    }
+  }
+  return { correctPairs, totalPairs };
+}
+
 function showScore() {
-  const label = wrongTotal === 0 ? 'Perfect' :
-                wrongTotal === 1 ? 'Good'    :
-                wrongTotal === 2 ? 'OK'      : 'Poor';
+  const centerHits = Math.max(0, SCORING.maxVenusMatches  - wrongCenterTotal);
+  const matchHits  = Math.max(0, SCORING.maxArtistMatches - wrongSideTotal);
+  const chrono     = computeChronologyScore();
+
+  const centerPts = centerHits * SCORING.pointsPerVenusMatch;
+  const matchPts  = matchHits  * SCORING.pointsPerArtistMatch;
+  const orderPts  = chrono ? Math.round((chrono.correctPairs / chrono.totalPairs) * SCORING.maxChronologyPoints) : 0;
+  const total     = centerPts + matchPts + orderPts;
+  const maxTotal  = SCORING.maxVenusMatches  * SCORING.pointsPerVenusMatch
+                   + SCORING.maxArtistMatches * SCORING.pointsPerArtistMatch
+                   + SCORING.maxChronologyPoints;
+
+  const label = total >= SCORING.perfectThreshold ? 'Perfect' :
+                total >= SCORING.goodThreshold    ? 'Good'    :
+                total >= SCORING.okThreshold       ? 'OK'      : 'Poor';
   const cls   = label.toLowerCase();
-  const el    = document.getElementById('scoreWord');
-  el.textContent = label;
+
+  const el = document.getElementById('scoreWord');
+  el.textContent = `${label} — ${total}/${maxTotal}`;
   el.className   = `score-word ${cls}`;
+
+  const breakdown = document.getElementById('scoreBreakdown');
+  if (breakdown) {
+    const lines = [
+      `Venus in the center: ${centerHits}/${SCORING.maxVenusMatches} (${centerPts} pts)`,
+      `Same-artist matches: ${matchHits}/${SCORING.maxArtistMatches} (${matchPts} pts)`,
+    ];
+    if (chrono) {
+      lines.push(`Chronological order: ${chrono.correctPairs}/${chrono.totalPairs} pairs (${orderPts} pts)`);
+    }
+    breakdown.innerHTML = lines.map(l => `<div class="score-line">${l}</div>`).join('');
+  }
+
   document.getElementById('scoreDisplay').removeAttribute('hidden');
   document.getElementById('resultBar').removeAttribute('hidden');
   document.getElementById('checkBtn').disabled = true;
