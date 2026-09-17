@@ -44,7 +44,7 @@ solved, based on the total score out of 100 (or whatever the point values
 above add up to).
 
 ```
-perfectThreshold: 90
-goodThreshold: 70
-okThreshold: 50
+perfectThreshold: 95
+goodThreshold: 80
+okThreshold: 60
 ```

@@ -5,9 +5,7 @@ let positions    = [];  // slot ids for the current puzzle (shape depends on puz
 let placed       = {};
 let locked       = new Set();
 let drag         = { artworkId: null, fromPos: null };
-let puzzleIndex     = 0;
-let wrongCenterTotal = 0;   // cumulative wrong Venus-in-center placements
-let wrongSideTotal   = 0;   // cumulative wrong same-artist-match placements
+let puzzleIndex  = 0;
 let axesRevealed = false;
 
 // ── Scoring config (loaded from SCORING.md so it's editable without touching code) ─────────
@@ -126,8 +124,6 @@ function loadPuzzle(index) {
   placed       = {};
   locked       = new Set();
   drag         = { artworkId: null, fromPos: null };
-  wrongCenterTotal = 0;
-  wrongSideTotal   = 0;
   axesRevealed = false;
   document.body.classList.remove('answers-revealed');
 
@@ -317,60 +313,33 @@ function computeCorrectness() {
   };
 }
 
+// One-shot: Check answers only ever runs once per puzzle. It reveals
+// everything, locks every box (correct in green, wrong in red, staying
+// exactly where it was dropped), and shows the final score immediately.
 function checkAll() {
+  if (locked.size === positions.length) return; // already scored
   if (!positions.every(pos => placed[pos] || locked.has(pos))) return;
 
-  // Reveal real axis labels + on-card captions for all paintings on first check
-  if (!axesRevealed) {
-    axesRevealed = true;
-    const { a, b } = axisReveals(puzzle);
-    document.getElementById('revealVertical').textContent   = a;
-    document.getElementById('revealHorizontal').textContent = b;
-    document.body.classList.add('answers-revealed');
-    document.getElementById('resultBar').removeAttribute('hidden');
-  }
+  axesRevealed = true;
+  const { a, b } = axisReveals(puzzle);
+  document.getElementById('revealVertical').textContent   = a;
+  document.getElementById('revealHorizontal').textContent = b;
+  document.body.classList.add('answers-revealed');
+  document.getElementById('resultBar').removeAttribute('hidden');
 
   const isCorrect = computeCorrectness();
+  positions.forEach(pos => lockCell(pos, isCorrect[pos]));
 
-  let wrongCount    = 0;
-  let resolvedCount = 0;
-
-  positions.forEach(pos => {
-    if (locked.has(pos)) return;
-
-    if (isCorrect[pos]) {
-      lockCell(pos);
-    } else {
-      wrongCount++;
-      if (pos.startsWith('center')) wrongCenterTotal++;
-      if (pos.startsWith('side'))   wrongSideTotal++;
-      const artworkId = placed[pos];
-      const cell      = document.getElementById(`cell-${pos}`);
-      cell.classList.add('wrong');
-
-      setTimeout(() => {
-        cell.classList.remove('wrong');
-        returnToPool(pos, artworkId);
-        updateCheckButton();
-        resolvedCount++;
-        if (resolvedCount === wrongCount && locked.size === positions.length) {
-          showScore();
-        }
-      }, 600);
-    }
-  });
-
-  if (wrongCount === 0 && locked.size === positions.length) {
-    showScore();
-  }
+  document.getElementById('checkBtn').disabled = true;
+  showScore(isCorrect);
 }
 
 // ── Locking ───────────────────────────────────────────────────────────────────
 
-function lockCell(pos) {
+function lockCell(pos, correct) {
   locked.add(pos);
   const cell = document.getElementById(`cell-${pos}`);
-  cell.classList.add('correct', 'locked');
+  cell.classList.add(correct ? 'correct' : 'wrong', 'locked');
   const card = cell.querySelector('.artwork-card');
   if (card) { card.draggable = false; card.style.cursor = 'default'; }
 }
@@ -430,9 +399,9 @@ function computeChronologyScore() {
   return { correctPairs, totalPairs };
 }
 
-function showScore() {
-  const centerHits = Math.max(0, SCORING.maxVenusMatches  - wrongCenterTotal);
-  const matchHits  = Math.max(0, SCORING.maxArtistMatches - wrongSideTotal);
+function showScore(isCorrect) {
+  const centerHits = positions.filter(pos => pos.startsWith('center') && isCorrect[pos]).length;
+  const matchHits  = positions.filter(pos => pos.startsWith('side')   && isCorrect[pos]).length;
   const chrono     = computeChronologyScore();
 
   const centerPts = centerHits * SCORING.pointsPerVenusMatch;
