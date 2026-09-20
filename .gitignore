@@ -2,3 +2,7 @@
 *~
 *.swp
 .DS_Store
+
+# Test / build artifacts
+node_modules/
+__pycache__/

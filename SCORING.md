@@ -37,6 +37,23 @@ the maximum below.
 maxChronologyPoints: 20
 ```
 
+## Two by Two
+
+Points for the 2x2 grid, awarded per *line* — each row that holds two works
+by one artist, and each column that holds two works of one subject. Four
+lines in all.
+
+Scoring by line rather than by square is deliberate. A square only counts as
+right when both the lines through it are right, so counting squares can only
+ever produce 0, 1, 2 or 4 of them, and the middle grades are unreachable.
+Per-line scoring gives totals of 0, 25, 50, 75 or 100 — keep the grade
+thresholds below between those steps.
+
+```
+pointsPerRow: 25
+pointsPerColumn: 25
+```
+
 ## Grade thresholds
 
 The final word (Perfect / Good / OK / Poor) shown after the puzzle is

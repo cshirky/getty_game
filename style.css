@@ -153,6 +153,10 @@ body {
 }
 .puzzle-grid.grid-cross   { grid-template-rows: repeat(3, var(--cell-h)); }
 .puzzle-grid.grid-zigzag  { grid-template-rows: repeat(4, var(--cell-h)); }
+.puzzle-grid.grid-grid2x2 {
+  grid-template-columns: repeat(2, var(--cell-w));
+  grid-template-rows: repeat(2, var(--cell-h));
+}
 .grid-spacer { background: transparent; pointer-events: none; }
 .grid-spacer.row-label {
   display: flex;

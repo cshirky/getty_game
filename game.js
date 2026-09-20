@@ -15,6 +15,8 @@ let SCORING = {
   pointsPerArtistMatch: 10,
   maxArtistMatches:     4,
   maxChronologyPoints:  20,
+  pointsPerRow:         25,
+  pointsPerColumn:      25,
   perfectThreshold:     90,
   goodThreshold:        70,
   okThreshold:          50,
@@ -68,6 +70,9 @@ function positionOverlay(rect) {
 // ── Grid shape (per puzzle.type) ─────────────────────────────────────────────
 
 function getPositions(p) {
+  if (p.type === 'grid2x2') {
+    return ['r1c1', 'r1c2', 'r2c1', 'r2c2'];
+  }
   if (p.type === 'zigzag') {
     return ['center1', 'center2', 'center3', 'center4', 'side1', 'side2', 'side3', 'side4'];
   }
@@ -76,6 +81,17 @@ function getPositions(p) {
 
 // Layout of the grid as a sequence of column-major-free rows; null = spacer cell.
 function getGridLayout(p) {
+  if (p.type === 'grid2x2') {
+    // Two rows, two columns, no labels on the axes: which artist takes which
+    // row and which subject takes which column is the puzzle.
+    return {
+      columns: 2,
+      rows: [
+        ['r1c1', 'r1c2'],
+        ['r2c1', 'r2c2'],
+      ],
+    };
+  }
   if (p.type === 'zigzag') {
     const rows = [];
     for (let r = 1; r <= 4; r++) {
@@ -95,6 +111,9 @@ function getGridLayout(p) {
 }
 
 function cellAxisClass(p, pos) {
+  // Every cell of a 2x2 sits under both constraints at once, so all four carry
+  // the two-tone intersection styling rather than one axis colour.
+  if (p.type === 'grid2x2') return 'cell-center';
   if (p.type === 'zigzag') return pos.startsWith('center') ? 'cell-vertical' : 'cell-horizontal';
   if (pos === 'center') return 'cell-center';
   if (pos === 'top' || pos === 'bottom') return 'cell-vertical';
@@ -102,6 +121,7 @@ function cellAxisClass(p, pos) {
 }
 
 function positionAxisLabels(p, pos) {
+  if (p.type === 'grid2x2') return [p.rowAxis.label, p.columnAxis.label];
   if (p.type === 'zigzag') {
     return pos.startsWith('center') ? [p.centerAxis.label] : [p.sideAxis.label];
   }
@@ -111,6 +131,7 @@ function positionAxisLabels(p, pos) {
 }
 
 function axisReveals(p) {
+  if (p.type === 'grid2x2') return { a: p.columnAxis.reveal, b: p.rowAxis.reveal };
   if (p.type === 'zigzag') return { a: p.centerAxis.reveal, b: p.sideAxis.reveal };
   return { a: p.verticalAxis.reveal, b: p.horizontalAxis.reveal };
 }
@@ -286,7 +307,42 @@ function placeInCell(artworkId, pos) {
 
 // ── Check (deferred, set-based validation) ────────────────────────────────────
 
+const GRID2X2_ROWS = [['r1c1', 'r1c2'], ['r2c1', 'r2c2']];
+const GRID2X2_COLS = [['r1c1', 'r2c1'], ['r1c2', 'r2c2']];
+
+// A 2x2 has no answer key. Either artist may take either row and either
+// subject either column, so what gets checked is the *pattern*: each row one
+// artist, each column one subject, and the two rows (and two columns) not the
+// same as each other. A cell is right when both the line it sits in hold.
+function grid2x2Correctness() {
+  const art  = pos => artworkById(placed[pos]);
+  const pairs = (line, key) => {
+    const [a, b] = line.map(art);
+    return a && b && a[key] === b[key] ? a[key] : null;
+  };
+
+  const rowKeys = GRID2X2_ROWS.map(line => pairs(line, 'artist'));
+  const colKeys = GRID2X2_COLS.map(line => pairs(line, 'theme'));
+
+  // Two rows of the same artist (or two columns of one subject) satisfies each
+  // line on its own but is not a 2x2 — reject both lines in that case.
+  const rowsDistinct = !(rowKeys[0] && rowKeys[0] === rowKeys[1]);
+  const colsDistinct = !(colKeys[0] && colKeys[0] === colKeys[1]);
+
+  const rowOk = rowKeys.map(k => !!k && rowsDistinct);
+  const colOk = colKeys.map(k => !!k && colsDistinct);
+
+  const result = {};
+  GRID2X2_ROWS.forEach((line, r) => {
+    line.forEach((pos, c) => { result[pos] = rowOk[r] && colOk[c]; });
+  });
+  result._rows = rowOk;
+  result._cols = colOk;
+  return result;
+}
+
 function computeCorrectness() {
+  if (puzzle.type === 'grid2x2') return grid2x2Correctness();
   if (puzzle.type === 'zigzag') {
     const centerIds = new Set(puzzle.solution.centerIds);
     const result = {};
@@ -399,7 +455,48 @@ function computeChronologyScore() {
   return { correctPairs, totalPairs };
 }
 
+function showGrid2x2Score(isCorrect) {
+  // Scored by line, not by square. A square is right only when its row and its
+  // column are both right, so counting squares can only ever yield 0, 1, 2 or
+  // 4 of them -- scoring the four lines instead gives an even spread.
+  const cells  = positions.filter(pos => isCorrect[pos]).length;
+  const rowsOk = isCorrect._rows.filter(Boolean).length;
+  const colsOk = isCorrect._cols.filter(Boolean).length;
+
+  const rowPts   = rowsOk * SCORING.pointsPerRow;
+  const colPts   = colsOk * SCORING.pointsPerColumn;
+  const total    = rowPts + colPts;
+  const maxTotal = 2 * SCORING.pointsPerRow + 2 * SCORING.pointsPerColumn;
+
+  const label = total >= SCORING.perfectThreshold ? 'Perfect' :
+                total >= SCORING.goodThreshold    ? 'Good'    :
+                total >= SCORING.okThreshold      ? 'OK'      : 'Poor';
+
+  const el = document.getElementById('scoreWord');
+  el.textContent = `${label} — ${total}/${maxTotal}`;
+  el.className   = `score-word ${label.toLowerCase()}`;
+
+  const breakdown = document.getElementById('scoreBreakdown');
+  if (breakdown) {
+    const lines = [
+      `Rows by one artist: ${rowsOk}/2 (${rowPts} pts)`,
+      `Columns of one subject: ${colsOk}/2 (${colPts} pts)`,
+      `Squares right: ${cells}/${positions.length}`,
+    ];
+    breakdown.innerHTML = lines.map(l => `<div class="score-line">${l}</div>`).join('');
+  }
+
+  document.getElementById('scoreDisplay').removeAttribute('hidden');
+  document.getElementById('resultBar').removeAttribute('hidden');
+  document.getElementById('checkBtn').disabled = true;
+
+  const nextBtn = document.getElementById('nextPuzzleBtn');
+  if (puzzleIndex + 1 < PUZZLES.length) nextBtn.removeAttribute('hidden');
+  else nextBtn.setAttribute('hidden', '');
+}
+
 function showScore(isCorrect) {
+  if (puzzle.type === 'grid2x2') return showGrid2x2Score(isCorrect);
   const centerHits = positions.filter(pos => pos.startsWith('center') && isCorrect[pos]).length;
   const matchHits  = positions.filter(pos => pos.startsWith('side')   && isCorrect[pos]).length;
   const chrono     = computeChronologyScore();
