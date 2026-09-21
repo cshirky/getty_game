@@ -1,0 +1,380 @@
+{
+  "Agnolo Bronzino||Head of a Man": {
+    "dataUuid": "b40e16c2-d4e2-462f-a80d-fa22b98fb68f",
+    "iiif": "bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc",
+    "objectId": "103R4A",
+    "date": "about 1550–1555",
+    "medium": "Black chalk",
+    "artist": "Agnolo Bronzino",
+    "title": "Head of a Man"
+  },
+  "Agnolo Bronzino||Saint John the Baptist": {
+    "dataUuid": "01b77281-7cee-4dfe-97a2-6c7c275f63db",
+    "iiif": "96af3363-a0d3-47e2-b03d-8ba10177405f",
+    "objectId": "103RCY",
+    "date": "about 1542–1545",
+    "medium": "Oil on panel",
+    "artist": "Agnolo Bronzino",
+    "title": "Saint John the Baptist"
+  },
+  "Annibale Carracci||Self-Portrait": {
+    "dataUuid": "3b9adc99-75d4-4b08-ad5f-be43efb85027",
+    "iiif": "fdc6f412-ad9d-4491-9ee7-5dd4d55bc554",
+    "objectId": "107RJ6",
+    "date": "early 1580s",
+    "medium": "Pen and brown ink",
+    "artist": "Annibale Carracci",
+    "title": "Self-Portrait"
+  },
+  "Anthony van Dyck||Landscape": {
+    "dataUuid": "4029e8d9-3f3c-4b09-afc4-a60afeb49fe7",
+    "iiif": "0cff9091-e65c-4f63-8da5-44d0c4bc0782",
+    "objectId": "103QS7",
+    "date": "about 1640",
+    "medium": "Pen and brown ink and watercolor",
+    "artist": "Anthony van Dyck",
+    "title": "Landscape"
+  },
+  "Anthony van Dyck||Portrait of Agostino Pallavicini": {
+    "dataUuid": "f2ff5f5f-80d7-47a5-b745-8807d121b5d3",
+    "iiif": "6f22d350-eb77-4992-b60d-72e49c64d326",
+    "objectId": "103R9N",
+    "date": "about 1621",
+    "medium": "Oil on canvas",
+    "artist": "Anthony van Dyck",
+    "title": "Portrait of Agostino Pallavicini"
+  },
+  "Anthony van Dyck||Portrait of Ann Bret, Countess of Middlesex": {
+    "dataUuid": "1671ebb5-3f57-4561-90ab-6c865567a98a",
+    "iiif": "c51ed2b0-990d-4781-b795-cf55584afb53",
+    "objectId": "1JAXDV",
+    "date": "n.d.",
+    "medium": "Oil on canvas",
+    "artist": "Anthony van Dyck",
+    "title": "Portrait of Ann Bret, Countess of Middlesex"
+  },
+  "Anthony van Dyck||Portrait of Hendrick van Balen": {
+    "dataUuid": "3d746b43-0998-4ffb-9155-361cffa0aa99",
+    "iiif": "6a62bf2f-04d1-4734-9e97-9cd1237546da",
+    "objectId": "103QXN",
+    "date": "about 1627–1632",
+    "medium": "Black chalk",
+    "artist": "Anthony van Dyck",
+    "title": "Portrait of Hendrick van Balen"
+  },
+  "Anthony van Dyck||Saint Sebastian Tended by an Angel": {
+    "dataUuid": "c8118ac0-a45e-4236-962c-5351a3ff2bf4",
+    "iiif": "8f081d6d-2da7-482f-ac11-2741885f714b",
+    "objectId": "103RGJ",
+    "date": "about 1630–1632",
+    "medium": "Oil on panel",
+    "artist": "Anthony van Dyck",
+    "title": "Saint Sebastian Tended by an Angel"
+  },
+  "Charles Le Brun||Portrait of M. Quatrehomme du Lys": {
+    "dataUuid": "345b4ffe-ed37-4d9e-8e2f-aa8df2859d55",
+    "iiif": "e1c88f74-8df4-43ca-8454-e133435d653b",
+    "objectId": "103R6Y",
+    "date": "1657",
+    "medium": "Black, white, and red chalk and pastel, on beige paper",
+    "artist": "Charles Le Brun",
+    "title": "Portrait of M. Quatrehomme du Lys"
+  },
+  "Charles Le Brun||The Martyrdom of Saint Andrew": {
+    "dataUuid": "39ec6b82-97b2-457d-a64f-c96b21510452",
+    "iiif": "0699fe90-bda2-4a3a-a8d1-1890e52f1436",
+    "objectId": "103RGC",
+    "date": "1646–1647",
+    "medium": "Oil on canvas",
+    "artist": "Charles Le Brun",
+    "title": "The Martyrdom of Saint Andrew"
+  },
+  "Fra Bartolommeo (Baccio della Porta)||Madonna and Child with Saints": {
+    "dataUuid": "551c34b0-7460-4292-9bca-e0eadb85a035",
+    "iiif": "a03c6749-a353-44b3-bf2b-db809e6e9ebe",
+    "objectId": "103QZ1",
+    "date": "1510–1513",
+    "medium": "Black chalk with traces of white chalk",
+    "artist": "Fra Bartolommeo (Baccio della Porta)",
+    "title": "Madonna and Child with Saints"
+  },
+  "Fra Bartolommeo (Baccio della Porta)||The Rest on the Flight into Egypt with Saint John the Baptist": {
+    "dataUuid": "8a1930a6-303b-49b0-80ea-b5f4de6a8ef9",
+    "iiif": "56c7808d-2741-48d2-b0fc-854e57af9f3f",
+    "objectId": "107RTP",
+    "date": "about 1509",
+    "medium": "Oil on panel",
+    "artist": "Fra Bartolommeo (Baccio della Porta)",
+    "title": "The Rest on the Flight into Egypt with Saint John the Baptist"
+  },
+  "François Boucher||Landscape with Figures": {
+    "dataUuid": "3653db8f-3e2c-4cfb-8251-27c694c86d36",
+    "iiif": "6785ee39-f024-4290-aa8a-41749380c72f",
+    "objectId": "103QVQ",
+    "date": "about 1726–1728",
+    "medium": "Red chalk, on vellum",
+    "artist": "François Boucher",
+    "title": "Landscape with Figures"
+  },
+  "François Boucher||The Bird Catchers": {
+    "dataUuid": "ac9440c4-0d89-4d20-9697-b1ce39a1819e",
+    "iiif": "914800b6-ac80-4cc2-a721-d0e916824a86",
+    "objectId": "103RBM",
+    "date": "1748",
+    "medium": "Oil on canvas",
+    "artist": "François Boucher",
+    "title": "The Bird Catchers"
+  },
+  "François Boucher||Venus and Cupid": {
+    "dataUuid": "4d720bd7-bc46-449a-8396-831028c6dba4",
+    "iiif": "c4cd0a67-a2dd-4f91-aeb2-a2dc88404640",
+    "objectId": "103QWX",
+    "date": "about 1750–1752",
+    "medium": "Black, white, red, blue, and green chalk",
+    "artist": "François Boucher",
+    "title": "Venus and Cupid"
+  },
+  "François Boucher||Venus on the Waves": {
+    "dataUuid": "b8010333-526e-49b1-b418-5df4d3578762",
+    "iiif": "c09544a6-c1ed-42e6-b294-4a60dd50ae58",
+    "objectId": "103RBV",
+    "date": "1769",
+    "medium": "Oil on canvas",
+    "artist": "François Boucher",
+    "title": "Venus on the Waves"
+  },
+  "Giovanni Battista Tiepolo||View of a Villa": {
+    "dataUuid": "a3d72252-357b-4a64-9637-09876247717f",
+    "iiif": "d980f4fe-1600-4b2c-8e78-442c37538ebb",
+    "objectId": "103QZ9",
+    "date": "1757–1759",
+    "medium": "Pen and brown ink and brown wash",
+    "artist": "Giovanni Battista Tiepolo",
+    "title": "View of a Villa"
+  },
+  "Nicolas Poussin||Landscape with a Calm (Un Tem[p]s calme et serein)": {
+    "dataUuid": "9f3d6258-9711-41a8-8d1c-640c39289691",
+    "iiif": "c68cb8b8-a473-4e07-9665-51548e31ce59",
+    "objectId": "107VSC",
+    "date": "1650–1651",
+    "medium": "Oil on canvas",
+    "artist": "Nicolas Poussin",
+    "title": "Landscape with a Calm (Un Tem[p]s calme et serein)"
+  },
+  "Nicolas Poussin||Saint John Baptizing in the River Jordan": {
+    "dataUuid": "c19da0f3-7fcb-44aa-ad78-07ee96559a54",
+    "iiif": "5c927231-cdc0-49fd-a2da-0c1447313f17",
+    "objectId": "103RC0",
+    "date": "about 1635–1640",
+    "medium": "Oil on canvas",
+    "artist": "Nicolas Poussin",
+    "title": "Saint John Baptizing in the River Jordan"
+  },
+  "Paolo Veronese (Paolo Caliari)||Portrait of a Boy": {
+    "dataUuid": "e8a15bc0-17bd-4275-ba65-b4c0ca7f5ff1",
+    "iiif": "b3427bd7-791e-4407-8839-6ec0538178c9",
+    "objectId": "1JAXG8",
+    "date": "about 1560–1565",
+    "medium": "Oil on canvas",
+    "artist": "Paolo Veronese (Paolo Caliari)",
+    "title": "Portrait of a Boy"
+  },
+  "Paolo Veronese (Paolo Caliari)||Portrait of a Man": {
+    "dataUuid": "95032cd1-6b6e-4350-9494-fce97e3bf469",
+    "iiif": "338de020-e0e0-4c5d-a221-f833d761766d",
+    "objectId": "103RB5",
+    "date": "about 1576–1578",
+    "medium": "Oil on canvas",
+    "artist": "Paolo Veronese (Paolo Caliari)",
+    "title": "Portrait of a Man"
+  },
+  "Paolo Veronese (Paolo Caliari)||The Martyrdom of Saint Justina": {
+    "dataUuid": "1c0c4a4a-3fbc-425a-a85c-8584b57eb03b",
+    "iiif": "5403509f-3bb2-422f-935d-379b8a8184d1",
+    "objectId": "103R1M",
+    "date": "1575",
+    "medium": "Pen and brown ink, gray wash, and white opaque watercolor, squared with black chalk, on blue-gray prepared paper",
+    "artist": "Paolo Veronese (Paolo Caliari)",
+    "title": "The Martyrdom of Saint Justina"
+  },
+  "Peter Paul Rubens||Diana and Her Nymphs on the Hunt": {
+    "dataUuid": "b8339144-4f46-40f9-9d21-baef4f8269ac",
+    "iiif": "7454f6e9-6013-4ab7-a650-b80af26b4e82",
+    "objectId": "103RB2",
+    "date": "1627–1628",
+    "medium": "Oil on canvas",
+    "artist": "Peter Paul Rubens",
+    "title": "Diana and Her Nymphs on the Hunt"
+  },
+  "Raphael (Raffaello Sanzio)||Portrait of a Young Man in Red": {
+    "dataUuid": "a00eab7e-89f5-4487-b070-4db8b4d6702a",
+    "iiif": "d06fd962-7d84-4b48-bcc6-bcd4826bc0b2",
+    "objectId": "103REA",
+    "date": "about 1505",
+    "medium": "Oil on panel",
+    "artist": "Raphael (Raffaello Sanzio)",
+    "title": "Portrait of a Young Man in Red"
+  },
+  "Raphael (Raffaello Sanzio)||Saint Paul Rending His Garments": {
+    "dataUuid": "e7738c32-a5dd-46d6-bb40-9bdb22dd337b",
+    "iiif": "3851650a-8a2b-4c88-bbb6-80ff9b18ea1b",
+    "objectId": "103QY7",
+    "date": "about 1515–1516",
+    "medium": "Metalpoint, heightened with white gouache, on lilac-gray prepared paper",
+    "artist": "Raphael (Raffaello Sanzio)",
+    "title": "Saint Paul Rending His Garments"
+  },
+  "Rembrandt Harmensz. van Rijn||Landscape with the House with the Little Tower": {
+    "dataUuid": "ce73129c-9dbd-4d75-99cd-84188c374765",
+    "iiif": "6b8c8b99-6c59-4ef9-b8fb-2cda90cc1725",
+    "objectId": "103QWJ",
+    "date": "about 1651",
+    "medium": "Pen and brown ink, brush and brown wash",
+    "artist": "Rembrandt Harmensz. van Rijn",
+    "title": "Landscape with the House with the Little Tower"
+  },
+  "Rembrandt Harmensz. van Rijn||Saint Bartholomew": {
+    "dataUuid": "5de8cebd-36f7-4a33-8774-6ef21ca5da7b",
+    "iiif": "419d4e47-23e5-4031-92cf-b196f5590113",
+    "objectId": "103RB6",
+    "date": "1661",
+    "medium": "Oil on canvas",
+    "artist": "Rembrandt Harmensz. van Rijn",
+    "title": "Saint Bartholomew"
+  },
+  "Annibale Carracci||Head of a Woman": {
+    "dataUuid": "7898874c-20be-456a-9e62-940bb0252ff6",
+    "iiif": "f3cca317-181f-470a-aadd-3eaa423b44f2",
+    "objectId": "103QZB",
+    "date": "about 1635",
+    "medium": "Black and red chalk, brush and dark brown wash with white gouache heightening",
+    "artist": "Annibale Carracci",
+    "title": "Head of a Woman"
+  },
+  "Sebastiano Ricci||Diana and Her Dog": {
+    "dataUuid": "648e09a6-db08-4928-9a22-986cff0f1381",
+    "iiif": "29d023da-6618-4a39-93bd-715055ca78e3",
+    "objectId": "103RE2",
+    "date": "1717–1720",
+    "medium": "Oil on canvas",
+    "artist": "Sebastiano Ricci",
+    "title": "Diana and Her Dog"
+  },
+  "Sebastiano Ricci||Triumph of the Marine Venus": {
+    "dataUuid": "f81e9c9b-924e-4aab-aefa-cbed151ed5aa",
+    "iiif": "eb31c802-f813-492b-bfba-f5ec79abd4a2",
+    "objectId": "103RCT",
+    "date": "about 1713",
+    "medium": "Oil on canvas",
+    "artist": "Sebastiano Ricci",
+    "title": "Triumph of the Marine Venus"
+  },
+  "Agnolo Bronzino||Virgin and Child with Saint Elizabeth and Saint John the Baptist": {
+    "dataUuid": "5c7325a4-5b37-49bf-8be3-41187fd62d1a",
+    "iiif": "d13d54f8-e4ed-4b3a-a1e1-1f4657da3530",
+    "objectId": "109Q6N",
+    "date": "about 1540–1545",
+    "medium": "Oil on panel",
+    "artist": "Agnolo Bronzino",
+    "title": "Virgin and Child with Saint Elizabeth and Saint John the Baptist"
+  },
+  "Annibale Carracci||Madonna and Child with Saints Lucy, Dominic, and Louis of France": {
+    "dataUuid": "32a0b1ab-8823-4f72-a866-a0592d0d5b4f",
+    "iiif": "7cc7933e-e040-408b-9055-3bed3a932cff",
+    "objectId": "10P3TF",
+    "date": "about 1596–1598",
+    "medium": "Oil on copper",
+    "artist": "Annibale Carracci",
+    "title": "Madonna and Child with Saints Lucy, Dominic, and Louis of France"
+  },
+  "François Boucher||The Birth and Triumph of Venus": {
+    "dataUuid": "9a52f2ea-901d-445a-b63d-3a5d340bff70",
+    "iiif": "40016a32-0f38-4f14-bb0b-a1eb191efe7f",
+    "objectId": "10985F",
+    "date": "about 1743",
+    "medium": "Black chalk and gouache",
+    "artist": "François Boucher",
+    "title": "The Birth and Triumph of Venus"
+  },
+  "Giovanni Battista Tiepolo||Head of a Man Looking Up": {
+    "dataUuid": "92c45942-d9fb-47df-9dc7-74d2a4b95e19",
+    "iiif": "83fec86f-c1a7-495d-820b-bce4d68427fd",
+    "objectId": "108JFV",
+    "date": "about 1750–1760",
+    "medium": "Red chalk heightened with white chalk, on blue paper (now slightly discolored)",
+    "artist": "Giovanni Battista Tiepolo",
+    "title": "Head of a Man Looking Up"
+  },
+  "Giovanni Domenico Tiepolo||A Centaur and a Female Faun in a Landscape": {
+    "dataUuid": "7bad0f3e-5db5-4d4a-8b77-c77e5599c9f8",
+    "iiif": "891a34b3-1370-45d9-96f3-86893ddfa2d1",
+    "objectId": "108JFW",
+    "date": "about 1775",
+    "medium": "Pen and brown ink, brown wash, over black chalk",
+    "artist": "Giovanni Domenico Tiepolo",
+    "title": "A Centaur and a Female Faun in a Landscape"
+  },
+  "Giovanni Domenico Tiepolo||The Punchinello Riding a Camel at the Head of a Caravan": {
+    "dataUuid": "1c4a0176-0dd1-4466-aa9b-17841ca9c607",
+    "iiif": "510a9c89-8be8-47e1-b080-ff6a0f0f55c7",
+    "objectId": "109NF4",
+    "date": "late 1790s",
+    "medium": "Brush and brown ink over black chalk, on laid paper",
+    "artist": "Giovanni Domenico Tiepolo",
+    "title": "The Punchinello Riding a Camel at the Head of a Caravan"
+  },
+  "Parmigianino (Francesco Mazzola)||The Head of a Young Man": {
+    "dataUuid": "b4d72ef7-af1f-4872-8a16-071f59492f8f",
+    "iiif": "c1847332-4bf5-4997-8967-5df7d9451703",
+    "objectId": "109NEZ",
+    "date": "about 1539–1540",
+    "medium": "Pen and brown ink",
+    "artist": "Parmigianino (Francesco Mazzola)",
+    "title": "The Head of a Young Man"
+  },
+  "Parmigianino (Francesco Mazzola)||Virgin and Child with Saint John the Baptist and Mary Magdalene": {
+    "dataUuid": "6d0b0ab4-6791-488d-872e-2b3f03b4e5e0",
+    "iiif": "a49ffba7-18b8-4974-8f7f-9a116363a986",
+    "objectId": "109M4K",
+    "date": "about 1535–1540",
+    "medium": "Oil on paper, laid down on panel",
+    "artist": "Parmigianino (Francesco Mazzola)",
+    "title": "Virgin and Child with Saint John the Baptist and Mary Magdalene"
+  },
+  "Peter Paul Rubens||The Calydonian Boar Hunt": {
+    "dataUuid": "1b1994a1-df30-46c8-a7bc-110afb7fba7c",
+    "iiif": "fd803195-132f-492a-857c-24fad0c98817",
+    "objectId": "103QTF",
+    "date": "about 1611–1612",
+    "medium": "Oil on panel",
+    "artist": "Peter Paul Rubens",
+    "title": "The Calydonian Boar Hunt"
+  },
+  "François Boucher||Leopard Hunt": {
+    "dataUuid": "f04010e0-6ec4-4b5e-bedd-5733903d6bf0",
+    "iiif": "ac2e060a-4f64-4004-9467-c7f73dbce290",
+    "objectId": "109Q8C",
+    "date": "about 1767–1773",
+    "medium": "Red chalk, with graphite",
+    "artist": "François Boucher",
+    "title": "Leopard Hunt"
+  },
+  "Peter Paul Rubens||The Return from War: Mars Disarmed by Venus": {
+    "dataUuid": "ceba8ea4-e322-4517-93d6-86c49b90a1cf",
+    "iiif": "9ea5966a-28b6-4450-8707-95931b4d5d3f",
+    "objectId": "108GRX",
+    "date": "about 1610–1612",
+    "medium": "Oil on panel",
+    "artist": "Peter Paul Rubens",
+    "title": "The Return from War: Mars Disarmed by Venus"
+  },
+  "Sebastiano Ricci||Landscape with Classical Ruins and Figures": {
+    "dataUuid": "64d34740-9a5e-4c6f-954d-40d7ab85c60e",
+    "iiif": "dffc719a-63f5-4f6c-8a57-a8be9feabfbe",
+    "objectId": "103RAM",
+    "date": "about 1725–1730",
+    "medium": "Oil on canvas",
+    "artist": "Sebastiano Ricci",
+    "title": "Landscape with Classical Ruins and Figures"
+  }
+}

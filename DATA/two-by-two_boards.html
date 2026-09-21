@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two by Two — Tier A boards</title>
+<style>
+  :root {
+    --bg: #14120e; --panel: #1d1a15; --ink: #f2ece1; --dim: #a49c8d;
+    --rule: #3a352d; --accent: #e0a24e; --accent2: #8fb4ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 15px/1.5 "Source Sans 3", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    padding: 28px 32px 22px; border-bottom: 1px solid var(--rule);
+    background: #100e0a;
+  }
+  h1 { font: 600 25px/1.2 "Playfair Display", Georgia, serif; }
+  header p { color: var(--dim); margin-top: 8px; max-width: 70ch; font-size: 14px; }
+  .wrap { display: flex; align-items: flex-start; }
+  nav {
+    position: sticky; top: 0; flex: 0 0 258px; max-height: 100vh;
+    overflow-y: auto; padding: 18px 14px; border-right: 1px solid var(--rule);
+  }
+  nav a {
+    display: block; padding: 7px 9px; border-radius: 4px;
+    color: var(--ink); text-decoration: none; font-size: 13px;
+  }
+  nav a span { display: block; color: var(--dim); font-size: 11px; }
+  nav a:hover { background: var(--panel); }
+  main { flex: 1; padding: 22px 32px 80px; min-width: 0; }
+  section {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 20px 22px 24px; margin-bottom: 22px;
+  }
+  h2 { font: 600 19px/1.3 "Playfair Display", Georgia, serif; }
+  h2 .x { color: var(--accent); }
+  .sub { color: var(--dim); font-size: 13px; margin: 5px 0 18px; }
+  .cent { display: block; font-size: 12px; opacity: .8; margin-top: 2px; }
+  .variant {
+    color: var(--accent); font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; margin: 16px 0 8px;
+  }
+  .grid {
+    display: grid; gap: 10px;
+    grid-template-columns: 92px repeat(2, minmax(0, 1fr));
+    max-width: 680px;
+  }
+  .colhead, .rowhead {
+    color: var(--dim); font-size: 11px; letter-spacing: .08em;
+    text-transform: uppercase; display: flex; align-items: center;
+  }
+  .colhead { justify-content: center; text-align: center; color: var(--accent2); }
+  .rowhead { color: var(--accent); }
+  .card {
+    background: #0c0b09; border: 1px solid var(--rule); border-radius: 5px;
+    overflow: hidden; text-decoration: none; color: inherit; display: block;
+    transition: border-color .15s, transform .12s;
+  }
+  a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .thumb {
+    height: 210px; display: flex; align-items: center;
+    justify-content: center; background: #000;
+  }
+  .thumb img { max-width: 100%; max-height: 100%; display: block; }
+  .missing { color: #b0645e; font-size: 12px; }
+  .meta { padding: 8px 10px 10px; }
+  .meta .t {
+    font: italic 400 13px/1.3 "Playfair Display", Georgia, serif;
+    margin-bottom: 3px;
+  }
+  .meta .a { font-size: 11.5px; color: var(--dim); }
+  .meta .d { font-size: 11.5px; color: var(--dim); opacity: .75; }
+  @media (max-width: 760px) {
+    .wrap { display: block; }
+    nav { position: static; width: auto; max-height: none;
+          border-right: 0; border-bottom: 1px solid var(--rule); }
+    main { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Two by Two — Tier A boards</h1>
+  <p>
+    Every 2&times;2 the Tier A pairs can make: 29 artist/subject pairings,
+    73 grids once each cell's alternatives are counted. Rows are one
+    artist, columns one subject. A mockup for judging the boards by eye —
+    nothing here is connected to the game. Subjects were matched on title text,
+    so this page is where that guess gets checked against the pictures. Cards
+    link to the Getty object page.
+  </p>
+</header>
+<div class="wrap">
+  <nav><a href="#b1">François Boucher × Sebastiano Ricci<span>Animals · Landscape</span></a>
+<a href="#b2">François Boucher × Sebastiano Ricci<span>Animals · Venus</span></a>
+<a href="#b3">François Boucher × Sebastiano Ricci<span>Diana / the hunt · Landscape</span></a>
+<a href="#b4">François Boucher × Sebastiano Ricci<span>Diana / the hunt · Venus</span></a>
+<a href="#b5">François Boucher × Sebastiano Ricci<span>Landscape · Venus</span></a>
+<a href="#b6">François Boucher × Peter Paul Rubens<span>Animals · Venus</span></a>
+<a href="#b7">François Boucher × Peter Paul Rubens<span>Diana / the hunt · Venus</span></a>
+<a href="#b8">Peter Paul Rubens × Sebastiano Ricci<span>Animals · Venus</span></a>
+<a href="#b9">Peter Paul Rubens × Sebastiano Ricci<span>Diana / the hunt · Venus</span></a>
+<a href="#b10">Agnolo Bronzino × Annibale Carracci<span>Portrait head or bust · Virgin and Child</span></a>
+<a href="#b11">Agnolo Bronzino × Anthony van Dyck<span>Portrait head or bust · Single saint</span></a>
+<a href="#b12">Agnolo Bronzino × Charles Le Brun<span>Portrait head or bust · Single saint</span></a>
+<a href="#b13">Agnolo Bronzino × Fra Bartolommeo<span>Single saint · Virgin and Child</span></a>
+<a href="#b14">Agnolo Bronzino × Paolo Veronese<span>Portrait head or bust · Single saint</span></a>
+<a href="#b15">Agnolo Bronzino × Parmigianino<span>Portrait head or bust · Virgin and Child</span></a>
+<a href="#b16">Agnolo Bronzino × Raphael<span>Portrait head or bust · Single saint</span></a>
+<a href="#b17">Annibale Carracci × Parmigianino<span>Portrait head or bust · Virgin and Child</span></a>
+<a href="#b18">Anthony van Dyck × Charles Le Brun<span>Portrait head or bust · Single saint</span></a>
+<a href="#b19">Anthony van Dyck × Giovanni Battista Tiepolo<span>Landscape · Portrait head or bust</span></a>
+<a href="#b20">Anthony van Dyck × Giovanni Domenico Tiepolo<span>Landscape · Portrait head or bust</span></a>
+<a href="#b21">Anthony van Dyck × Nicolas Poussin<span>Landscape · Single saint</span></a>
+<a href="#b22">Anthony van Dyck × Paolo Veronese<span>Portrait head or bust · Single saint</span></a>
+<a href="#b23">Anthony van Dyck × Raphael<span>Portrait head or bust · Single saint</span></a>
+<a href="#b24">Anthony van Dyck × Rembrandt Harmensz. van Rijn<span>Landscape · Single saint</span></a>
+<a href="#b25">Charles Le Brun × Paolo Veronese<span>Portrait head or bust · Single saint</span></a>
+<a href="#b26">Charles Le Brun × Raphael<span>Portrait head or bust · Single saint</span></a>
+<a href="#b27">Giovanni Battista Tiepolo × Giovanni Domenico Tiepolo<span>Landscape · Portrait head or bust</span></a>
+<a href="#b28">Nicolas Poussin × Rembrandt Harmensz. van Rijn<span>Landscape · Single saint</span></a>
+<a href="#b29">Paolo Veronese × Raphael<span>Portrait head or bust · Single saint</span></a></nav>
+  <main>
+        <section id="b1">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Animals / Landscape
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 4</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 4</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 4</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+            </div>
+            <div class="variant">Variant 4 of 4</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b2">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Animals / Venus
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 4 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 5 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 6 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b3">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Diana / the hunt / Landscape
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Landscape</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b4">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Diana / the hunt / Venus
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b5">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Venus
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QVQ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6785ee39-f024-4290-aa8a-41749380c72f/full/%5E%21600,600/0/default.jpg" alt="Landscape with Figures"></div><div class="meta"><div class="t">Landscape with Figures</div><div class="a">François Boucher</div><div class="d">about 1726–1728</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RAM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/dffc719a-63f5-4f6c-8a57-a8be9feabfbe/full/%5E%21600,600/0/default.jpg" alt="Landscape with Classical Ruins and Figures"></div><div class="meta"><div class="t">Landscape with Classical Ruins and Figures</div><div class="a">Sebastiano Ricci</div><div class="d">about 1725–1730</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b6">
+          <h2>François Boucher <span class="x">×</span> Peter Paul Rubens</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Animals / Venus
+            <span class="cent">18th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 4 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 5 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 6 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+        </section>
+
+        <section id="b7">
+          <h2>François Boucher <span class="x">×</span> Peter Paul Rubens</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Diana / the hunt / Venus
+            <span class="cent">18th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 4 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 5 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+            <div class="variant">Variant 6 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">François Boucher</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+            </div>
+        </section>
+
+        <section id="b8">
+          <h2>Peter Paul Rubens <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Animals / Venus
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Animals</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b9">
+          <h2>Peter Paul Rubens <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Diana / the hunt / Venus
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Diana / the hunt</div>
+              <div class="colhead">Venus</div>
+              <div class="rowhead">Peter Paul Rubens</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              <div class="rowhead">Sebastiano Ricci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+            </div>
+        </section>
+
+        <section id="b10">
+          <h2>Agnolo Bronzino <span class="x">×</span> Annibale Carracci</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Virgin and Child
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q6N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d13d54f8-e4ed-4b3a-a1e1-1f4657da3530/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint Elizabeth and Saint John the Baptist"></div><div class="meta"><div class="t">Virgin and Child with Saint Elizabeth and Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1540–1545</div></div></a>
+              <div class="rowhead">Annibale Carracci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/107RJ6"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fdc6f412-ad9d-4491-9ee7-5dd4d55bc554/full/%5E%21600,600/0/default.jpg" alt="Self-Portrait"></div><div class="meta"><div class="t">Self-Portrait</div><div class="a">Annibale Carracci</div><div class="d">early 1580s</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10P3TF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7cc7933e-e040-408b-9055-3bed3a932cff/full/%5E%21600,600/0/default.jpg" alt="Madonna and Child with Saints Lucy, Dominic, and Louis of France"></div><div class="meta"><div class="t">Madonna and Child with Saints Lucy, Dominic, and Louis of France</div><div class="a">Annibale Carracci</div><div class="d">about 1596–1598</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q6N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d13d54f8-e4ed-4b3a-a1e1-1f4657da3530/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint Elizabeth and Saint John the Baptist"></div><div class="meta"><div class="t">Virgin and Child with Saint Elizabeth and Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1540–1545</div></div></a>
+              <div class="rowhead">Annibale Carracci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZB"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/f3cca317-181f-470a-aadd-3eaa423b44f2/full/%5E%21600,600/0/default.jpg" alt="Head of a Woman"></div><div class="meta"><div class="t">Head of a Woman</div><div class="a">Annibale Carracci</div><div class="d">about 1635</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10P3TF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7cc7933e-e040-408b-9055-3bed3a932cff/full/%5E%21600,600/0/default.jpg" alt="Madonna and Child with Saints Lucy, Dominic, and Louis of France"></div><div class="meta"><div class="t">Madonna and Child with Saints Lucy, Dominic, and Louis of France</div><div class="a">Annibale Carracci</div><div class="d">about 1596–1598</div></div></a>
+            </div>
+        </section>
+
+        <section id="b11">
+          <h2>Agnolo Bronzino <span class="x">×</span> Anthony van Dyck</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">15th–16th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+            </div>
+        </section>
+
+        <section id="b12">
+          <h2>Agnolo Bronzino <span class="x">×</span> Charles Le Brun</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">15th–16th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+            </div>
+        </section>
+
+        <section id="b13">
+          <h2>Agnolo Bronzino <span class="x">×</span> Fra Bartolommeo</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Single saint / Virgin and Child
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Single saint</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q6N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d13d54f8-e4ed-4b3a-a1e1-1f4657da3530/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint Elizabeth and Saint John the Baptist"></div><div class="meta"><div class="t">Virgin and Child with Saint Elizabeth and Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1540–1545</div></div></a>
+              <div class="rowhead">Fra Bartolommeo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/107RTP"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/56c7808d-2741-48d2-b0fc-854e57af9f3f/full/%5E%21600,600/0/default.jpg" alt="The Rest on the Flight into Egypt with Saint John the Baptist"></div><div class="meta"><div class="t">The Rest on the Flight into Egypt with Saint John the Baptist</div><div class="a">Fra Bartolommeo</div><div class="d">about 1509</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ1"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/a03c6749-a353-44b3-bf2b-db809e6e9ebe/full/%5E%21600,600/0/default.jpg" alt="Madonna and Child with Saints"></div><div class="meta"><div class="t">Madonna and Child with Saints</div><div class="a">Fra Bartolommeo</div><div class="d">1510–1513</div></div></a>
+            </div>
+        </section>
+
+        <section id="b14">
+          <h2>Agnolo Bronzino <span class="x">×</span> Paolo Veronese</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+        </section>
+
+        <section id="b15">
+          <h2>Agnolo Bronzino <span class="x">×</span> Parmigianino</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Virgin and Child
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q6N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d13d54f8-e4ed-4b3a-a1e1-1f4657da3530/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint Elizabeth and Saint John the Baptist"></div><div class="meta"><div class="t">Virgin and Child with Saint Elizabeth and Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1540–1545</div></div></a>
+              <div class="rowhead">Parmigianino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NEZ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c1847332-4bf5-4997-8967-5df7d9451703/full/%5E%21600,600/0/default.jpg" alt="The Head of a Young Man"></div><div class="meta"><div class="t">The Head of a Young Man</div><div class="a">Parmigianino</div><div class="d">about 1539–1540</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109M4K"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/a49ffba7-18b8-4974-8f7f-9a116363a986/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint John the Baptist and Mary Magdalene"></div><div class="meta"><div class="t">Virgin and Child with Saint John the Baptist and Mary Magdalene</div><div class="a">Parmigianino</div><div class="d">about 1535–1540</div></div></a>
+            </div>
+        </section>
+
+        <section id="b16">
+          <h2>Agnolo Bronzino <span class="x">×</span> Raphael</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Agnolo Bronzino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R4A"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/bc6c5fdd-44d8-4eaf-80a3-9e6ca8448ffc/full/%5E%21600,600/0/default.jpg" alt="Head of a Man"></div><div class="meta"><div class="t">Head of a Man</div><div class="a">Agnolo Bronzino</div><div class="d">about 1550–1555</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCY"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/96af3363-a0d3-47e2-b03d-8ba10177405f/full/%5E%21600,600/0/default.jpg" alt="Saint John the Baptist"></div><div class="meta"><div class="t">Saint John the Baptist</div><div class="a">Agnolo Bronzino</div><div class="d">about 1542–1545</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+        </section>
+
+        <section id="b17">
+          <h2>Annibale Carracci <span class="x">×</span> Parmigianino</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Virgin and Child
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Annibale Carracci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/107RJ6"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fdc6f412-ad9d-4491-9ee7-5dd4d55bc554/full/%5E%21600,600/0/default.jpg" alt="Self-Portrait"></div><div class="meta"><div class="t">Self-Portrait</div><div class="a">Annibale Carracci</div><div class="d">early 1580s</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10P3TF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7cc7933e-e040-408b-9055-3bed3a932cff/full/%5E%21600,600/0/default.jpg" alt="Madonna and Child with Saints Lucy, Dominic, and Louis of France"></div><div class="meta"><div class="t">Madonna and Child with Saints Lucy, Dominic, and Louis of France</div><div class="a">Annibale Carracci</div><div class="d">about 1596–1598</div></div></a>
+              <div class="rowhead">Parmigianino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NEZ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c1847332-4bf5-4997-8967-5df7d9451703/full/%5E%21600,600/0/default.jpg" alt="The Head of a Young Man"></div><div class="meta"><div class="t">The Head of a Young Man</div><div class="a">Parmigianino</div><div class="d">about 1539–1540</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109M4K"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/a49ffba7-18b8-4974-8f7f-9a116363a986/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint John the Baptist and Mary Magdalene"></div><div class="meta"><div class="t">Virgin and Child with Saint John the Baptist and Mary Magdalene</div><div class="a">Parmigianino</div><div class="d">about 1535–1540</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Virgin and Child</div>
+              <div class="rowhead">Annibale Carracci</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZB"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/f3cca317-181f-470a-aadd-3eaa423b44f2/full/%5E%21600,600/0/default.jpg" alt="Head of a Woman"></div><div class="meta"><div class="t">Head of a Woman</div><div class="a">Annibale Carracci</div><div class="d">about 1635</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10P3TF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7cc7933e-e040-408b-9055-3bed3a932cff/full/%5E%21600,600/0/default.jpg" alt="Madonna and Child with Saints Lucy, Dominic, and Louis of France"></div><div class="meta"><div class="t">Madonna and Child with Saints Lucy, Dominic, and Louis of France</div><div class="a">Annibale Carracci</div><div class="d">about 1596–1598</div></div></a>
+              <div class="rowhead">Parmigianino</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NEZ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c1847332-4bf5-4997-8967-5df7d9451703/full/%5E%21600,600/0/default.jpg" alt="The Head of a Young Man"></div><div class="meta"><div class="t">The Head of a Young Man</div><div class="a">Parmigianino</div><div class="d">about 1539–1540</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109M4K"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/a49ffba7-18b8-4974-8f7f-9a116363a986/full/%5E%21600,600/0/default.jpg" alt="Virgin and Child with Saint John the Baptist and Mary Magdalene"></div><div class="meta"><div class="t">Virgin and Child with Saint John the Baptist and Mary Magdalene</div><div class="a">Parmigianino</div><div class="d">about 1535–1540</div></div></a>
+            </div>
+        </section>
+
+        <section id="b18">
+          <h2>Anthony van Dyck <span class="x">×</span> Charles Le Brun</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">17th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+            </div>
+        </section>
+
+        <section id="b19">
+          <h2>Anthony van Dyck <span class="x">×</span> Giovanni Battista Tiepolo</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Portrait head or bust
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <div class="rowhead">Giovanni Battista Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <div class="rowhead">Giovanni Battista Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <div class="rowhead">Giovanni Battista Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+            </div>
+        </section>
+
+        <section id="b20">
+          <h2>Anthony van Dyck <span class="x">×</span> Giovanni Domenico Tiepolo</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Portrait head or bust
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <div class="rowhead">Giovanni Domenico Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFW"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/891a34b3-1370-45d9-96f3-86893ddfa2d1/full/%5E%21600,600/0/default.jpg" alt="A Centaur and a Female Faun in a Landscape"></div><div class="meta"><div class="t">A Centaur and a Female Faun in a Landscape</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">about 1775</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NF4"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/510a9c89-8be8-47e1-b080-ff6a0f0f55c7/full/%5E%21600,600/0/default.jpg" alt="The Punchinello Riding a Camel at the Head of a Caravan"></div><div class="meta"><div class="t">The Punchinello Riding a Camel at the Head of a Caravan</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">late 1790s</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <div class="rowhead">Giovanni Domenico Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFW"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/891a34b3-1370-45d9-96f3-86893ddfa2d1/full/%5E%21600,600/0/default.jpg" alt="A Centaur and a Female Faun in a Landscape"></div><div class="meta"><div class="t">A Centaur and a Female Faun in a Landscape</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">about 1775</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NF4"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/510a9c89-8be8-47e1-b080-ff6a0f0f55c7/full/%5E%21600,600/0/default.jpg" alt="The Punchinello Riding a Camel at the Head of a Caravan"></div><div class="meta"><div class="t">The Punchinello Riding a Camel at the Head of a Caravan</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">late 1790s</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <div class="rowhead">Giovanni Domenico Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFW"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/891a34b3-1370-45d9-96f3-86893ddfa2d1/full/%5E%21600,600/0/default.jpg" alt="A Centaur and a Female Faun in a Landscape"></div><div class="meta"><div class="t">A Centaur and a Female Faun in a Landscape</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">about 1775</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NF4"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/510a9c89-8be8-47e1-b080-ff6a0f0f55c7/full/%5E%21600,600/0/default.jpg" alt="The Punchinello Riding a Camel at the Head of a Caravan"></div><div class="meta"><div class="t">The Punchinello Riding a Camel at the Head of a Caravan</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">late 1790s</div></div></a>
+            </div>
+        </section>
+
+        <section id="b21">
+          <h2>Anthony van Dyck <span class="x">×</span> Nicolas Poussin</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Single saint
+            <span class="cent">17th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Nicolas Poussin</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/107VSC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c68cb8b8-a473-4e07-9665-51548e31ce59/full/%5E%21600,600/0/default.jpg" alt="Landscape with a Calm (Un Tem[p]s calme et serein)"></div><div class="meta"><div class="t">Landscape with a Calm (Un Tem[p]s calme et serein)</div><div class="a">Nicolas Poussin</div><div class="d">1650–1651</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RC0"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5c927231-cdc0-49fd-a2da-0c1447313f17/full/%5E%21600,600/0/default.jpg" alt="Saint John Baptizing in the River Jordan"></div><div class="meta"><div class="t">Saint John Baptizing in the River Jordan</div><div class="a">Nicolas Poussin</div><div class="d">about 1635–1640</div></div></a>
+            </div>
+        </section>
+
+        <section id="b22">
+          <h2>Anthony van Dyck <span class="x">×</span> Paolo Veronese</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">17th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 4 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 5 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 6 of 6</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+        </section>
+
+        <section id="b23">
+          <h2>Anthony van Dyck <span class="x">×</span> Raphael</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">17th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R9N"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6f22d350-eb77-4992-b60d-72e49c64d326/full/%5E%21600,600/0/default.jpg" alt="Portrait of Agostino Pallavicini"></div><div class="meta"><div class="t">Portrait of Agostino Pallavicini</div><div class="a">Anthony van Dyck</div><div class="d">about 1621</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+            <div class="variant">Variant 3 of 3</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+        </section>
+
+        <section id="b24">
+          <h2>Anthony van Dyck <span class="x">×</span> Rembrandt Harmensz. van Rijn</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Single saint
+            <span class="cent">17th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Anthony van Dyck</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/8f081d6d-2da7-482f-ac11-2741885f714b/full/%5E%21600,600/0/default.jpg" alt="Saint Sebastian Tended by an Angel"></div><div class="meta"><div class="t">Saint Sebastian Tended by an Angel</div><div class="a">Anthony van Dyck</div><div class="d">about 1630–1632</div></div></a>
+              <div class="rowhead">Rembrandt Harmensz. van Rijn</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6b8c8b99-6c59-4ef9-b8fb-2cda90cc1725/full/%5E%21600,600/0/default.jpg" alt="Landscape with the House with the Little Tower"></div><div class="meta"><div class="t">Landscape with the House with the Little Tower</div><div class="a">Rembrandt Harmensz. van Rijn</div><div class="d">about 1651</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB6"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/419d4e47-23e5-4031-92cf-b196f5590113/full/%5E%21600,600/0/default.jpg" alt="Saint Bartholomew"></div><div class="meta"><div class="t">Saint Bartholomew</div><div class="a">Rembrandt Harmensz. van Rijn</div><div class="d">1661</div></div></a>
+            </div>
+        </section>
+
+        <section id="b25">
+          <h2>Charles Le Brun <span class="x">×</span> Paolo Veronese</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">17th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+            </div>
+        </section>
+
+        <section id="b26">
+          <h2>Charles Le Brun <span class="x">×</span> Raphael</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">17th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Charles Le Brun</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R6Y"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/e1c88f74-8df4-43ca-8454-e133435d653b/full/%5E%21600,600/0/default.jpg" alt="Portrait of M. Quatrehomme du Lys"></div><div class="meta"><div class="t">Portrait of M. Quatrehomme du Lys</div><div class="a">Charles Le Brun</div><div class="d">1657</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RGC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0699fe90-bda2-4a3a-a8d1-1890e52f1436/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Andrew"></div><div class="meta"><div class="t">The Martyrdom of Saint Andrew</div><div class="a">Charles Le Brun</div><div class="d">1646–1647</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+        </section>
+
+        <section id="b27">
+          <h2>Giovanni Battista Tiepolo <span class="x">×</span> Giovanni Domenico Tiepolo</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Portrait head or bust
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="rowhead">Giovanni Battista Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+              <div class="rowhead">Giovanni Domenico Tiepolo</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFW"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/891a34b3-1370-45d9-96f3-86893ddfa2d1/full/%5E%21600,600/0/default.jpg" alt="A Centaur and a Female Faun in a Landscape"></div><div class="meta"><div class="t">A Centaur and a Female Faun in a Landscape</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">about 1775</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109NF4"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/510a9c89-8be8-47e1-b080-ff6a0f0f55c7/full/%5E%21600,600/0/default.jpg" alt="The Punchinello Riding a Camel at the Head of a Caravan"></div><div class="meta"><div class="t">The Punchinello Riding a Camel at the Head of a Caravan</div><div class="a">Giovanni Domenico Tiepolo</div><div class="d">late 1790s</div></div></a>
+            </div>
+        </section>
+
+        <section id="b28">
+          <h2>Nicolas Poussin <span class="x">×</span> Rembrandt Harmensz. van Rijn</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Landscape / Single saint
+            <span class="cent">17th c.
+            &amp; 17th c.</span>
+          </p>
+          
+            
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Landscape</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Nicolas Poussin</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/107VSC"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c68cb8b8-a473-4e07-9665-51548e31ce59/full/%5E%21600,600/0/default.jpg" alt="Landscape with a Calm (Un Tem[p]s calme et serein)"></div><div class="meta"><div class="t">Landscape with a Calm (Un Tem[p]s calme et serein)</div><div class="a">Nicolas Poussin</div><div class="d">1650–1651</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RC0"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5c927231-cdc0-49fd-a2da-0c1447313f17/full/%5E%21600,600/0/default.jpg" alt="Saint John Baptizing in the River Jordan"></div><div class="meta"><div class="t">Saint John Baptizing in the River Jordan</div><div class="a">Nicolas Poussin</div><div class="d">about 1635–1640</div></div></a>
+              <div class="rowhead">Rembrandt Harmensz. van Rijn</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWJ"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6b8c8b99-6c59-4ef9-b8fb-2cda90cc1725/full/%5E%21600,600/0/default.jpg" alt="Landscape with the House with the Little Tower"></div><div class="meta"><div class="t">Landscape with the House with the Little Tower</div><div class="a">Rembrandt Harmensz. van Rijn</div><div class="d">about 1651</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB6"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/419d4e47-23e5-4031-92cf-b196f5590113/full/%5E%21600,600/0/default.jpg" alt="Saint Bartholomew"></div><div class="meta"><div class="t">Saint Bartholomew</div><div class="a">Rembrandt Harmensz. van Rijn</div><div class="d">1661</div></div></a>
+            </div>
+        </section>
+
+        <section id="b29">
+          <h2>Paolo Veronese <span class="x">×</span> Raphael</h2>
+          <p class="sub">
+            Rows: same artist · Columns: Portrait head or bust / Single saint
+            <span class="cent">15th–16th c.
+            &amp; 15th–16th c.</span>
+          </p>
+          
+            <div class="variant">Variant 1 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXG8"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/b3427bd7-791e-4407-8839-6ec0538178c9/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Boy"></div><div class="meta"><div class="t">Portrait of a Boy</div><div class="a">Paolo Veronese</div><div class="d">about 1560–1565</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+            <div class="variant">Variant 2 of 2</div>
+            <div class="grid">
+              <div class="corner"></div>
+              <div class="colhead">Portrait head or bust</div>
+              <div class="colhead">Single saint</div>
+              <div class="rowhead">Paolo Veronese</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB5"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/338de020-e0e0-4c5d-a221-f833d761766d/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Man"></div><div class="meta"><div class="t">Portrait of a Man</div><div class="a">Paolo Veronese</div><div class="d">about 1576–1578</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103R1M"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/5403509f-3bb2-422f-935d-379b8a8184d1/full/%5E%21600,600/0/default.jpg" alt="The Martyrdom of Saint Justina"></div><div class="meta"><div class="t">The Martyrdom of Saint Justina</div><div class="a">Paolo Veronese</div><div class="d">1575</div></div></a>
+              <div class="rowhead">Raphael</div>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103REA"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d06fd962-7d84-4b48-bcc6-bcd4826bc0b2/full/%5E%21600,600/0/default.jpg" alt="Portrait of a Young Man in Red"></div><div class="meta"><div class="t">Portrait of a Young Man in Red</div><div class="a">Raphael</div><div class="d">about 1505</div></div></a>
+              <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QY7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/3851650a-8a2b-4c88-bbb6-80ff9b18ea1b/full/%5E%21600,600/0/default.jpg" alt="Saint Paul Rending His Garments"></div><div class="meta"><div class="t">Saint Paul Rending His Garments</div><div class="a">Raphael</div><div class="d">about 1515–1516</div></div></a>
+            </div>
+        </section></main>
+</div>
+</body>
+</html>
