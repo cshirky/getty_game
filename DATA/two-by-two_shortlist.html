@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two by Two — shortlist</title>
+<style>
+  :root {
+    --bg: #14120e; --panel: #1d1a15; --ink: #f2ece1; --dim: #a49c8d;
+    --rule: #3a352d; --accent: #e0a24e; --accent2: #8fb4ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 15px/1.5 "Source Sans 3", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  header { padding: 28px 32px 22px; border-bottom: 1px solid var(--rule);
+           background: #100e0a; }
+  h1 { font: 600 25px/1.2 "Playfair Display", Georgia, serif; }
+  header p { color: var(--dim); margin-top: 8px; max-width: 74ch; font-size: 14px; }
+  table.spec {
+    margin-top: 16px; border-collapse: collapse; font-size: 12.5px;
+    max-width: 100%;
+  }
+  table.spec th, table.spec td {
+    border: 1px solid var(--rule); padding: 5px 9px; text-align: left;
+    vertical-align: top;
+  }
+  table.spec th { color: var(--accent2); font-weight: 600; }
+  table.spec td:nth-child(6) { color: var(--dim); max-width: 34ch; }
+  .wrap { display: flex; align-items: flex-start; }
+  nav {
+    position: sticky; top: 0; flex: 0 0 254px; max-height: 100vh;
+    overflow-y: auto; padding: 18px 14px; border-right: 1px solid var(--rule);
+  }
+  nav a { display: block; padding: 7px 9px; border-radius: 4px;
+          color: var(--ink); text-decoration: none; font-size: 13px; }
+  nav a span { display: block; color: var(--dim); font-size: 11px; }
+  nav a:hover { background: var(--panel); }
+  main { flex: 1; padding: 22px 32px 80px; min-width: 0; }
+  section {
+    background: var(--panel); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 20px 22px 24px; margin-bottom: 22px;
+  }
+  h2 { font: 600 19px/1.3 "Playfair Display", Georgia, serif; }
+  h2 .x { color: var(--accent); }
+  .sub { color: var(--dim); font-size: 13px; margin: 5px 0 10px; }
+  .cent { display: block; font-size: 12px; opacity: .8; margin-top: 2px; }
+  .note {
+    border-left: 2px solid var(--accent); padding: 7px 12px; margin: 0 0 16px;
+    background: rgba(224,162,78,.07); color: var(--ink);
+    font-size: 13px; max-width: 78ch;
+  }
+  .note em { font-family: "Playfair Display", Georgia, serif; }
+  .boards { display: flex; flex-wrap: wrap; gap: 26px; }
+  .board { flex: 0 0 auto; }
+  .variant {
+    color: var(--accent); font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .grid {
+    display: grid; gap: 9px;
+    grid-template-columns: 74px repeat(2, 176px);
+  }
+  .colhead, .rowhead {
+    color: var(--dim); font-size: 10.5px; letter-spacing: .07em;
+    text-transform: uppercase; display: flex; align-items: center;
+  }
+  .colhead { justify-content: center; text-align: center; color: var(--accent); }
+  .rowhead { color: var(--accent2); line-height: 1.25; }
+  .card {
+    background: #0c0b09; border: 1px solid var(--rule); border-radius: 5px;
+    overflow: hidden; text-decoration: none; color: inherit; display: block;
+    transition: border-color .15s, transform .12s;
+  }
+  a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .thumb { height: 168px; display: flex; align-items: center;
+           justify-content: center; background: #000; }
+  .thumb img { max-width: 100%; max-height: 100%; display: block; }
+  .missing { color: #b0645e; font-size: 12px; }
+  .meta { padding: 7px 9px 9px; }
+  .meta .t { font: italic 400 12px/1.3 "Playfair Display", Georgia, serif;
+             margin-bottom: 2px; }
+  .meta .a, .meta .d { font-size: 11px; color: var(--dim); }
+  .meta .d { opacity: .75; }
+  @media (max-width: 760px) {
+    .wrap { display: block; }
+    nav { position: static; width: auto; max-height: none;
+          border-right: 0; border-bottom: 1px solid var(--rule); }
+    main { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Two by Two — shortlist</h1>
+  <p>
+    6 chosen pairings, 17 boards, laid out with <strong>artists
+    across the columns</strong> and <strong>subjects down the rows</strong> —
+    the transpose of the full Tier A page. Variant numbers match that page.
+    Cards link to the Getty object page.
+  </p>
+  <table class="spec">
+    <tr><th>Artist 1</th><th>Artist 2</th><th>Variants</th>
+        <th>Row 1</th><th>Row 2</th><th>Notes</th></tr>
+    <tr><td>François Boucher</td><td>Sebastiano Ricci</td><td>4, 5, 6 of 6</td><td>Animals</td><td>Venus</td><td></td></tr>
+<tr><td>François Boucher</td><td>Peter Paul Rubens</td><td>4, 5, 6 of 6</td><td>Animals</td><td>Venus</td><td></td></tr>
+<tr><td>François Boucher</td><td>Peter Paul Rubens</td><td>1, 2, 3, 4, 5, 6 of 6</td><td>Diana / the hunt</td><td>Venus</td><td>Boucher drawing — his <em>Leopard Hunt</em> is red chalk; every other work on these boards is oil.</td></tr>
+<tr><td>Peter Paul Rubens</td><td>Sebastiano Ricci</td><td>1 of 1</td><td>Animals</td><td>Venus</td><td>Only one variant exists for this pairing, not six.</td></tr>
+<tr><td>Peter Paul Rubens</td><td>Sebastiano Ricci</td><td>1, 2 of 2</td><td>Diana / the hunt</td><td>Venus</td><td></td></tr>
+<tr><td>Anthony van Dyck</td><td>Giovanni Battista Tiepolo</td><td>2, 3 of 3</td><td>Landscape</td><td>Portrait head or bust</td><td>Giovanni Battista, not Domenico — Domenico's board is a false positive (<em>The Punchinello Riding a Camel at the Head of a Caravan</em> was read as a portrait by the words &ldquo;head of a&rdquo;).</td></tr>
+  </table>
+</header>
+<div class="wrap">
+  <nav><a href="#s1">François Boucher × Sebastiano Ricci<span>Animals · Venus</span></a>
+<a href="#s2">François Boucher × Peter Paul Rubens<span>Animals · Venus</span></a>
+<a href="#s3">François Boucher × Peter Paul Rubens<span>Diana / the hunt · Venus</span></a>
+<a href="#s4">Peter Paul Rubens × Sebastiano Ricci<span>Animals · Venus</span></a>
+<a href="#s5">Peter Paul Rubens × Sebastiano Ricci<span>Diana / the hunt · Venus</span></a>
+<a href="#s6">Anthony van Dyck × Giovanni Battista Tiepolo<span>Landscape · Portrait head or bust</span></a></nav>
+  <main>
+        <section id="s1">
+          <h2>François Boucher <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Animals / Venus
+            <span class="cent">18th c.
+            &amp; 18th c.</span>
+          </p>
+          
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 4 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 5 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 6 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div></div>
+        </section>
+
+        <section id="s2">
+          <h2>François Boucher <span class="x">×</span> Peter Paul Rubens</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Animals / Venus
+            <span class="cent">18th c.
+            &amp; 17th c.</span>
+          </p>
+          
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 4 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 5 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 6 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBM"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/914800b6-ac80-4cc2-a721-d0e916824a86/full/%5E%21600,600/0/default.jpg" alt="The Bird Catchers"></div><div class="meta"><div class="t">The Bird Catchers</div><div class="a">François Boucher</div><div class="d">1748</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div></div>
+        </section>
+
+        <section id="s3">
+          <h2>François Boucher <span class="x">×</span> Peter Paul Rubens</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Diana / the hunt / Venus
+            <span class="cent">18th c.
+            &amp; 17th c.</span>
+          </p>
+          <p class="note">Boucher drawing — his <em>Leopard Hunt</em> is red chalk; every other work on these boards is oil.</p>
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 1 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 2 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RBV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c09544a6-c1ed-42e6-b294-4a60dd50ae58/full/%5E%21600,600/0/default.jpg" alt="Venus on the Waves"></div><div class="meta"><div class="t">Venus on the Waves</div><div class="a">François Boucher</div><div class="d">1769</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 3 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 4 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QWX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c4cd0a67-a2dd-4f91-aeb2-a2dc88404640/full/%5E%21600,600/0/default.jpg" alt="Venus and Cupid"></div><div class="meta"><div class="t">Venus and Cupid</div><div class="a">François Boucher</div><div class="d">about 1750–1752</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 5 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 6 of 6</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">François Boucher</div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/109Q8C"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/ac2e060a-4f64-4004-9467-c7f73dbce290/full/%5E%21600,600/0/default.jpg" alt="Leopard Hunt"></div><div class="meta"><div class="t">Leopard Hunt</div><div class="a">François Boucher</div><div class="d">about 1767–1773</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/10985F"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/40016a32-0f38-4f14-bb0b-a1eb191efe7f/full/%5E%21600,600/0/default.jpg" alt="The Birth and Triumph of Venus"></div><div class="meta"><div class="t">The Birth and Triumph of Venus</div><div class="a">François Boucher</div><div class="d">about 1743</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+              </div>
+            </div></div>
+        </section>
+
+        <section id="s4">
+          <h2>Peter Paul Rubens <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Animals / Venus
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          <p class="note">Only one variant exists for this pairing, not six.</p>
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 1 of 1</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Animals</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div></div>
+        </section>
+
+        <section id="s5">
+          <h2>Peter Paul Rubens <span class="x">×</span> Sebastiano Ricci</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Diana / the hunt / Venus
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 1 of 2</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RB2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/7454f6e9-6013-4ab7-a650-b80af26b4e82/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Nymphs on the Hunt"></div><div class="meta"><div class="t">Diana and Her Nymphs on the Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">1627–1628</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 2 of 2</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">Peter Paul Rubens</div>
+                <div class="colhead">Sebastiano Ricci</div>
+                <div class="rowhead">Diana / the hunt</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QTF"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/fd803195-132f-492a-857c-24fad0c98817/full/%5E%21600,600/0/default.jpg" alt="The Calydonian Boar Hunt"></div><div class="meta"><div class="t">The Calydonian Boar Hunt</div><div class="a">Peter Paul Rubens</div><div class="d">about 1611–1612</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RE2"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/29d023da-6618-4a39-93bd-715055ca78e3/full/%5E%21600,600/0/default.jpg" alt="Diana and Her Dog"></div><div class="meta"><div class="t">Diana and Her Dog</div><div class="a">Sebastiano Ricci</div><div class="d">1717–1720</div></div></a>
+                <div class="rowhead">Venus</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108GRX"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/9ea5966a-28b6-4450-8707-95931b4d5d3f/full/%5E%21600,600/0/default.jpg" alt="The Return from War: Mars Disarmed by Venus"></div><div class="meta"><div class="t">The Return from War: Mars Disarmed by Venus</div><div class="a">Peter Paul Rubens</div><div class="d">about 1610–1612</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103RCT"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/eb31c802-f813-492b-bfba-f5ec79abd4a2/full/%5E%21600,600/0/default.jpg" alt="Triumph of the Marine Venus"></div><div class="meta"><div class="t">Triumph of the Marine Venus</div><div class="a">Sebastiano Ricci</div><div class="d">about 1713</div></div></a>
+              </div>
+            </div></div>
+        </section>
+
+        <section id="s6">
+          <h2>Anthony van Dyck <span class="x">×</span> Giovanni Battista Tiepolo</h2>
+          <p class="sub">
+            Columns: same artist · Rows: Landscape / Portrait head or bust
+            <span class="cent">17th c.
+            &amp; 18th c.</span>
+          </p>
+          <p class="note">Giovanni Battista, not Domenico — Domenico's board is a false positive (<em>The Punchinello Riding a Camel at the Head of a Caravan</em> was read as a portrait by the words &ldquo;head of a&rdquo;).</p>
+          <div class="boards">
+            <div class="board">
+              <div class="variant">Variant 2 of 3</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">Anthony van Dyck</div>
+                <div class="colhead">Giovanni Battista Tiepolo</div>
+                <div class="rowhead">Landscape</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+                <div class="rowhead">Portrait head or bust</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/1JAXDV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/c51ed2b0-990d-4781-b795-cf55584afb53/full/%5E%21600,600/0/default.jpg" alt="Portrait of Ann Bret, Countess of Middlesex"></div><div class="meta"><div class="t">Portrait of Ann Bret, Countess of Middlesex</div><div class="a">Anthony van Dyck</div><div class="d">n.d.</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+              </div>
+            </div>
+            <div class="board">
+              <div class="variant">Variant 3 of 3</div>
+              <div class="grid">
+                <div class="corner"></div>
+                <div class="colhead">Anthony van Dyck</div>
+                <div class="colhead">Giovanni Battista Tiepolo</div>
+                <div class="rowhead">Landscape</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QS7"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/0cff9091-e65c-4f63-8da5-44d0c4bc0782/full/%5E%21600,600/0/default.jpg" alt="Landscape"></div><div class="meta"><div class="t">Landscape</div><div class="a">Anthony van Dyck</div><div class="d">about 1640</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QZ9"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/d980f4fe-1600-4b2c-8e78-442c37538ebb/full/%5E%21600,600/0/default.jpg" alt="View of a Villa"></div><div class="meta"><div class="t">View of a Villa</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">1757–1759</div></div></a>
+                <div class="rowhead">Portrait head or bust</div>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/103QXN"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/6a62bf2f-04d1-4734-9e97-9cd1237546da/full/%5E%21600,600/0/default.jpg" alt="Portrait of Hendrick van Balen"></div><div class="meta"><div class="t">Portrait of Hendrick van Balen</div><div class="a">Anthony van Dyck</div><div class="d">about 1627–1632</div></div></a>
+                <a class="card" target="_blank" rel="noopener" href="https://www.getty.edu/art/collection/object/108JFV"><div class="thumb"><img loading="lazy" src="https://media.getty.edu/iiif/image/83fec86f-c1a7-495d-820b-bce4d68427fd/full/%5E%21600,600/0/default.jpg" alt="Head of a Man Looking Up"></div><div class="meta"><div class="t">Head of a Man Looking Up</div><div class="a">Giovanni Battista Tiepolo</div><div class="d">about 1750–1760</div></div></a>
+              </div>
+            </div></div>
+        </section></main>
+</div>
+</body>
+</html>
